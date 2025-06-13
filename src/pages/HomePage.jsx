@@ -578,24 +578,26 @@ const HomePage = () => {
             <div className="skills-content">
               <div className="skills-column">
                 <h3>Frontend</h3>
-                <SkillBar skill="HTML/CSS" percentage={90} color="#E44D26" />
-                <SkillBar skill="JavaScript" percentage={85} color="#F7DF1E" />
+                <SkillBar skill="HTML/CSS" percentage={70} color="#E44D26" />
+                <SkillBar skill="JavaScript" percentage={80} color="#F7DF1E" />
                 <SkillBar skill="React" percentage={80} color="#61DAFB" />
-                <SkillBar skill="TypeScript" percentage={75} color="#3178C6" />
+                <SkillBar skill="Flutter" percentage={60} color="#02569B" />
+                <SkillBar skill="TypeScript" percentage={80} color="#3178C6" />
               </div>
               <div className="skills-column">
                 <h3>Backend</h3>
-                <SkillBar skill="Node.js" percentage={75} color="#68A063" />
-                <SkillBar skill="Express" percentage={70} color="#000000" />
-                <SkillBar skill="MongoDB" percentage={65} color="#47A248" />
-                <SkillBar skill="RESTful APIs" percentage={80} color="#005A9C" />
+                <SkillBar skill="JavaScript (Node.js)" percentage={75} color="#F7DF1E" />
+                <SkillBar skill="Node.js" percentage={65} color="#68A063" />
+                <SkillBar skill="C#" percentage={60} color="#9B4F96" />
+                <SkillBar skill="SQL" percentage={60} color="#336791" />
               </div>
               <div className="skills-column">
                 <h3>Tools & Other</h3>
-                <SkillBar skill="Git/GitHub" percentage={85} color="#F05032" />
-                <SkillBar skill="Figma" percentage={70} color="#F24E1E" />
-                <SkillBar skill="Responsive Design" percentage={90} color="#38B2AC" />
-                <SkillBar skill="UI/UX Principles" percentage={75} color="#FF61F6" />
+                <SkillBar skill="Git/GitHub" percentage={70} color="#F05032" />
+                <SkillBar skill="MySQL" percentage={75} color="#4479A1" />
+                <SkillBar skill="RESTful APIs" percentage={65} color="#005A9C" />
+                <SkillBar skill="Responsive Design" percentage={73} color="#38B2AC" />
+                <SkillBar skill="UI/UX Principles" percentage={60} color="#FF61F6" />
               </div>
             </div>
           </section>
