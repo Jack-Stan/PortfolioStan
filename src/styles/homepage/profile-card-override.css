@@ -1,0 +1,19 @@
+.profile-card-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.pc-card {
+  height: 450px !important;
+  max-height: 450px !important;
+}
+
+@media (max-width: 768px) {
+  .pc-card {
+    height: 400px !important;
+    max-height: 400px !important;
+  }
+}

@@ -1,0 +1,112 @@
+import { useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import FuzzyText from "../components/ui/FuzzyText";
+import TypewriterFuzzy from "../components/ui/TypewriterFuzzy";
+import BackgroundDither from "../components/ui/BackgroundDither";
+import "../styles/welcomepage/welcome-page.css";
+import "../styles/welcomepage/page-transition.css";
+
+const WelcomePage = () => {
+  const navigate = useNavigate();
+  const [typingComplete, setTypingComplete] = useState(false);
+  // Removed unused state variable hoverIntensity
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const pageRef = useRef(null);
+  const contentRef = useRef(null);
+
+  const handleScrollDown = () => {
+    setIsTransitioning(true);
+    
+    // Animatie van onder naar boven (page slide up)
+    const tl = gsap.timeline({
+      onComplete: () => {
+        // Navigeer naar home na de animatie
+        setTimeout(() => {
+          navigate("/home", { state: { from: 'welcome' } });
+        }, 100);
+      }
+    });
+    
+    // Fade uit de huidige content
+    tl.to(contentRef.current, {
+      y: -100,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in"
+    });
+    
+    // Slide de nieuwe pagina in van beneden
+    tl.to(pageRef.current, {
+      y: "-100vh",
+      duration: 0.8,
+      delay: 0.1,
+      ease: "power3.inOut"
+    }, "-=0.3");
+  };
+
+  const handleTypingComplete = () => {
+    setTypingComplete(true);
+  };
+
+  // Effect voor initiële animatie
+  useEffect(() => {
+    if (contentRef.current) {
+      gsap.fromTo(
+        contentRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.5 }
+      );
+    }
+  }, []);
+
+  return (
+    <div className="welcome-page" ref={pageRef} style={{ position: 'relative' }}>
+      {/* Dither background */}
+      <BackgroundDither />
+
+      <div className="content" ref={contentRef}>
+        {typingComplete ? (
+          <div className="title-container">
+            <FuzzyText 
+              baseIntensity={0.2} 
+              hoverIntensity={0.5} 
+              enableHover={true}
+              fontSize="clamp(2rem, 5vw, 4rem)"
+              color="#fff"
+            >
+              Stan's Portfolio
+            </FuzzyText>
+          </div>
+        ) : (
+          <div className="title-container">
+            <TypewriterFuzzy 
+              text="Stan's Portfolio" 
+              delay={100} 
+              onComplete={handleTypingComplete} 
+              baseIntensity={0.2}
+              hoverIntensity={0.5}
+              enableHover={true}
+              fontSize="clamp(2rem, 5vw, 4rem)"
+              color="#fff"
+            />
+          </div>
+        )}
+        <div className="scroll-button" onClick={handleScrollDown}>
+          <div className="scroll-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      {/* Transitie overlay voor animatie */}
+      {isTransitioning && (
+        <div className="page-transition-overlay"></div>
+      )}
+    </div>
+  );
+};
+
+export default WelcomePage;

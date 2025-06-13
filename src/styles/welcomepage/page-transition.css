@@ -1,0 +1,38 @@
+.page-transition {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: opacity 0.5s ease;
+}
+
+.page-transition.fadeIn {
+  opacity: 1;
+}
+
+.page-transition.fadeOut {
+  opacity: 0;
+}
+
+/* Voeg een animation klasse toe voor slide-up effect */
+.slide-up-animation {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Voeg een klasse toe voor de container die de animatie beperkt */
+.transition-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
