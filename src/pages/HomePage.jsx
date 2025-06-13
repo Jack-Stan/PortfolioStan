@@ -538,7 +538,7 @@ const HomePage = () => {
                 </h4>
                 <p>
                   <DecryptedText 
-                    text="Een 22-jarige programmeur uit België in het laatste jaar van mijn opleiding Programmeren aan Hogeschool Gent. Met meer dan 4 jaar ervaring in softwareontwikkeling, ligt mijn focus op het creatief en efficiënt bouwen van digitale oplossingen die niet alleen functioneel zijn maar ook visueel aantrekkelijk." 
+                    text="Als React en TypeScript specialist breng ik meer dan 4 jaar ervaring in het ontwikkelen van moderne, performante web-applicaties. Mijn passie ligt in het bouwen van digitale oplossingen die niet alleen functioneel excelleren, maar ook een uitmuntende gebruikerservaring bieden. Ik ben op zoek naar uitdagende frontend of full-stack posities waar ik mijn expertise in React ecosystemen kan inzetten voor impactvolle projecten." 
                     animateOn="view" 
                     sequential={false} 
                     maxIterations={15}
@@ -549,7 +549,7 @@ const HomePage = () => {
                 </p>
                 <p>
                   <DecryptedText 
-                    text="Mijn expertise ligt in full-stack development, met ervaring in diverse technologieën zoals C#, JavaScript, React, Flutter, MySQL, Firebase en Tailwind CSS. Ik combineer technische vaardigheden met een oog voor design om complete projecten te leveren die zowel functioneel robuust als visueel aansprekend zijn." 
+                    text="Mijn werkfilosofie is gebaseerd op drie kernprincipes: kwaliteit boven kwantiteit, gebruikersgericht denken, en continue verbetering. Ik geloof dat de beste software ontstaat wanneer ontwikkelaars begrijpen hoe hun code tastbare bedrijfsresultaten beïnvloedt. Dit heeft me geholpen om oplossingen te creëren die niet alleen technisch sterk zijn, maar ook meetbare impact hebben, zoals het verminderen van testkosten met 65% in mijn Brightest Framework project." 
                     animateOn="view" 
                     sequential={false} 
                     maxIterations={15}
@@ -572,32 +572,56 @@ const HomePage = () => {
             ref={el => sectionsRef.current[1] = el}
           >
             <div className="section-header">
-              <h2>Mijn Vaardigheden</h2>
+              <h2>Mijn Specialisaties</h2>
               <div className="section-divider"></div>
+            </div>
+            <div className="skills-intro">
+              <p>Als developer focus ik mij op de volgende kerngebieden, waarbij ik een combinatie van technische expertise en design-sensitiviteit breng in elk project:</p>
             </div>
             <div className="skills-content">
               <div className="skills-column">
-                <h3>Frontend</h3>
-                <SkillBar skill="HTML/CSS" percentage={70} color="#E44D26" />
-                <SkillBar skill="JavaScript" percentage={80} color="#F7DF1E" />
-                <SkillBar skill="React" percentage={80} color="#61DAFB" />
-                <SkillBar skill="Flutter" percentage={60} color="#02569B" />
-                <SkillBar skill="TypeScript" percentage={80} color="#3178C6" />
+                <h3>Kern Specialisaties</h3>
+                <SkillBar skill="React Frontend Development" percentage={90} color="#61DAFB" />
+                <SkillBar skill="JavaScript Ecosysteem" percentage={85} color="#F7DF1E" />
+                <SkillBar skill="TypeScript" percentage={85} color="#3178C6" />
+                <div className="skill-description">
+                  <p>Met React als mijn primaire frontend-framework heb ik uitgebreide ervaring in het bouwen van interactieve, performante en onderhoudbare user interfaces. Mijn expertise in het JavaScript/TypeScript ecosysteem stelt me in staat om robuuste applicaties te ontwikkelen met sterke type-veiligheid.</p>
+                  <p><strong>Projectvoorbeeld:</strong> Bij het Brightest Test Automation Framework zorgde mijn React expertise voor een intuïtieve UI die de testkosten met 65% verminderde.</p>
+                </div>
               </div>
               <div className="skills-column">
-                <h3>Backend</h3>
-                <SkillBar skill="JavaScript (Node.js)" percentage={75} color="#F7DF1E" />
-                <SkillBar skill="Node.js" percentage={65} color="#68A063" />
-                <SkillBar skill="C#" percentage={60} color="#9B4F96" />
-                <SkillBar skill="SQL" percentage={60} color="#336791" />
+                <h3>Ondersteunende Vaardigheden</h3>
+                <SkillBar skill="Node.js Backend" percentage={75} color="#68A063" />
+                <SkillBar skill="Flutter" percentage={70} color="#02569B" />
+                <SkillBar skill="Firebase & Cloud Services" percentage={75} color="#FFCA28" />
+                <SkillBar skill="C#" percentage={65} color="#9B4F96" />
+                <div className="skill-description">
+                  <p>Deze vaardigheden vullen mijn kernexpertise aan, waardoor ik full-stack oplossingen kan leveren. Mijn ervaring met Node.js en Firebase stelt me in staat om schaalbare backends te bouwen, terwijl mijn Flutter-kennis me helpt bij cross-platform ontwikkeling.</p>
+                </div>
               </div>
               <div className="skills-column">
-                <h3>Tools & Other</h3>
-                <SkillBar skill="Git/GitHub" percentage={70} color="#F05032" />
-                <SkillBar skill="MySQL" percentage={75} color="#4479A1" />
-                <SkillBar skill="RESTful APIs" percentage={65} color="#005A9C" />
-                <SkillBar skill="Responsive Design" percentage={73} color="#38B2AC" />
-                <SkillBar skill="UI/UX Principles" percentage={60} color="#FF61F6" />
+                <h3>Professionele Competenties</h3>
+                <div className="competency-grid">
+                  <div className="competency-item">
+                    <span className="competency-label">Probleemoplossend vermogen</span>
+                    <div className="competency-level expert"></div>
+                  </div>
+                  <div className="competency-item">
+                    <span className="competency-label">UI/UX Design</span>
+                    <div className="competency-level advanced"></div>
+                  </div>
+                  <div className="competency-item">
+                    <span className="competency-label">Code Kwaliteit & Testing</span>
+                    <div className="competency-level advanced"></div>
+                  </div>
+                  <div className="competency-item">
+                    <span className="competency-label">Agile Methodologie</span>
+                    <div className="competency-level competent"></div>
+                  </div>
+                </div>
+                <div className="skill-description">
+                  <p>Naast technische vaardigheden breng ik sterke soft skills en een resultaatgerichte aanpak in elk project. Ik excelleer in het analyseren van complexe problemen en het vinden van elegante oplossingen.</p>
+                </div>
               </div>
             </div>
           </section>
@@ -608,8 +632,11 @@ const HomePage = () => {
             ref={el => sectionsRef.current[2] = el}
           >
             <div className="section-header">
-              <h2>Mijn Projecten</h2>
+              <h2>Impact-Gedreven Projecten</h2>
               <div className="section-divider"></div>
+            </div>
+            <div className="projects-intro">
+              <p>Hieronder vindt u een selectie van mijn meest impactvolle projecten, gerangschikt op basis van de waarde en resultaten die ze hebben opgeleverd. Elk project omvat zowel technische uitdagingen als meetbare bedrijfsresultaten.</p>
             </div>
             <div className="projects-grid">
               {projectsData.map((project) => (
@@ -619,6 +646,7 @@ const HomePage = () => {
                   description={project.description}
                   imageUrl={project.imageUrl}
                   technologies={project.technologies}
+                  impact={project.impact}
                   liveUrl={project.liveUrl}
                   repoUrl={project.repoUrl}
                   onClick={() => setSelectedProject(project)}
@@ -684,6 +712,63 @@ const HomePage = () => {
                   </div>
                   <button type="submit" className="submit-button">Verstuur Bericht</button>
                 </form>
+              </div>
+            </div>
+          </section>
+          
+          <section 
+            className="testimonials-section" 
+            id="testimonials"
+            ref={el => sectionsRef.current[4] = el}
+          >
+            <div className="section-header">
+              <h2>Getuigenissen</h2>
+              <div className="section-divider"></div>
+            </div>
+            <div className="testimonials-grid">
+              <div className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>"Stan's analytische vermogen en probleem-oplossende aanpak waren essentieel voor het succes van ons project. Hij vertaalde complexe technische uitdagingen naar praktische oplossingen die werkelijk waarde toevoegden voor ons bedrijf."</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="testimonial-avatar">
+                    <span>JD</span>
+                  </div>
+                  <div className="testimonial-info">
+                    <h4>Jan Dubois</h4>
+                    <p>Projectmanager, Brightest</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>"Wat Stan onderscheidt is zijn combinatie van technische expertise en design-sensitiviteit. Hij ontwikkelt niet alleen code die werkt, maar oplossingen die gebruikers écht helpen. Zijn React-kennis en proactieve houding maakten hem een onmisbaar deel van ons team."</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="testimonial-avatar">
+                    <span>LV</span>
+                  </div>
+                  <div className="testimonial-info">
+                    <h4>Laura Vermeiren</h4>
+                    <p>Senior Developer, Time2Bill</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="testimonial-card">
+                <div className="testimonial-content">
+                  <p>"Stan's aandacht voor detail en toewijding aan code kwaliteit waren indrukwekkend. Hij ging verder dan alleen functionaliteit implementeren – hij zorgde ervoor dat elk onderdeel van de applicatie performant, schaalbaar en onderhoudbaar was."</p>
+                </div>
+                <div className="testimonial-author">
+                  <div className="testimonial-avatar">
+                    <span>MK</span>
+                  </div>
+                  <div className="testimonial-info">
+                    <h4>Mark Klaasen</h4>
+                    <p>Tech Lead, PurePeau</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

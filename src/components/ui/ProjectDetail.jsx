@@ -158,6 +158,42 @@ const ProjectDetail = ({ project, onClose }) => {
               </div>
             </div>
           )}
+
+          {/* Add challenges and problem solving section */}
+          <div className="project-challenges">
+            <h3>Uitdagingen & Probleemoplossing</h3>
+            <div className="challenge-container">
+              <div className="challenge-item">
+                <h4>Uitdaging</h4>                <p>{project.id === 'brightest'
+                  ? 'De grootste uitdaging was het creëren van een systeem dat niet-technische gebruikers in staat stelt om geautomatiseerde tests te schrijven zonder codeerkennis, terwijl het ook gestructureerde, onderhoudbare testcode moest genereren die past binnen bestaande frameworks.'
+                  : project.id === 'time2bill'
+                  ? 'Het bouwen van een cross-platform applicatie die effectief functioneert op zowel web als mobiel, terwijl er complexe bedrijfslogica voor facturatie en verschillende internationale facturatiestandaarden geïmplementeerd moesten worden.'
+                  : project.id === 'purepeau'
+                  ? 'Het creëren van een CMS-functionaliteit die intuïtief genoeg was voor een niet-technische eigenaar om zelf content te beheren, terwijl het design en de merkauthenticiteit behouden blijft.'
+                  : 'Het integreren van meerdere AI-systemen (spraakherkenning, emotiedetectie, NLP) in een coherente, real-time gebruikerservaring die zowel performant als intuïtief is.'}</p>
+              </div>
+              
+              <div className="challenge-item">
+                <h4>Mijn Aanpak</h4>                <p>{project.id === 'brightest' 
+                  ? 'Ik ontwikkelde een systeem dat de webpagina analyseert en selecteerbare elementen identificeert. Voor de codegeneratie integreerde ik OpenAI\'s API om Page Object Models te genereren die voldoen aan de bestaande codestandaarden, waardoor een brug werd geslagen tussen de visuele interface en professionele testcode.'
+                  : project.id === 'time2bill' 
+                  ? 'Ik implementeerde een modulaire architectuur met Flutter, waarbij ik een duidelijke scheiding tussen UI-logica en bedrijfsregels handhaafde. Voor de facturatie ontwikkelde ik een abstractielaag die verschillende standaarden (UBL, Peppol) ondersteunt zonder de kernfunctionaliteit te beïnvloeden.' 
+                  : project.id === 'purepeau' 
+                  ? 'Ik ontwierp een aangepaste content editor met React die complexe styling verbergt achter intuïtieve knoppen en drag-and-drop functionaliteit, terwijl ik templates creëerde die de merkidentiteit beschermen ongeacht welke content wordt toegevoegd.' 
+                  : 'Ik ontwikkelde een microservice-architectuur waarbij elk AI-systeem onafhankelijk kon functioneren maar synchroniseerde via een centrale state manager. Om performantieproblemen op te lossen, implementeerde ik client-side caching en intelligente debouncing van API-calls.'}</p>
+              </div>
+              
+              <div className="challenge-item">
+                <h4>Lessen & Groei</h4>                <p>{project.id === 'brightest'
+                  ? 'Dit project leerde me hoe belangrijk het is om complexe technische concepten te vertalen naar toegankelijke gebruikerservaringen. Ik verfijnde mijn vaardigheden in het werken met AI-integraties en leerde hoe ik technische barrières kan wegnemen zonder compromissen te sluiten op kwaliteit.'
+                  : project.id === 'time2bill'
+                  ? 'Dit project versterkte mijn begrip van domein-gedreven design en het belang van flexibele architecturen die kunnen evolueren met veranderende bedrijfsbehoeften. Ik verbeterde mijn vaardigheden in het bouwen van schaalbare, toekomstbestendige applicaties.'
+                  : project.id === 'purepeau'
+                  ? 'Ik leerde het belang van empathisch ontwerp - het begrijpen van de behoeften en beperkingen van niet-technische gebruikers. Deze ervaring heeft mijn benadering van UX/UI-ontwerp aanzienlijk verbeterd en me geleerd hoe ik technologie kan democratiseren.'
+                  : 'Dit complexe project leerde me het belang van asynchroon denken en hoe verschillende AI-subsystemen effectief te orkestreren. Ik verdiepte mijn begrip van realtime systemen en verbeterde mijn vaardigheden in het optimaliseren van frontend performance onder zware belasting.'}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

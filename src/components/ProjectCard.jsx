@@ -8,8 +8,12 @@ const ProjectCard = ({
   technologies = [], 
   liveUrl, 
   repoUrl,
+  impact = [],
   onClick 
 }) => {
+  // Select first impact point to highlight if available
+  const highlightedImpact = impact && impact.length > 0 ? impact[0] : null;
+
   return (
     <div className="project-card" onClick={onClick}>
       <div className="project-image-container">
@@ -44,6 +48,15 @@ const ProjectCard = ({
       <div className="project-info">
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{description}</p>
+        
+        {/* Show key impact/result */}
+        {highlightedImpact && (
+          <div className="project-impact">
+            <h4>Belangrijkste Resultaat:</h4>
+            <p>{highlightedImpact}</p>
+          </div>
+        )}
+        
         {technologies.length > 0 && (
           <div className="project-technologies">
             {technologies.map((tech, index) => (
@@ -53,6 +66,10 @@ const ProjectCard = ({
             ))}
           </div>
         )}
+        
+        <div className="project-view-more">
+          <span>Klik voor details & alle resultaten</span>
+        </div>
       </div>
     </div>
   );

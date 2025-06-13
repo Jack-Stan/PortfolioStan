@@ -104,3 +104,41 @@
   color: #666;
   font-weight: 500;
 }
+
+.project-impact {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background-color: rgba(97, 218, 251, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid #61DAFB;
+}
+
+.project-impact h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.project-impact p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #f0f0f0;
+}
+
+.project-view-more {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  text-align: right;
+  color: #61DAFB;
+  font-style: italic;
+}
+
+.project-view-more span {
+  cursor: pointer;
+}
+
+.project-view-more span:hover {
+  text-decoration: underline;
+}

@@ -637,209 +637,112 @@ section.active .skills-column:nth-child(3) {
   width: 100%;
 }
 
-/* Contact Section Styling */
-.contact-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.contact-text {
-  flex: 1;
-  min-width: 300px;
-  transform: translateX(-50px);
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-section.active .contact-text {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.contact-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+/* Add styles for skills intro */
+.skills-intro {
   margin-bottom: 2rem;
-  color: #444;
+  text-align: center;
 }
 
-.contact-info {
+.skills-intro p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Add styles for skill descriptions */
+.skill-description {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Changed to more opaque white for better contrast with black text */
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color, #6e72fc);
+}
+
+.skill-description p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  color: #000000; /* Changed to black */
+}
+
+.skill-description p:last-child {
+  margin-bottom: 0;
+}
+
+.skill-description strong {
+  color: #000000; /* Changed to black */
+  font-weight: 600;
+}
+
+/* Competency grid styling */
+.competency-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.contact-item {
+.competency-item {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1rem;
-  border-radius: 10px;
-  transition: all 0.4s ease;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.03);
-  transform: translateX(-30px);
-  opacity: 0;
+  justify-content: space-between;
 }
 
-section.active .contact-item {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-section.active .contact-item:nth-child(1) {
-  transition-delay: 0.3s;
-}
-
-section.active .contact-item:nth-child(2) {
-  transition-delay: 0.5s;
-}
-
-section.active .contact-item:nth-child(3) {
-  transition-delay: 0.7s;
-}
-
-.contact-item:hover {
-  background-color: white;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transform: translateY(-5px) scale(1.02);
-}
-
-.contact-item svg {
-  color: #6e72fc;
-  transition: all 0.4s ease;
-  flex-shrink: 0;
-}
-
-.contact-item:hover svg {
-  transform: scale(1.2);
-  color: #ad1deb;
-}
-
-.contact-item a {
-  color: #444;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
-}
-
-.contact-item a:hover {
-  color: #6e72fc;
-}
-
-.contact-form-container {
+.competency-label {
   flex: 1;
-  min-width: 300px;
-  transform: translateX(50px);
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  transition-delay: 0.3s;
+  font-weight: 500;
+  color: #000000; /* Changed to black */
 }
 
-section.active .contact-form-container {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.contact-form {
-  background-color: #f8f9fa;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: all 0.5s ease;
-  border: 1px solid transparent;
-}
-
-.contact-form:hover {
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  transform: translateY(-8px);
-  border-color: rgba(110, 114, 252, 0.2);
-  background-color: white;
-}
-
-.form-group {
-  margin-bottom: 1.8rem;
+.competency-level {
+  height: 8px;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-  color: #333;
-  transform: translateY(0);
-  transition: all 0.3s ease;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: inherit;
-  transition: all 0.4s ease;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #6e72fc;
-  box-shadow: 0 0 0 4px rgba(110, 114, 252, 0.2);
-  transform: translateY(-2px);
-  background-color: white;
-}
-
-.form-group input:focus + label,
-.form-group textarea:focus + label {
-  transform: translateY(-5px);
-  color: #6e72fc;
-}
-
-.submit-button {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
-  background-size: 200% auto;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-  box-shadow: 0 4px 10px rgba(110, 114, 252, 0.3);
-  position: relative;
-  overflow: hidden;
-  margin-top: 1rem;
-}
-
-.submit-button::before {
+.competency-level::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
-  transition: all 0.5s ease;
-  z-index: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--level-color, #6e72fc) 0%, var(--level-color-end, #ad1deb) 100%);
+  animation: fillLevel 1.5s ease-out forwards;
 }
 
-.submit-button:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(110, 114, 252, 0.4);
-  background-position: right center;
-  letter-spacing: 1px;
+.competency-level.beginner::after {
+  --level-color: #3498db;
+  --level-color-end: #2980b9;
+  width: 25%;
 }
 
-.submit-button:hover::before {
-  left: 100%;
+.competency-level.competent::after {
+  --level-color: #2ecc71;
+  --level-color-end: #27ae60;
+  width: 50%;
 }
 
-/* Animation Keyframes */
+.competency-level.advanced::after {
+  --level-color: #f1c40f;
+  --level-color-end: #f39c12;
+  width: 75%;
+}
+
+.competency-level.expert::after {
+  --level-color: #e74c3c;
+  --level-color-end: #c0392b;
+  width: 95%;
+}
+
+@keyframes fillLevel {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1024,5 +927,114 @@ section.active .contact-form-container {
   
   section {
     padding: 1.5rem;
+  }
+}
+
+/* Projects Intro Section Styling */
+.projects-intro {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects-intro p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Professional CTA Section Styling */
+
+
+/* Testimonials Section Styling */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 5rem;
+  color: rgba(110, 114, 252, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+  z-index: 0;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.testimonial-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6e72fc 0%, #ad1deb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.testimonial-avatar span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.testimonial-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
