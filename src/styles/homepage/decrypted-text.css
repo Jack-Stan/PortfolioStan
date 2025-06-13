@@ -1,0 +1,45 @@
+.text-encrypted {
+  color: rgba(174, 102, 255, 0.7); /* Purple-ish color for encrypted text */
+  text-shadow: 0 0 8px rgba(174, 102, 255, 0.8);
+}
+
+.text-revealed {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.about-name {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.about-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Animation styles for the encrypted text */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 8px rgba(174, 102, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(174, 102, 255, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(174, 102, 255, 0.5);
+  }
+}
+
+.text-encrypted {
+  animation: pulse 2s infinite;
+}

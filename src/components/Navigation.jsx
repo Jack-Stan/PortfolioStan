@@ -26,11 +26,9 @@ const Navigation = () => {
   if (location.pathname === '/') {
     return null;
   }
-
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="nav-container">
-        <div className="logo">
+      <div className="nav-container">        <div className="logo">
           <Link to="/home">Portfolio</Link>
         </div>
         
@@ -45,6 +43,7 @@ const Navigation = () => {
           <li><a href="#skills" onClick={() => setMenuOpen(false)}>Vaardigheden</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projecten</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          <li><a href="/cv.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>CV</a></li>
         </ul>
       </div>
     </nav>

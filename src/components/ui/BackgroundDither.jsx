@@ -3,14 +3,13 @@ import Dither from './Dither';
 
 // Reusable background component with consistent styling
 const BackgroundDither = ({ customStyle = {} }) => {
-  return (
-    <div style={{ 
+  return (    <div style={{ 
       position: 'fixed', 
       top: 0, 
       left: 0, 
       width: '100%', 
       height: '100%', 
-      zIndex: -1,
+      zIndex: -10,
       backgroundColor: '#000', // Black background as base
       ...customStyle    }}>
       <Dither

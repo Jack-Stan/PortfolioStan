@@ -50,6 +50,7 @@
   transform: scale(0.8) translate3d(0, 0, 0.1px);
   background-size: 100% 100%;
   background-image: var(--behind-gradient);
+  opacity: 0.6;
 }
 
 .pc-card-wrapper:hover,
@@ -59,7 +60,7 @@
 
 .pc-card-wrapper:hover::before,
 .pc-card-wrapper.active::before {
-  filter: contrast(1) saturate(2) blur(40px) opacity(1);
+  filter: contrast(1) saturate(2) blur(40px) opacity(0.4);
   transform: scale(0.9) translate3d(0, 0, 0.1px);
 }
 
@@ -191,6 +192,9 @@
   transform: translateX(-50%) scale(1);
   bottom: 2px;
   opacity: calc(1.75 - var(--pointer-from-center));
+  object-fit: cover;
+  object-position: top center;
+  height: 100%;
 }
 
 .pc-avatar-content::before {

@@ -7,10 +7,11 @@ const ProjectCard = ({
   imageUrl, 
   technologies = [], 
   liveUrl, 
-  repoUrl 
+  repoUrl,
+  onClick 
 }) => {
   return (
-    <div className="project-card">
+    <div className="project-card" onClick={onClick}>
       <div className="project-image-container">
         <img src={imageUrl} alt={title} className="project-image" />
         <div className="project-overlay">
@@ -21,6 +22,7 @@ const ProjectCard = ({
                 className="project-link" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()} // Prevent card click when clicking on link
               >
                 Live Demo
               </a>
@@ -31,6 +33,7 @@ const ProjectCard = ({
                 className="project-link" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()} // Prevent card click when clicking on link
               >
                 Code Repository
               </a>
