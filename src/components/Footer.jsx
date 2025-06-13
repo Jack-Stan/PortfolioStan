@@ -25,16 +25,16 @@ const Footer = () => {
             <div className="footer-link-group">
               <h4>Connect</h4>
               <ul>
-                <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="mailto:your@email.com">Email</a></li>
+                <li><a href="https://github.com/Jack-Stan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="www.linkedin.com/in/stan-verbruggen-67b928198" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              
               </ul>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
           <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
-          <p>Designed & Built with ❤️</p>
+          <p>Designed & Built by JAQ</p>
         </div>
       </div>
     </footer>

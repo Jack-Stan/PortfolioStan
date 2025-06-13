@@ -36,12 +36,10 @@ const Navigation = () => {
           <span></span>
           <span></span>
           <span></span>
-        </div>
-          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        </div>          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>Over Mij</a></li>
           <li><a href="#skills" onClick={() => setMenuOpen(false)}>Specialisaties</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projecten</a></li>
-          <li><a href="#testimonials" onClick={() => setMenuOpen(false)}>Getuigenissen</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
           <li><a href="/cv.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>CV</a></li>
         </ul>

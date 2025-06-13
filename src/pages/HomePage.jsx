@@ -715,63 +715,6 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          
-          <section 
-            className="testimonials-section" 
-            id="testimonials"
-            ref={el => sectionsRef.current[4] = el}
-          >
-            <div className="section-header">
-              <h2>Getuigenissen</h2>
-              <div className="section-divider"></div>
-            </div>
-            <div className="testimonials-grid">
-              <div className="testimonial-card">
-                <div className="testimonial-content">
-                  <p>"Stan's analytische vermogen en probleem-oplossende aanpak waren essentieel voor het succes van ons project. Hij vertaalde complexe technische uitdagingen naar praktische oplossingen die werkelijk waarde toevoegden voor ons bedrijf."</p>
-                </div>
-                <div className="testimonial-author">
-                  <div className="testimonial-avatar">
-                    <span>JD</span>
-                  </div>
-                  <div className="testimonial-info">
-                    <h4>Jan Dubois</h4>
-                    <p>Projectmanager, Brightest</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="testimonial-card">
-                <div className="testimonial-content">
-                  <p>"Wat Stan onderscheidt is zijn combinatie van technische expertise en design-sensitiviteit. Hij ontwikkelt niet alleen code die werkt, maar oplossingen die gebruikers écht helpen. Zijn React-kennis en proactieve houding maakten hem een onmisbaar deel van ons team."</p>
-                </div>
-                <div className="testimonial-author">
-                  <div className="testimonial-avatar">
-                    <span>LV</span>
-                  </div>
-                  <div className="testimonial-info">
-                    <h4>Laura Vermeiren</h4>
-                    <p>Senior Developer, Time2Bill</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="testimonial-card">
-                <div className="testimonial-content">
-                  <p>"Stan's aandacht voor detail en toewijding aan code kwaliteit waren indrukwekkend. Hij ging verder dan alleen functionaliteit implementeren – hij zorgde ervoor dat elk onderdeel van de applicatie performant, schaalbaar en onderhoudbaar was."</p>
-                </div>
-                <div className="testimonial-author">
-                  <div className="testimonial-avatar">
-                    <span>MK</span>
-                  </div>
-                  <div className="testimonial-info">
-                    <h4>Mark Klaasen</h4>
-                    <p>Tech Lead, PurePeau</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
       </div>
       <Footer />
