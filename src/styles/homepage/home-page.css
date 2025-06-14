@@ -93,6 +93,10 @@ section {
   margin-top: 3rem;
   background-color: rgba(30, 30, 30, 0.85);
   color: #fff;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section:hover {
@@ -363,20 +367,26 @@ section.active .section-divider {
   flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   background-color: transparent;
   border-radius: 12px;
   z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-image {
   flex: 1;
   min-width: 300px;
+  max-width: 400px;
   display: flex;
   justify-content: center;
+  align-items: center;
   transform: translateX(-50px);
   opacity: 0;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  margin: 0 auto;
 }
 
 section.active .about-image {
@@ -443,10 +453,12 @@ section.active .about-image {
 .about-text {
   flex: 2;
   min-width: 300px;
+  max-width: 700px;
   transform: translateX(50px);
   opacity: 0;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
   transition-delay: 0.3s;
+  padding: 0 1rem;
 }
 
 section.active .about-text {
@@ -899,6 +911,21 @@ section.active .skills-column:nth-child(3) {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .home-header h1 {
+    font-size: 3.5rem;
+  }
+  
+  .about-content, 
+  .skills-content {
+    gap: 2rem;
+  }
+  
+  .skills-column {
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .home-header h1 {
     font-size: 2.8rem;
@@ -921,12 +948,83 @@ section.active .skills-column:nth-child(3) {
   }
   
   .about-content, 
-  .contact-content {
+  .contact-content,
+  .skills-content {
     flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-image, 
+  .about-text {
+    width: 100%;
+    transform: none;
+    max-width: 100%;
+  }
+  
+  .about-image {
+    margin-bottom: 1rem;
+  }
+  
+  .about-text {
+    padding: 0;
+  }
+  
+  .skills-column {
+    width: 100%;
+    max-width: none;
   }
   
   section {
     padding: 1.5rem;
+  }
+  
+  .about-text {
+    order: 1;
+  }
+  
+  .about-image {
+    order: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header h1 {
+    font-size: 2.3rem;
+  }
+  
+  .home-header p {
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 1rem;
+  }
+  
+  .about-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .about-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
   }
 }
 

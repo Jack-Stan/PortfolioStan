@@ -122,14 +122,25 @@
     align-items: center;
     transition: right 0.3s ease;
     z-index: 1000;
+    padding: 2rem;
   }
 
   .nav-links.open {
     right: 0;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
   }
 
   .nav-links li {
     margin: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
   }
 
   .menu-toggle.open span:nth-child(1) {
@@ -142,5 +153,23 @@
 
   .menu-toggle.open span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem;
+  }
+  
+  .nav-links {
+    width: 85%;
+  }
+  
+  .nav-links li {
+    margin: 1.2rem 0;
   }
 }

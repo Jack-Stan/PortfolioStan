@@ -6,6 +6,8 @@ import "../styles/welcomepage/page-transition.css";
 import "../styles/homepage/ProfileCard.css";
 import "../styles/homepage/profile-card-override.css";
 import "../styles/homepage/decrypted-text.css";
+import "../styles/homepage/projects-chroma.css";
+import "../styles/homepage/project-section-divider.css";
 import SkillBar from "../components/SkillBar";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
@@ -15,12 +17,13 @@ import ProfileCard from "../components/ui/ProfileCard";
 import BackgroundDither from "../components/ui/BackgroundDither";
 import ProjectDetail from "../components/ui/ProjectDetail";
 import DecryptedText from "../components/ui/DecryptedText";
+import ProjectsChroma from "../components/section/ProjectsChroma";
 
-// Placeholder images - replace with your actual project images
-const projectImage1 = "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
-const projectImage2 = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
-const projectImage3 = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
-const projectImage4 = "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"; // Automation/testing themed image
+// Import project images
+import brightestImage from "../data/photo/Brightest.png";
+import time2BillImage from "../data/photo/Time2Bill.png";
+import jaqAIImage from "../data/photo/JaqAi.png";
+import purePeauImage from "../data/photo/PurePeau.png";
 
 // Project data with detailed information
 const projectsData = [
@@ -105,7 +108,7 @@ const projectsData = [
         <li>AI Codegeneratie: OpenAI API-integratie</li>
       </ul>
     `,
-    imageUrl: projectImage4,
+    imageUrl: brightestImage,
     technologies: ["React.js", "Node.js", "Firebase", "Material UI", "WebSockets", "OpenAI API", "Puppeteer"],
     liveUrl: "https://brightest-framework.example.com",
     repoUrl: "https://github.com/Jack-Stan/brightest-framework",
@@ -205,7 +208,7 @@ const projectsData = [
         <li><strong>Datavisualisatie</strong>: Grafieken voor rapportage met fl_chart bibliotheek</li>
       </ul>
     `,
-    imageUrl: projectImage1,
+    imageUrl: time2BillImage,
     technologies: ["Flutter", "Firebase", "Firestore", "Cloud Functions", "Authentication", "Provider", "fl_chart", "UBL/Peppol"],
     liveUrl: "https://time2bill.example.com",
     repoUrl: "https://github.com/Jack-Stan/time2bill",
@@ -288,7 +291,7 @@ const projectsData = [
         <li>Visuele elementen die de natuurlijke, holistische merkpositionering versterken</li>
       </ul>
     `,
-    imageUrl: projectImage2,
+    imageUrl: purePeauImage,
     technologies: ["React", "Tailwind CSS", "Responsive Design", "SEO"],
     liveUrl: "https://purepeau.example.com",
     repoUrl: "https://github.com/Jack-Stan/purepeau",
@@ -358,7 +361,7 @@ const projectsData = [
         <li>Externe API's voor nieuws en financiële data</li>
       </ul>
     `,
-    imageUrl: projectImage3,
+    imageUrl: jaqAIImage,
     technologies: ["React.js", "Face-api.js", "Python", "Flask", "SQLAlchemy", "Styled-components", "Spraakherkenning", "AI"],
     liveUrl: "https://jaqai.example.com",
     repoUrl: "https://github.com/Jack-Stan/jaqai",
@@ -538,7 +541,7 @@ const HomePage = () => {
                 </h4>
                 <p>
                   <DecryptedText 
-                    text="Als React en TypeScript specialist breng ik meer dan 4 jaar ervaring in het ontwikkelen van moderne, performante web-applicaties. Mijn passie ligt in het bouwen van digitale oplossingen die niet alleen functioneel excelleren, maar ook een uitmuntende gebruikerservaring bieden. Ik ben op zoek naar uitdagende frontend of full-stack posities waar ik mijn expertise in React ecosystemen kan inzetten voor impactvolle projecten." 
+                    text="Wat me het meest boeit aan software development? Hoe iets van nul kan uitgroeien tot iets dat echt werkt, impact maakt en mensen blij maakt. Ik hou ervan om te zien hoe een idee vorm krijgt en dat ik daar als developer iets creatiefs en tastbaars van kan maken." 
                     animateOn="view" 
                     sequential={false} 
                     maxIterations={15}
@@ -549,7 +552,40 @@ const HomePage = () => {
                 </p>
                 <p>
                   <DecryptedText 
-                    text="Mijn werkfilosofie is gebaseerd op drie kernprincipes: kwaliteit boven kwantiteit, gebruikersgericht denken, en continue verbetering. Ik geloof dat de beste software ontstaat wanneer ontwikkelaars begrijpen hoe hun code tastbare bedrijfsresultaten beïnvloedt. Dit heeft me geholpen om oplossingen te creëren die niet alleen technisch sterk zijn, maar ook meetbare impact hebben, zoals het verminderen van testkosten met 65% in mijn Brightest Framework project." 
+                    text="Mijn sterkte ligt vooral in frontend, met React als mijn thuishaven. Daar kan ik mijn creativiteit kwijt en zorgen dat dingen niet alleen goed werken maar ook fijn aanvoelen voor de gebruiker. Tegelijk vind ik backend ook belangrijk, het geeft me controle over hoe alles achter de schermen klopt en vlot draait." 
+                    animateOn="view" 
+                    sequential={false} 
+                    maxIterations={15}
+                    speed={30}
+                    className="text-revealed"
+                    encryptedClassName="text-encrypted"
+                  />
+                </p>
+                <p>
+                  <DecryptedText 
+                    text="In een team ben ik diegene die op de details let, altijd op zoek is naar creatieve insteken en oplossingen, en het belangrijk vindt dat code begrijpelijk blijft voor anderen. Ik hecht veel waarde aan gebruiksvriendelijkheid, zowel voor de eindgebruiker als voor andere developers." 
+                    animateOn="view" 
+                    sequential={false} 
+                    maxIterations={15}
+                    speed={30}
+                    className="text-revealed"
+                    encryptedClassName="text-encrypted"
+                  />
+                </p>
+                <p>
+                  <DecryptedText 
+                    text="Twee projecten waar ik trots op ben: mijn portfolio (je kijkt er nu naar 😉) en mijn Time2Bill-applicatie. Die tonen goed hoe ik denk, werk en ontwikkel." 
+                    animateOn="view" 
+                    sequential={false} 
+                    maxIterations={15}
+                    speed={30}
+                    className="text-revealed"
+                    encryptedClassName="text-encrypted"
+                  />
+                </p>
+                <p>
+                  <DecryptedText 
+                    text="Mijn doel is om door te groeien tot een sterke senior full stack developer. Ik ben net afgestudeerd, dus ik weet dat het nog een weg is, maar ik ben er klaar voor. Wat ik zoek in een job? Doorgroeimogelijkheden en vooral: nieuwe technologieën leren die je niet in een klaslokaal tegenkomt." 
                     animateOn="view" 
                     sequential={false} 
                     maxIterations={15}
@@ -638,21 +674,13 @@ const HomePage = () => {
             <div className="projects-intro">
               <p>Hieronder vindt u een selectie van mijn meest impactvolle projecten, gerangschikt op basis van de waarde en resultaten die ze hebben opgeleverd. Elk project omvat zowel technische uitdagingen als meetbare bedrijfsresultaten.</p>
             </div>
-            <div className="projects-grid">
-              {projectsData.map((project) => (
-                <ProjectCard 
-                  key={project.id}
-                  title={project.title}
-                  description={project.description}
-                  imageUrl={project.imageUrl}
-                  technologies={project.technologies}
-                  impact={project.impact}
-                  liveUrl={project.liveUrl}
-                  repoUrl={project.repoUrl}
-                  onClick={() => setSelectedProject(project)}
-                />
-              ))}
-            </div>
+            
+            {/* ChromaGrid Project Display */}
+            <ProjectsChroma 
+              handleProjectSelect={setSelectedProject} 
+              projectsData={projectsData}
+            />
+            
             <div className="projects-more">
               <a href="https://github.com/Jack-Stan" className="more-button" target="_blank" rel="noopener noreferrer">
                 Bekijk meer op GitHub

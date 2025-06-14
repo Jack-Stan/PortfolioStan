@@ -61,3 +61,39 @@
     transform: translateX(200%);
   }
 }
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .skill-bar {
+    margin-bottom: 1.2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  
+  .skill-percentage {
+    font-size: 0.8rem;
+  }
+  
+  .skill-progress {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-bar {
+    margin-bottom: 1rem;
+  }
+  
+  .skill-info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  
+  .skill-percentage {
+    margin-top: 2px;
+    font-size: 0.75rem;
+  }
+}
