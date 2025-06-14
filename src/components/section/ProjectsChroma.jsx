@@ -24,16 +24,14 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData }) => {
       "#8B5CF6", // Purple
       "#06B6D4", // Cyan
     ];    // Get technologies as a string
-    const techString = project.technologies.slice(0, 3).join(' · ');
-    
-    // Get a short impact description if available
+    const techString = project.technologies.slice(0, 3).join(' · ');    // Get a short impact description if available
     const impactSummary = project.impact && project.impact.length > 0 
-      ? project.impact[0].substring(0, 100) + '...' 
+      ? project.impact[0].substring(0, 70) + '...' 
       : '';
     
     // Get a better project description with proper length
-    const shortDescription = project.description.length > 150 
-      ? project.description.substring(0, 150) + '...'
+    const shortDescription = project.description.length > 100 
+      ? project.description.substring(0, 100) + '...'
       : project.description;
 
     return {

@@ -3,11 +3,11 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(var(--cols, 3), 360px);
+  grid-template-columns: repeat(var(--cols, 3), 320px);
   grid-auto-rows: auto;
   justify-content: center;
-  gap: 1.5rem;
-  max-width: 1200px;
+  gap: 1.2rem;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
@@ -19,14 +19,14 @@
 
 @media (max-width: 1200px) {
   .chroma-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
     padding: 0.5rem;
   }
   
   .chroma-card {
     width: 100%;
-    max-width: 360px;
+    max-width: 320px;
     margin: 0 auto;
   }
 }
@@ -67,14 +67,16 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 360px;
-  min-height: 400px;
+  width: 320px;
+  min-height: 380px;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #333;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   background: var(--card-gradient);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 
   --mouse-x: 50%;
   --mouse-y: 50%;
@@ -107,7 +109,7 @@
 .chroma-img-wrapper {
   position: relative;
   z-index: 1;
-  height: 170px;
+  height: 160px;
   overflow: hidden;
   padding: 10px;
   box-sizing: border-box;
@@ -134,60 +136,79 @@
   padding: 1rem 1.25rem;
   color: #fff;
   font-family: system-ui, sans-serif;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  row-gap: 0.5rem;
-  column-gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   background: linear-gradient(to bottom, 
     rgba(0,0,0,0.4) 0%, 
     rgba(0,0,0,0.7) 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.chroma-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.chroma-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
 }
 
 .name {
-  grid-column: 1;
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
   color: #fff;
   letter-spacing: 0.01em;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75%;
 }
 
 .handle {
-  grid-column: 2;
   font-size: 0.875rem;
   opacity: 0.8;
-  align-self: center;
+  margin-left: auto;
 }
 
 .role {
-  grid-column: 1 / -1;
   margin: 0;
   font-size: 0.9rem;
   margin-bottom: 8px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
+  width: 100%;
 }
 
 .description, .impact {
-  grid-column: 1 / -1;
   margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.825rem;
+  line-height: 1.45;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
   color: rgba(255, 255, 255, 0.75);
+  width: 100%;
 }
 
 .description {
   margin-bottom: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 3.5rem;
+  box-sizing: border-box;
 }
 
 .impact {
@@ -199,11 +220,12 @@
   padding: 8px;
   border-radius: 4px;
   margin-top: 4px;
+  box-sizing: border-box;
 }
 
 .location {
-  grid-column: 1 / -1;
   font-size: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .chroma-info .role,

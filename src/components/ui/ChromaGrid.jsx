@@ -160,12 +160,16 @@ export const ChromaGrid = ({
           <div className="chroma-img-wrapper">
             <img src={c.image} alt={c.title} loading="lazy" />
           </div>          <footer className="chroma-info">
-            <h3 className="name">{c.title}</h3>
-            {c.handle && <span className="handle">{c.handle}</span>}
+            <div className="chroma-header">
+              <h3 className="name">{c.title}</h3>
+              {c.handle && <span className="handle">{c.handle}</span>}
+            </div>
             <p className="role">{c.subtitle}</p>
-            {c.description && <p className="description">{c.description}</p>}
-            {c.impact && <p className="impact">{c.impact}</p>}
-            {c.location && <span className="location">{c.location}</span>}
+            <div className="chroma-content">
+              {c.description && <p className="description">{c.description}</p>}
+              {c.impact && <p className="impact">{c.impact}</p>}
+              {c.location && <span className="location">{c.location}</span>}
+            </div>
           </footer>
         </article>
       ))}
