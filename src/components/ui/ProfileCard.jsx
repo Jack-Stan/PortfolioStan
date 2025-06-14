@@ -233,9 +233,7 @@ const ProfileCardComponent = ({
       "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
     }),
     [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
-  );
-
-  const handleContactClick = useCallback(() => {
+  );  const handleContactClick = useCallback(() => {
     onContactClick?.();
   }, [onContactClick]);
 
@@ -279,8 +277,7 @@ const ProfileCardComponent = ({
                     <div className="pc-handle">@{handle}</div>
                     <div className="pc-status">{status}</div>
                   </div>
-                </div>
-                <button
+                </div>                <button
                   className="pc-contact-btn"
                   onClick={handleContactClick}
                   style={{ pointerEvents: "auto" }}

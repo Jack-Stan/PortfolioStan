@@ -18,6 +18,7 @@ import BackgroundDither from "../components/ui/BackgroundDither";
 import ProjectDetail from "../components/ui/ProjectDetail";
 import DecryptedText from "../components/ui/DecryptedText";
 import ProjectsChroma from "../components/section/ProjectsChroma";
+import CVDownloadButton from "../components/CVDownloadButton";
 
 // Import project images
 import brightestImage from "../data/photo/Brightest.png";
@@ -211,7 +212,7 @@ const projectsData = [
     imageUrl: time2BillImage,
     technologies: ["Flutter", "Firebase", "Firestore", "Cloud Functions", "Authentication", "Provider", "fl_chart", "UBL/Peppol"],
     liveUrl: "https://time2bill.example.com",
-    repoUrl: "https://github.com/Jack-Stan/time2bill",
+    repoUrl: "https://github.com/Jack-Stan/Time2Bil",
     features: [
       "Cross-platform applicatie (web, iOS, Android)",
       "Projectbeheer met taakorganisatie",
@@ -294,7 +295,7 @@ const projectsData = [
     imageUrl: purePeauImage,
     technologies: ["React", "Tailwind CSS", "Responsive Design", "SEO"],
     liveUrl: "https://purepeau.example.com",
-    repoUrl: "https://github.com/Jack-Stan/purepeau",
+    repoUrl: "https://github.com/Jack-Stan/PurePeauWebsite",
     features: [
       "Professionele diensten showcase met beschrijvingen en tarieven",
       "Volledig blogbeheersysteem voor de eigenaar",
@@ -364,7 +365,7 @@ const projectsData = [
     imageUrl: jaqAIImage,
     technologies: ["React.js", "Face-api.js", "Python", "Flask", "SQLAlchemy", "Styled-components", "Spraakherkenning", "AI"],
     liveUrl: "https://jaqai.example.com",
-    repoUrl: "https://github.com/Jack-Stan/jaqai",
+    repoUrl: "https://github.com/Jack-Stan/TheJaqProject",
     features: [
       "Conversationele AI die reageert met contextuele antwoorden",
       "Zelf-lerend systeem dat verbetert door gebruikersinteracties",
@@ -596,7 +597,7 @@ const HomePage = () => {
                 </p>
                 <div className="about-buttons">
                   <a href="#contact" className="about-button">Contact opnemen</a>
-                  <a href="/cv.pdf" className="about-button secondary" target="_blank" rel="noopener noreferrer">Download CV</a>
+                  <CVDownloadButton />
                 </div>
               </div>
             </div>
