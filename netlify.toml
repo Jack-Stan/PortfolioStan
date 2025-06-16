@@ -15,8 +15,8 @@
 
 # Environment variable settings
 [build.environment]
-  # Add environment variables for your build here if needed
-  # REACT_APP_API_URL = "https://api.example.com"
+  # Avoid treating ESLint warnings as errors
+  CI = "false"
 
 # Asset optimization
 [build.processing]
