@@ -1,12 +1,15 @@
 import React from 'react';
 import '../styles/homepage/contact-form.css';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="contact-form-container">
       <div className="contact-buttons-container">
         <div className="form-explanation">
-          <p>Neem contact met mij op via een van de onderstaande opties:</p>
+          <p>{t('contactIntro')}</p>
         </div>
         
         <div className="contact-buttons">
@@ -16,7 +19,7 @@ const ContactForm = () => {
             target="_blank"
             rel="noopener noreferrer"
           >            <i className="fas fa-envelope"></i>
-            ProtonMail
+            {t('protonmail')}
           </a>
             <a 
             href="https://github.com/Jack-Stan" 
@@ -24,7 +27,7 @@ const ContactForm = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-github"></i>            GitHub
+            <i className="fab fa-github"></i>            {t('github')}
           </a>
             <a 
             href="https://www.linkedin.com/in/stan-verbruggen-67b928198" 
@@ -32,11 +35,11 @@ const ContactForm = () => {
             target="_blank"
             rel="noopener noreferrer"
           ><i className="fab fa-linkedin-in"></i>
-            LinkedIn          </a>
+            {t('linkedin')}          </a>
         </div>
         
         <div className="email-display">
-          <p>E-mail: <span className="email-address">stanverbruggensj@protonmail.com</span></p>
+          <p>{t('emailLabel')} <span className="email-address">stanverbruggensj@protonmail.com</span></p>
         </div>
       </div>
     </div>

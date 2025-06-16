@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/homepage/navigation.css';
+import ThemeToggle from './ThemeToggle';
+import LanguageToggle from './LanguageToggle';
+import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +24,14 @@ const Navigation = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
   };
 
   const handleCVDownload = () => {
@@ -39,19 +51,25 @@ const Navigation = () => {
   }
   return (
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="nav-container">        <div className="logo">
+      <div className="nav-container">        
+        <div className="logo">
           <Link to="/home">Portfolio</Link>
         </div>
-        
-        <div className={`menu-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div className={`menu-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
-        </div>          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>          <li><a href="#about" onClick={() => setMenuOpen(false)}>Over Mij</a></li>
-          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Specialisaties</a></li>
-          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projecten</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-          <li><button onClick={handleCVDownload} className="nav-cv-button">CV</button></li>
+        </div>          
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>          
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>{t('aboutMe')}</a></li>
+          <li><a href="#skills" onClick={() => setMenuOpen(false)}>{t('skills')}</a></li>
+          <li><a href="#projects" onClick={() => setMenuOpen(false)}>{t('projects')}</a></li>          
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t('contact')}</a></li>
+          <li><button onClick={handleCVDownload} className="nav-cv-button">{t('cv')}</button></li>
+          <li className="toggle-container">
+            <ThemeToggle />
+            <LanguageToggle />
+          </li>
         </ul>
       </div>
     </nav>

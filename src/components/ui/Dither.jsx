@@ -258,12 +258,34 @@ export default function Dither({
   enableMouseInteraction = true,
   mouseRadius = 1,
 }) {
+  const [mounted, setMounted] = useState(false);
+  
+  // Only mount the Canvas component when the component is fully mounted
+  // This helps prevent race conditions during page transitions
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
+  }, []);
+  
+  // Only render the Canvas when the component is mounted in the DOM
+  if (!mounted) {
+    return null;
+  }
+  
   return (
     <Canvas
       className="dither-container"
       camera={{ position: [0, 0, 6] }}
-      dpr={window.devicePixelRatio}
-      gl={{ antialias: true, preserveDrawingBuffer: true }}
+      dpr={Math.min(window.devicePixelRatio, 2)} // Limit DPR to avoid performance issues
+      gl={{ 
+        antialias: false, // Disable antialiasing for better performance
+        alpha: true,
+        powerPreference: 'high-performance', 
+        preserveDrawingBuffer: true,
+        failIfMajorPerformanceCaveat: true // Don't render if it would be very slow
+      }}
     >
       <DitheredWaves
         waveSpeed={waveSpeed}

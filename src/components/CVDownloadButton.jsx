@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const CVDownloadButton = () => {
+  const { t } = useTranslation();
+  
   const handleDownload = () => {
     // Optioneel: voeg hier analytics toe
     console.log('CV download gestart');
@@ -20,7 +23,7 @@ const CVDownloadButton = () => {
       className="about-button secondary"
       style={{ cursor: 'pointer' }}
     >
-      Download CV
+      {t('downloadCV', 'Download CV')}
     </button>
   );
 };

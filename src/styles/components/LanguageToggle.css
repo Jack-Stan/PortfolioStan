@@ -1,0 +1,39 @@
+/* Language Toggle Styling */
+.language-toggle {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.language-toggle-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .language-toggle-button {
+  color: #333;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .language-toggle-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .language-toggle-button {
+    padding: 4px 8px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Dither from './Dither';
 
 // Reusable background component with consistent styling
-const BackgroundDither = ({ customStyle = {} }) => {
-  return (    <div style={{ 
+// Using memo to prevent unnecessary re-renders
+const BackgroundDither = memo(({ customStyle = {} }) => {
+  return (
+    <div style={{ 
       position: 'fixed', 
       top: 0, 
       left: 0, 
@@ -11,7 +13,8 @@ const BackgroundDither = ({ customStyle = {} }) => {
       height: '100%', 
       zIndex: -10,
       backgroundColor: '#000', // Black background as base
-      ...customStyle    }}>
+      ...customStyle 
+    }}>
       <Dither
         waveColor={[0.2, 0.2, 0.2]} // Dark gray for the dither effect
         disableAnimation={false}
@@ -24,6 +27,6 @@ const BackgroundDither = ({ customStyle = {} }) => {
       />
     </div>
   );
-};
+});
 
 export default BackgroundDither;
