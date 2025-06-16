@@ -7,6 +7,7 @@ const translations = {
     contact: 'Contact',
     cv: 'CV',
     contactIntro: 'Feel free to contact me through any of the following channels:',
+    contactMeIntro: 'Feel free to contact me through any of the following channels:',
     name: 'Name',
     email: 'Email',
     message: 'Message',
@@ -16,6 +17,9 @@ const translations = {
     linkedin: 'LinkedIn',
     emailLabel: 'Email:',
     downloadCV: 'Download CV',
+    problemSolving: 'Problem Solving Ability',
+    codeQuality: 'Code Quality & Testing',
+    agileMethodology: 'Agile Methodology',
     // Add more translations as needed
   },
   nl: {
@@ -25,6 +29,7 @@ const translations = {
     contact: 'Contact',
     cv: 'CV',
     contactIntro: 'Neem gerust contact met mij op via een van de volgende kanalen:',
+    contactMeIntro: 'Neem gerust contact met mij op via een van de volgende kanalen:',
     name: 'Naam',
     email: 'E-mail',
     message: 'Bericht',
@@ -34,6 +39,9 @@ const translations = {
     linkedin: 'LinkedIn',
     emailLabel: 'E-mail:',
     downloadCV: 'Download CV',
+    problemSolving: 'Probleemoplossend vermogen',
+    codeQuality: 'Code Kwaliteit & Testing',
+    agileMethodology: 'Agile Methodologie',
     // Add more translations as needed
   }
 };

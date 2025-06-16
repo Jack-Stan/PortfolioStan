@@ -4,7 +4,7 @@ import '../styles/components/LanguageToggle.css';
 
 const LanguageToggle = () => {
   const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
+  const currentLanguage = i18n.language || 'nl';
 
   const toggleLanguage = () => {
     const newLanguage = currentLanguage === 'nl' ? 'en' : 'nl';
