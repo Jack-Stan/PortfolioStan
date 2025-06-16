@@ -10,11 +10,11 @@
 
 .skill-name {
   font-weight: 500;
-  color: var(--color-text-primary); /* Using theme variable */
+  color: #000000; /* Always black */
 }
 
 .skill-percentage {
-  color: var(--color-text-primary); /* Using theme variable */
+  color: #000000; /* Always black */
   text-shadow: none; /* Removed text shadow for better readability */
 }
 

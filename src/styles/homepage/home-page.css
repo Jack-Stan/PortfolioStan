@@ -692,7 +692,6 @@ section.active .skills-column:nth-child(3) {
 .competency-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -700,6 +699,7 @@ section.active .skills-column:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
 .competency-label {
@@ -715,10 +715,10 @@ section.active .skills-column:nth-child(3) {
 }
 
 .competency-level {
-  height: 8px;
+  height: 10px;
   width: 150px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
@@ -727,9 +727,9 @@ section.active .skills-column:nth-child(3) {
   content: '';
   position: absolute;
   height: 100%;
-  border-radius: 4px;
+  border-radius: 5px;
   background: linear-gradient(90deg, var(--level-color, #6e72fc) 0%, var(--level-color-end, #ad1deb) 100%);
-  animation: fillLevel 1.5s ease-out forwards;
+  animation: fillLevel 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 .competency-level.beginner::after {

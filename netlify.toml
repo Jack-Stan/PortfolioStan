@@ -5,7 +5,7 @@
   # Directory to publish (relative to root of your repo)
   publish = "build"
   # Default build command
-  command = "npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
 
 # Redirects and headers
 [[redirects]]

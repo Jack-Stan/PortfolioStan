@@ -296,27 +296,12 @@ const HomePage = () => {
                 <div className="skill-description">
                   <p>{localizedSkills.supportDescription}</p>
                 </div>
-              </div>
-              <div className="skills-column">
+              </div>              <div className="skills-column">
                 <h3>{localizedSkills.professionalTitle}</h3>
-                <div className="competency-grid">
-                  <div className="competency-item">
-                    <span className="competency-label">{t('problemSolving', 'Probleemoplossend vermogen')}</span>
-                    <div className="competency-level expert"></div>
-                  </div>
-                  <div className="competency-item">
-                    <span className="competency-label">UI/UX Design</span>
-                    <div className="competency-level advanced"></div>
-                  </div>
-                  <div className="competency-item">
-                    <span className="competency-label">{t('codeQuality', 'Code Kwaliteit & Testing')}</span>
-                    <div className="competency-level advanced"></div>
-                  </div>
-                  <div className="competency-item">
-                    <span className="competency-label">{t('agileMethodology', 'Agile Methodologie')}</span>
-                    <div className="competency-level competent"></div>
-                  </div>
-                </div>
+                <SkillBar skill={t('problemSolving', 'Probleemoplossend vermogen')} percentage={95} color="#e74c3c" />
+                <SkillBar skill="UI/UX Design" percentage={75} color="#f1c40f" />
+                <SkillBar skill={t('codeQuality', 'Code Kwaliteit & Testing')} percentage={75} color="#f1c40f" />
+                <SkillBar skill={t('agileMethodology', 'Agile Methodologie')} percentage={50} color="#2ecc71" />
                 <div className="skill-description">
                   <p>{localizedSkills.professionalDescription}</p>
                 </div>
