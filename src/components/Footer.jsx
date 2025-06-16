@@ -15,19 +15,16 @@ const Footer = () => {
           <div className="footer-links">
             <div className="footer-link-group">
               <h4>Navigatie</h4>
-              <ul>
-                <li><a href="#about">Over Mij</a></li>
+              <ul>                <li><a href="#about">Over Mij</a></li>
                 <li><a href="#skills">Vaardigheden</a></li>
                 <li><a href="#projects">Projecten</a></li>
-                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
-            <div className="footer-link-group">
-              <h4>Connect</h4>
+            <div className="footer-link-group">              <h4>Connect</h4>
               <ul>
                 <li><a href="https://github.com/Jack-Stan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="www.linkedin.com/in/stan-verbruggen-67b928198" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              
+                <li><a href="https://www.linkedin.com/in/stan-verbruggen-67b928198" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="mailto:stanverbruggensj@gmail.com">E-mail</a></li>
               </ul>
             </div>
           </div>
