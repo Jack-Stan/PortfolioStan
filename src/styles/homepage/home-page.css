@@ -4,7 +4,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-primary);
   /* Background is now provided by BackgroundDither component */
 }
 
@@ -20,10 +20,10 @@
   text-align: center;
   margin: 4rem 0 5rem;
   padding: 3rem 0;
-  background-color: var(--bg-secondary);
+  background-color: var(--color-bg-secondary);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  box-shadow: 0 8px 32px var(--shadow-color);
+  box-shadow: 0 8px 32px var(--color-shadow);
   position: relative;
   overflow: hidden;
 }
@@ -49,50 +49,50 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(90deg, var(--color-accent-hover) 0%, var(--color-accent) 100%);
   z-index: 1;
 }
 
 .home-header h1 {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--color-text-primary);
   font-weight: 700;
   letter-spacing: -0.5px;
   animation: fadeIn 1s ease-out;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px var(--color-shadow);
 }
 
 .home-header p {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--color-text-primary);
   max-width: 700px;
   margin: 0 auto 3rem;
   line-height: 1.6;
   animation: fadeIn 1.5s ease-out;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px var(--color-shadow);
 }
 
 section {
   margin-bottom: 6rem;
   padding: 2.5rem;
-  background-color: rgba(30, 30, 30, 0.85);
+  background-color: var(--color-bg-secondary);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px var(--color-shadow);
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
               box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: var(--color-text-primary);
   z-index: 1;
 }
 
 .about-section {
   margin-top: 3rem;
-  background-color: rgba(30, 30, 30, 0.85);
-  color: #fff;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
   padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ section {
 
 section:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 35px var(--color-shadow);
 }
 
 section::after {
@@ -111,7 +111,7 @@ section::after {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease;
@@ -130,7 +130,7 @@ section:hover::after {
 section h2 {
   font-size: 2.2rem;
   margin-bottom: 0.8rem;
-  color: #fff;
+  color: var(--color-text-primary);
   position: relative;
   display: inline-block;
   transform: translateY(20px);
@@ -146,7 +146,7 @@ section.active h2 {
 .section-divider {
   height: 4px;
   width: 0;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
   margin: 0 auto;
   border-radius: 2px;
   transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -164,13 +164,13 @@ section.active .section-divider {
 }
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--color-card-bg);
   backdrop-filter: blur(5px);
   border-radius: 12px;
   padding: 1.8rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px var(--color-shadow);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid var(--color-border);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -184,7 +184,7 @@ section.active .section-divider {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(110, 114, 252, 0.15), rgba(173, 29, 235, 0.15));
+  background: linear-gradient(135deg, rgba(var(--color-accent-rgb), 0.15), rgba(var(--color-accent-hover-rgb), 0.15));
   opacity: 0;
   z-index: -1;
   transition: opacity 0.5s ease;
@@ -192,8 +192,8 @@ section.active .section-divider {
 
 .project-card:hover {
   transform: perspective(1000px) rotateY(5deg) translateY(-15px) translateZ(10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  border-color: rgba(110, 114, 252, 0.5);
+  box-shadow: 0 20px 40px var(--color-shadow);
+  border-color: var(--color-accent);
 }
 
 .project-card:hover::before {
@@ -660,7 +660,7 @@ section.active .skills-column:nth-child(3) {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  color: #f0f0f0;
+  color: var(--text-primary);
 }
 
 /* Add styles for skill descriptions */
@@ -1039,7 +1039,7 @@ section.active .skills-column:nth-child(3) {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  color: #f0f0f0;
+  color: var(--text-primary);
 }
 
 /* Professional CTA Section Styling */
@@ -1156,13 +1156,13 @@ section.active .skills-column:nth-child(3) {
 }
 
 .contact-section {
-  background-color: rgba(30, 30, 30, 0.85);
-  color: #ffffff;
+  background-color: var(--color-bg-secondary);
+  color: var(--text-primary);
   padding: 4rem 2rem;
 }
 
 .contact-section .section-header h2 {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .contact-section .section-divider {
@@ -1178,7 +1178,7 @@ section.active .skills-column:nth-child(3) {
 .contact-section .contact-intro p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
 }
 
 .contact-content {

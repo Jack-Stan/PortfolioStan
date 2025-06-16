@@ -50,16 +50,10 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData }) => {
 
   return (
     <div className="projects-chroma-container">
-      <div className="projects-chroma-wrapper">        <ChromaGrid 
+      <div className="projects-chroma-wrapper">
+        <ChromaGrid 
           items={chromaItems}
-          radius={300}
-          damping={0.45}
-          fadeOut={0.6}
-          ease="power3.out"
-          columns={3}
-          rows={2}
-          className="projects-chroma-grid"
-          handleProjectSelect={handleProjectSelect}
+          onItemClick={handleProjectSelect}
         />
       </div>      <div className="projects-chroma-instruction">
         <span className="instruction-text">Beweeg je cursor over de projectkaarten en klik voor volledige details</span>

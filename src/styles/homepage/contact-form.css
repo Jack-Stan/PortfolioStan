@@ -2,9 +2,9 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--card-bg);
+  background-color: var(--color-card-bg);
   border-radius: 10px;
-  box-shadow: 0 4px 6px var(--shadow-color);
+  box-shadow: 0 4px 6px var(--color-shadow);
 }
 
 .contact-form {
@@ -21,16 +21,16 @@
 .form-group label {
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .form-group input,
 .form-group textarea {
   padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-input-border);
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #fff;
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -38,14 +38,14 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #5271ff;
+  border-color: var(--color-input-focus);
   box-shadow: 0 0 0 2px rgba(82, 113, 255, 0.2);
 }
 
 .submit-button {
   padding: 0.75rem 1.5rem;
-  background-color: #5271ff;
-  color: white;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -56,28 +56,28 @@
 }
 
 .submit-button:hover {
-  background-color: #3a5dff;
+  background-color: var(--color-button-hover);
   transform: translateY(-2px);
 }
 
 .submit-button:disabled {
-  background-color: #7a8bcc;
+  opacity: 0.6;
   cursor: not-allowed;
   transform: none;
 }
 
 .error-message {
-  color: #ff5252;
+  color: var(--color-error);
   margin-top: 0.5rem;
   font-size: 0.9rem;
   padding: 0.5rem;
   background-color: rgba(255, 82, 82, 0.1);
   border-radius: 4px;
-  border-left: 3px solid #ff5252;
+  border-left: 3px solid var(--color-error);
 }
 
 .success-message {
-  color: #52ff7a;
+  color: var(--color-success);
   text-align: center;
   padding: 2rem;
 }
@@ -89,7 +89,7 @@
 
 .success-message button {
   padding: 0.75rem 1.5rem;
-  background-color: #52ff7a;
+  background-color: var(--color-success);
   color: #000;
   border: none;
   border-radius: 4px;
@@ -262,7 +262,7 @@
 
 .email-display p {
   margin: 0;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1rem;
 }
 

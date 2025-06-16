@@ -8,10 +8,6 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container">
       <div className="contact-buttons-container">
-        <div className="form-explanation">
-          <p>{t('contactIntro')}</p>
-        </div>
-        
         <div className="contact-buttons">
           <a 
             href="mailto:stanverbruggensj@protonmail.com" 

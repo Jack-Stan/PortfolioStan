@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import useTheme from '../hooks/useTheme';
 import '../styles/components/ThemeToggle.css';
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem('theme') === 'dark' || 
-    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  );
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const { theme, toggleTheme } = useTheme();
+  const isDarkMode = theme === 'dark';
 
   return (
     <div className="theme-toggle">

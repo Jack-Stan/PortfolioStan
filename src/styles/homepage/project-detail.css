@@ -16,17 +16,17 @@
 
 .project-detail-content {
   position: relative;
-  background-color: #1f1f1f;
+  background-color: var(--color-bg-secondary);
   border-radius: 12px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px -12px var(--color-shadow);
   max-width: 900px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   padding: 2.5rem;
   margin: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
 }
 
 .close-button {
@@ -35,7 +35,7 @@
   right: 1rem;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--color-text-primary);
   font-size: 2rem;
   cursor: pointer;
   width: 40px;
@@ -44,17 +44,18 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .close-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-accent);
 }
 
 .project-detail-header {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -64,7 +65,7 @@
 .project-detail-header h2 {
   font-size: 2.2rem;
   margin: 0;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -82,9 +83,9 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-button-bg);
   border-radius: 8px;
-  color: #fff;
+  color: var(--color-button-text);
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 0.9rem;
@@ -92,7 +93,7 @@
 }
 
 .detail-link:hover {
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: var(--color-button-hover);
   transform: translateY(-2px);
 }
 
@@ -100,7 +101,7 @@
   margin-bottom: 2rem;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px -15px var(--color-shadow);
 }
 
 .project-detail-image img {
@@ -112,16 +113,19 @@
 
 .project-detail-body {
   line-height: 1.6;
+  color: var(--color-text-primary);
 }
 
 .project-full-description {
   margin-bottom: 2rem;
+  color: var(--color-text-secondary);
 }
 
 .project-description {
   margin-bottom: 2rem;
   font-size: 1.1rem;
   line-height: 1.7;
+  color: var(--color-text-primary);
 }
 
 .project-technologies, 
@@ -135,7 +139,7 @@
 .project-impact h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
   position: relative;
   display: inline-block;
   padding-bottom: 0.5rem;
@@ -150,7 +154,7 @@
   left: 0;
   width: 60%;
   height: 3px;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
   border-radius: 2px;
 }
 
@@ -161,8 +165,8 @@
 }
 
 .tech-tag {
-  background: rgba(110, 114, 252, 0.2);
-  color: #fff;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -172,12 +176,14 @@
 }
 
 .tech-tag:hover {
-  background: rgba(110, 114, 252, 0.3);
+  background: var(--color-bg-primary);
   transform: translateY(-2px);
+  border-color: var(--color-accent);
 }
 
 .feature-list {
   padding-left: 1.5rem;
+  color: var(--color-text-primary);
 }
 
 .feature-list li {
@@ -189,7 +195,7 @@
   content: "→";
   position: absolute;
   left: -1.5rem;
-  color: #ad1deb;
+  color: var(--color-accent);
 }
 
 .impact-points {
@@ -201,14 +207,14 @@
 .impact-point {
   display: flex;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-secondary);
   padding: 1rem;
   border-radius: 8px;
-  border-left: 3px solid #6e72fc;
+  border-left: 3px solid var(--color-accent);
 }
 
 .impact-icon {
-  color: #6e72fc;
+  color: var(--color-accent);
   flex-shrink: 0;
 }
 

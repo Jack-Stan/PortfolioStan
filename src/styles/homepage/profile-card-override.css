@@ -11,11 +11,37 @@
   height: 450px !important;
   max-height: 450px !important;
   width: 100% !important;
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-text-primary) !important;
 }
 
 .pc-card-wrapper {
   width: 100% !important;
   max-width: 350px !important;
+}
+
+.pc-card .user-info h2,
+.pc-card .user-info h3,
+.pc-card .user-info p {
+  color: var(--color-text-primary) !important;
+}
+
+.pc-card .user-info .handle {
+  color: var(--color-text-secondary) !important;
+}
+
+.pc-card .status {
+  background-color: var(--color-success) !important;
+  color: var(--color-bg-primary) !important;
+}
+
+.pc-card .contact-button {
+  background-color: var(--color-button-bg) !important;
+  color: var(--color-button-text) !important;
+}
+
+.pc-card .contact-button:hover {
+  background-color: var(--color-button-hover) !important;
 }
 
 @media (max-width: 768px) {

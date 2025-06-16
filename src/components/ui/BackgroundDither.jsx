@@ -1,9 +1,13 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
 import Dither from './Dither';
+import ThemeContext from '../../context/ThemeContext';
 
 // Reusable background component with consistent styling
 // Using memo to prevent unnecessary re-renders
 const BackgroundDither = memo(({ customStyle = {} }) => {
+  const { theme } = useContext(ThemeContext);
+  const isDarkMode = theme === 'dark';
+  
   return (
     <div style={{ 
       position: 'fixed', 
@@ -12,11 +16,11 @@ const BackgroundDither = memo(({ customStyle = {} }) => {
       width: '100%', 
       height: '100%', 
       zIndex: -10,
-      backgroundColor: '#000', // Black background as base
+      backgroundColor: isDarkMode ? '#121212' : '#f8f9fa', // Theme-based background color
       ...customStyle 
     }}>
       <Dither
-        waveColor={[0.2, 0.2, 0.2]} // Dark gray for the dither effect
+        waveColor={isDarkMode ? [0.2, 0.2, 0.2] : [0.9, 0.9, 0.9]} // Theme-based dither effect
         disableAnimation={false}
         enableMouseInteraction={true}
         mouseRadius={0.3}
