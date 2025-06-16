@@ -1,6 +1,6 @@
 // Project data with translations for both languages
 const projectsData = {
-  en: [
+  nl: [
     {
       id: "brightest",
       title: "Brightest Test Automation Framework",
@@ -148,9 +148,8 @@ const projectsData = {
         "Improved accessibility: Provides multiple interaction methods (text, speech, visual) making information accessible to users with different needs or preferences",
         "Real-time information access: Delivers critical financial and news data within seconds, enabling faster decision making"
       ]
-    }
-  ],
-  nl: [
+    }  ],
+  en: [
     {
       id: "brightest",
       title: "Brightest Test Automation Framework",

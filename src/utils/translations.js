@@ -1,6 +1,6 @@
 // Translation dictionary
 const translations = {
-  en: {
+  nl: {
     aboutMe: 'About Me',
     skills: 'Skills',
     projects: 'Projects',
@@ -22,7 +22,7 @@ const translations = {
     agileMethodology: 'Agile Methodology',
     // Add more translations as needed
   },
-  nl: {
+  en: {
     aboutMe: 'Over Mij',
     skills: 'Specialisaties',
     projects: 'Projecten',
