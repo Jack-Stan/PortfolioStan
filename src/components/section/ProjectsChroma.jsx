@@ -48,12 +48,18 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData }) => {
     };
   });
 
+  const handleItemClick = (item) => {
+    if (handleProjectSelect) {
+      handleProjectSelect(item.handle);
+    }
+  };
+
   return (
     <div className="projects-chroma-container">
       <div className="projects-chroma-wrapper">
         <ChromaGrid 
           items={chromaItems}
-          onItemClick={handleProjectSelect}
+          handleProjectSelect={handleItemClick}
         />
       </div>      <div className="projects-chroma-instruction">
         <span className="instruction-text">Beweeg je cursor over de projectkaarten en klik voor volledige details</span>
