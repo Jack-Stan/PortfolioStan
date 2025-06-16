@@ -116,50 +116,20 @@ export const ChromaGrid = ({
     });
   };
 
-  useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return;
+  const handleCardMove = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
 
-    const cards = Array.from(root.querySelectorAll(".chroma-card"));
-    const fade = fadeRef.current;
-
-    const onMouseMove = (e) => {
-      const r = root.getBoundingClientRect();
-      moveTo(e.clientX - r.left, e.clientY - r.top);
-      gsap.to(fade, { opacity: 0, duration: 0.25, overwrite: true });
-    };
-
-    const onMouseLeave = () => {
-      gsap.to(fade, {
-        opacity: 1,
-        duration: fadeOut,
-        overwrite: true,
-      });
-    };
-
-    const onClick = (e, item) => {
-      e.preventDefault();
-      if (handleProjectSelect) {
-        handleProjectSelect(item);
-      }
-    };
-
-    // Add click event listeners to cards
-    cards.forEach((card, index) => {
-      card.addEventListener("click", (e) => onClick(e, items[index]));
-    });
-
-    root.addEventListener("mousemove", onMouseMove);
-    root.addEventListener("mouseleave", onMouseLeave);
-
-    return () => {
-      cards.forEach((card, index) => {
-        card.removeEventListener("click", (e) => onClick(e, items[index]));
-      });
-      root.removeEventListener("mousemove", onMouseMove);
-      root.removeEventListener("mouseleave", onMouseLeave);
-    };
-  }, [items, handleProjectSelect]);
+  const handleCardClick = (url, i) => {
+    if (url === "#" && items[i]?.originalProject) {
+      handleProjectSelect(items[i].originalProject);
+    }
+  };
 
   return (
     <div
@@ -182,7 +152,7 @@ export const ChromaGrid = ({
           style={{
             "--card-border": c.borderColor || "transparent",
             "--card-gradient": c.gradient,
-            cursor: c.url ? "pointer" : "default",
+            cursor: "pointer"
           }}
         >
           <div className="chroma-img-wrapper">

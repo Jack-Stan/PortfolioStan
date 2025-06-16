@@ -43,23 +43,17 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData }) => {
       impact: impactSummary,
       borderColor: borderColors[index % borderColors.length],
       gradient: gradients[index % gradients.length],
-      url: "#", // We'll use the card click to trigger project detail view
+      url: "#", // This is needed to trigger the click handler
       originalProject: project // Store the original project data
     };
   });
-
-  const handleItemClick = (item) => {
-    if (handleProjectSelect) {
-      handleProjectSelect(item.handle);
-    }
-  };
 
   return (
     <div className="projects-chroma-container">
       <div className="projects-chroma-wrapper">
         <ChromaGrid 
           items={chromaItems}
-          handleProjectSelect={handleItemClick}
+          handleProjectSelect={handleProjectSelect}
         />
       </div>      <div className="projects-chroma-instruction">
         <span className="instruction-text">Beweeg je cursor over de projectkaarten en klik voor volledige details</span>

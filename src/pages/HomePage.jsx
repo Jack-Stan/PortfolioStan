@@ -135,6 +135,14 @@ const HomePage = () => {
         <BackgroundDither />
       </div>
       
+      {/* Project Detail Modal */}
+      {selectedProject && (
+        <ProjectDetail
+          project={selectedProject}
+          onClose={handleCloseDetail}
+        />
+      )}
+      
       <div className="home-page" ref={homePageRef}>
         <div className="home-content">
           <section 
@@ -365,14 +373,6 @@ const HomePage = () => {
         </div>
       </div>
       <Footer />
-      
-      {/* Project Detail Modal - Only render if a project is selected */}
-      {selectedProject && (
-        <ProjectDetail 
-          project={localizedProjects.find(p => p.id === selectedProject)} 
-          onClose={handleCloseDetail}
-        />
-      )}
     </div>
   );
 };
