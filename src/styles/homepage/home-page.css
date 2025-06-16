@@ -705,7 +705,13 @@ section.active .skills-column:nth-child(3) {
 .competency-label {
   flex: 1;
   font-weight: 500;
-  color: #000000; /* Changed to black */
+  color: #000000; /* Fixed black color */
+}
+
+.competency-percentage {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #000000; /* Fixed black color */
 }
 
 .competency-level {
@@ -1190,19 +1196,4 @@ section.active .skills-column:nth-child(3) {
 
 .contact-section:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-  }
-  
-  .contact-form-container {
-    width: 100%;
-  }
-  
-  .submit-button {
-    width: 100%;
-    align-self: center;
-  }
 }

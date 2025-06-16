@@ -226,7 +226,7 @@
 /* Challenges and Problem Solving Section */
 .project-challenges {
   margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
   padding-top: 1.5rem;
 }
 
@@ -238,23 +238,23 @@
 }
 
 .challenge-item {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-bg-secondary);
   border-radius: 8px;
   padding: 1.25rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--color-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .challenge-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px var(--color-shadow);
 }
 
 .challenge-item h4 {
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 0.75rem;
-  color: #fff;
+  color: var(--color-text-primary);
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -266,14 +266,14 @@
   bottom: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
 }
 
 .challenge-item p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-secondary);
 }
 
 /* Scrollbar styling */
@@ -282,12 +282,12 @@
 }
 
 .project-detail-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-secondary);
   border-radius: 4px;
 }
 
 .project-detail-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6e72fc 0%, #ad1deb 100%);
+  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
   border-radius: 4px;
 }
 
