@@ -14,35 +14,34 @@ const WelcomePage = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const pageRef = useRef(null);
   const contentRef = useRef(null);
-
   const handleScrollDown = () => {
     setIsTransitioning(true);
     
-    // Animatie van onder naar boven (page slide up)
+    // Animation from bottom to top (page slide up)
     const tl = gsap.timeline({
       onComplete: () => {
-        // Navigeer naar home na de animatie
+        // Navigate to home after animation
         setTimeout(() => {
           navigate("/home", { state: { from: 'welcome' } });
         }, 100);
       }
     });
     
-    // Fade uit de huidige content
+    // Fade out current content
     tl.to(contentRef.current, {
-      y: -100,
+      y: -50, // Reduced for better mobile experience
       opacity: 0,
-      duration: 0.5,
+      duration: 0.4, // Slightly faster for mobile
       ease: "power2.in"
     });
     
-    // Slide de nieuwe pagina in van beneden
+    // Slide the new page in from below
     tl.to(pageRef.current, {
       y: "-100vh",
-      duration: 0.8,
-      delay: 0.1,
+      duration: 0.7, // Slightly faster for mobile
+      delay: 0.05, // Reduced delay for mobile
       ease: "power3.inOut"
-    }, "-=0.3");
+    }, "-=0.2");
   };
 
   const handleTypingComplete = () => {
