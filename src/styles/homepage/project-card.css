@@ -98,12 +98,18 @@
 }
 
 .project-tech-tag {
-  font-size: 0.8rem;
-  padding: 0.3rem 0.6rem;
-  background-color: var(--color-bg-secondary);
-  border-radius: 20px;
-  color: var(--color-text-secondary);
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--color-tech-tag-bg);
+  color: var(--color-tech-tag-text);
+  border-radius: 4px;
+  font-size: 0.75rem;
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-tech-tag:hover {
+  background-color: var(--color-tech-tag-hover);
 }
 
 .project-impact {
@@ -142,4 +148,48 @@
 
 .project-view-more span:hover {
   text-decoration: underline;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 100%;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+  
+  .project-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info {
+    padding: 1.2rem;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-links {
+    gap: 0.5rem;
+  }
+  
+  .project-link {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+  .project-tech-tag {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
 }

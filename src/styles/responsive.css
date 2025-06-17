@@ -1,0 +1,101 @@
+/* Global responsive styles */
+
+/* Base responsive adjustments */
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+/* Ensure proper viewport behavior on all devices */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  p {
+    font-size: 0.95rem !important;
+  }
+  
+  /* Adjust section padding */
+  section {
+    padding: 2rem 1.5rem !important;
+  }
+  
+  /* Force images to be responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Small devices (mobile phones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  p {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Adjust section padding further */
+  section {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  /* Adjust button sizes for better touch targets */
+  button, 
+  .btn,
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Ensure form inputs are easy to interact with */
+  input, 
+  select, 
+  textarea {
+    font-size: 16px !important; /* Prevent auto-zoom on iOS */
+  }
+}
+
+/* Fix for iOS 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .full-height {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Improve touch targets */
+a, button {
+  touch-action: manipulation;
+}

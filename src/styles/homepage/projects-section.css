@@ -102,10 +102,10 @@
   height: 100%;
 }
 
-/* Responsive adjustments */
+/* Media queries for responsive design */
 @media (max-width: 768px) {
-  .project-folder-container {
-    gap: 30px;
+  .projects-section {
+    padding: 40px 15px;
   }
   
   .section-title {
@@ -114,15 +114,38 @@
   
   .section-description {
     font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .project-folder-container {
+    gap: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .projects-section {
-    padding: 40px 15px;
+    padding: 30px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .section-description {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
   }
   
   .project-folder-container {
     gap: 20px;
+  }
+  
+  .folder-label {
+    font-size: 0.9rem;
   }
 }

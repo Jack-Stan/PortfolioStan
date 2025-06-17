@@ -933,78 +933,43 @@ section.active .skills-column:nth-child(3) {
 }
 
 @media (max-width: 768px) {
-  .home-header h1 {
-    font-size: 2.8rem;
-  }
-  
-  .home-header p {
-    font-size: 1.1rem;
-  }
-  
-  .header-cta {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .cta-button {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-  }
-  
-  .about-content, 
-  .contact-content,
-  .skills-content {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .about-image, 
-  .about-text {
-    width: 100%;
-    transform: none;
-    max-width: 100%;
-  }
-  
-  .about-image {
-    margin-bottom: 1rem;
-  }
-  
-  .about-text {
-    padding: 0;
-  }
-  
-  .skills-column {
-    width: 100%;
-    max-width: none;
-  }
-  
-  section {
+  .home-content {
     padding: 1.5rem;
   }
   
-  .about-text {
-    order: 1;
+  .home-header {
+    margin: 3rem 0 4rem;
+    padding: 2rem 1rem;
   }
   
-  .about-image {
-    order: 0;
+  .home-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-header p {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
   }
   
-  .section-header {
-    margin-bottom: 2rem;
-  }
-  
-  section h2 {
-    font-size: 2rem;
+  section {
+    margin-bottom: 4rem;
+    padding: 2rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .home-content {
+    padding: 1rem;
+  }
+  
+  .home-header {
+    margin: 2rem 0 3rem;
+    padding: 1.5rem 1rem;
+  }
+  
   .home-header h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   
   .home-header p {
@@ -1012,25 +977,8 @@ section.active .skills-column:nth-child(3) {
   }
   
   section {
-    padding: 1rem;
-  }
-  
-  .about-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .about-button {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .section-header {
-    margin-bottom: 1.5rem;
-  }
-  
-  section h2 {
-    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 1rem;
   }
 }
 
