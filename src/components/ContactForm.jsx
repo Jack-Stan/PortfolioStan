@@ -9,7 +9,7 @@ const ContactForm = () => {
     <div className="contact-form-container">
       <div className="contact-buttons-container">
         <div className="contact-buttons">          <a 
-            href="mailto:stanverbruggensj@protonmail.com" 
+            href="mailto:stanverbruggen@protonmail.com" 
             className="contact-button protonmail-button"
             target="_blank"
             rel="noopener noreferrer"
