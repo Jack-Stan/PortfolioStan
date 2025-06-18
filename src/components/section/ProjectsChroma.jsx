@@ -32,9 +32,7 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData }) => {
     // Get a better project description with proper length
     const shortDescription = project.description.length > 100 
       ? project.description.substring(0, 100) + '...'
-      : project.description;
-
-    return {
+      : project.description;    return {
       image: project.imageUrl, // Use the actual project image
       title: project.title,
       subtitle: techString,
@@ -44,7 +42,8 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData }) => {
       borderColor: borderColors[index % borderColors.length],
       gradient: gradients[index % gradients.length],
       url: "#", // This is needed to trigger the click handler
-      originalProject: project // Store the original project data
+      originalProject: project, // Store the original project data
+      developmentStatus: project.developmentStatus // Add development status
     };
   });
 

@@ -9,14 +9,14 @@ const ProjectCard = ({
   liveUrl, 
   repoUrl,
   impact = [],
+  developmentStatus,
   onClick 
 }) => {
   // Select first impact point to highlight if available
   const highlightedImpact = impact && impact.length > 0 ? impact[0] : null;
 
   return (
-    <div className="project-card" onClick={onClick}>
-      <div className="project-image-container">
+    <div className="project-card" onClick={onClick}>      <div className="project-image-container">
         <img src={imageUrl} alt={title} className="project-image" />
         <div className="project-overlay">
           <div className="project-links">
@@ -43,7 +43,12 @@ const ProjectCard = ({
               </a>
             )}
           </div>
-        </div>
+        </div>        {developmentStatus && (
+          <div className={`development-status ${developmentStatus}`}>
+            {developmentStatus === 'in-development' ? 'In ontwikkeling' : 
+             developmentStatus === 'planning' ? 'Gepland' : 'Voltooid'}
+          </div>
+        )}
       </div>
       <div className="project-info">
         <h3 className="project-title">{title}</h3>

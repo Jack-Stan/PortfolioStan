@@ -59,7 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .project-detail-header h2 {
@@ -274,6 +274,36 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--color-text-secondary);
+}
+
+/* Development status styling for detail view */
+.detail-development-status {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.detail-development-status.in-development {
+  background-color: #f97316; /* Orange */
+}
+
+.detail-development-status.planning {
+  background-color: #8b5cf6; /* Purple */
+}
+
+.detail-development-status.completed {
+  background-color: #10b981; /* Green */
+}
+
+.development-info {
+  margin-top: 5px;
+  font-size: 0.85rem;
+  font-weight: normal;
+  line-height: 1.4;
 }
 
 /* Scrollbar styling */

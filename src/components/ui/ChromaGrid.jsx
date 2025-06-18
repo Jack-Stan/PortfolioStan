@@ -143,8 +143,7 @@ export const ChromaGrid = ({
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
     >
-      {data.map((c, i) => (
-        <article
+      {data.map((c, i) => (        <article
           key={i}
           className="chroma-card"
           onMouseMove={handleCardMove}
@@ -156,7 +155,12 @@ export const ChromaGrid = ({
           }}
         >
           <div className="chroma-img-wrapper">
-            <img src={c.image} alt={c.title} loading="lazy" />
+            <img src={c.image} alt={c.title} loading="lazy" />            {c.developmentStatus && (
+              <div className={`chroma-development-status ${c.developmentStatus}`}>
+                {c.developmentStatus === 'in-development' ? 'In ontwikkeling' : 
+                 c.developmentStatus === 'planning' ? 'Gepland' : 'Voltooid'}
+              </div>
+            )}
           </div>
           <footer className="chroma-info">
             <div className="chroma-header">

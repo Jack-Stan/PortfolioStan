@@ -2,6 +2,50 @@
 const projectsData = {
   nl: [
     {
+      id: "jaqops",
+      title: "JAQOps",
+      description: "Een schaalbaar SaaS-platform dat field service bedrijven helpt hun bedrijfsprocessen te digitaliseren en stroomlijnen door klantenbeheer, techniekerplanning, voorraadbeheer en facturatie in één krachtig systeem te combineren.",
+      fullDescription: `
+        <h2>JAQOps</h2>
+        <p>Een schaalbaar SaaS-platform dat field service bedrijven zoals installatie- en onderhoudsbedrijven helpt hun bedrijfsprocessen te digitaliseren en stroomlijnen.</p>
+        
+        <h3>Project Overzicht</h3>
+        <p>JAQOps is een uitgebreid SaaS-platform dat voorziet in:</p>
+        <ul>
+          <li>Multi-tenant architectuur met data-isolatie en eigen branding</li>
+          <li>CRM module voor klantenbeheer, contactpersonen, historiek en offertes</li>
+          <li>Planning & Dispatch met real-time techniekerplanning</li>
+          <li>Voorraadbeheer gekoppeld aan werkbonnen</li>
+          <li>Automatische facturatie met PDF-export en e-mailnotificaties</li>
+          <li>Role-based Access Control (RBAC) voor verschillende gebruikersrollen</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/JaqAi.png"), // Tijdelijk dezelfde afbeelding als JaqAI, vervang later
+      technologies: ["ASP.NET Core 8", "React", "TypeScript", "PostgreSQL", "Docker", "SignalR", "TailwindCSS", "Entity Framework Core", "Hangfire", "PWA"],
+      liveUrl: "https://jaqops.example.com",
+      repoUrl: "https://github.com/Jack-Stan/jaqops",
+      features: [
+        "Multi-tenant architectuur met data-isolatie per klant",
+        "CRM module voor klantenbeheer en historiek",
+        "Real-time planning van techniekers met mobiele ondersteuning",
+        "Voorraadbeheer gekoppeld aan werkbonnen",
+        "Automatische factuur- en werkbongeneratie",
+        "Role-based Access Control (RBAC)",
+        "Realtime status updates via SignalR",
+        "Offline ondersteuning via PWA",
+        "Uitgebreide rapportage & analytics",
+        "Docker-gebaseerde deployment",
+        "Asynchrone taakverwerking met Hangfire"
+      ],
+      impact: [
+        "Efficiëntiewinst: Field service bedrijven kunnen hun operationele efficiëntie aanzienlijk verhogen door gestroomlijnde processen",
+        "Digitale transformatie: Stelt traditionele servicebedrijven in staat om te digitaliseren en hun concurrentiepositie te verbeteren",
+        "Schaalbaarheid: Het multi-tenant ontwerp maakt de oplossing toegankelijk voor zowel kleine als grote servicebedrijven"
+      ],
+      developmentStatus: "planning",
+      developmentInfo: "Nieuw project in planningsfase. Architectuur ontworpen en technologiekeuzes gemaakt. Ontwikkeling zal binnenkort starten."
+    },
+    {
       id: "brightest",
       title: "Brightest Test Automation Framework",
       description: "A full-stack JavaScript application that enables users without coding knowledge to create automated tests for websites. It combines a React frontend with Material UI, a Node.js backend, and Firebase for storage. The tool has reduced testing costs by 65% and accelerated test creation by 80% through AI-generated test code and a no-code interface.",
@@ -37,7 +81,8 @@ const projectsData = {
         "Test coverage improved by 40% through the systematic approach to testable elements",
         "Collaboration efficiency improved by 50% through real-time team features and shared test repositories",
         "Test maintenance time reduced by 70% by automating the creation of well-structured, maintainable test code"
-      ]
+      ],
+      developmentStatus: "completed"
     },
     {
       id: "time2bill",
@@ -74,7 +119,9 @@ const projectsData = {
       impact: [
         "Improved business efficiency: Streamlines the entire workflow from time tracking to payment, reducing administrative overhead by approximately 60%",
         "Increased revenue capture: The detailed time tracking has helped users capture 15-20% more billable time that was previously not recorded"
-      ]
+      ],
+      developmentStatus: "in-development",
+      developmentInfo: "Currently developing new features to enhance the user experience and add more functionality."
     },
     {
       id: "purepeau",
@@ -110,7 +157,9 @@ const projectsData = {
         "Professional online presence that builds trust with potential clients",
         "Increased bookings: The online booking system has led to a 40% increase in new client acquisitions",
         "Improved content management: The custom CMS has reduced website update times by 75%, allowing the owner to maintain their own content"
-      ]
+      ],
+      developmentStatus: "in-development",
+      developmentInfo: "Currently improving the website with additional features and content."
     },
     {
       id: "jaqai",
@@ -147,9 +196,55 @@ const projectsData = {
         "Improved interaction efficiency: Reduces the time needed to obtain information by about 60% via natural language questions compared to traditional search methods",
         "Improved accessibility: Provides multiple interaction methods (text, speech, visual) making information accessible to users with different needs or preferences",
         "Real-time information access: Delivers critical financial and news data within seconds, enabling faster decision making"
-      ]
+      ],
+      developmentStatus: "in-development",
+      developmentInfo: "Currently enhancing AI capabilities and adding new features."
     }  ],
   en: [
+    {
+      id: "jaqops",
+      title: "JAQOps",
+      description: "A scalable SaaS platform that helps field service companies digitize and streamline their business processes by combining customer management, technician scheduling, inventory management, and invoicing in one powerful system.",
+      fullDescription: `
+        <h2>JAQOps</h2>
+        <p>A scalable SaaS platform that helps field service companies such as installation and maintenance businesses digitize and streamline their business processes.</p>
+        
+        <h3>Project Overview</h3>
+        <p>JAQOps is a comprehensive SaaS platform that provides:</p>
+        <ul>
+          <li>Multi-tenant architecture with data isolation and custom branding</li>
+          <li>CRM module for customer management, contacts, history, and quotes</li>
+          <li>Planning & Dispatch with real-time technician scheduling</li>
+          <li>Inventory management linked to work orders</li>
+          <li>Automated invoicing with PDF export and email notifications</li>
+          <li>Role-based Access Control (RBAC) for different user roles</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/JaqAi.png"), // Temporarily using the same image as JaqAI, replace later
+      technologies: ["ASP.NET Core 8", "React", "TypeScript", "PostgreSQL", "Docker", "SignalR", "TailwindCSS", "Entity Framework Core", "Hangfire", "PWA"],
+      liveUrl: "https://jaqops.example.com",
+      repoUrl: "https://github.com/Jack-Stan/jaqops",
+      features: [
+        "Multi-tenant architecture with data isolation per client",
+        "CRM module for customer management and history",
+        "Real-time scheduling of technicians with mobile support",
+        "Inventory management linked to work orders",
+        "Automated invoice and work order generation",
+        "Role-based Access Control (RBAC)",
+        "Real-time status updates via SignalR",
+        "Offline support via PWA",
+        "Comprehensive reporting & analytics",
+        "Docker-based deployment",
+        "Asynchronous task processing with Hangfire"
+      ],
+      impact: [
+        "Efficiency gains: Field service companies can significantly increase their operational efficiency through streamlined processes",
+        "Digital transformation: Enables traditional service companies to digitize and improve their competitive position",
+        "Scalability: The multi-tenant design makes the solution accessible to both small and large service companies"
+      ],
+      developmentStatus: "planning",
+      developmentInfo: "New project in planning phase. Architecture designed and technology choices made. Development will begin soon."
+    },
     {
       id: "brightest",
       title: "Brightest Test Automation Framework",
@@ -186,7 +281,8 @@ const projectsData = {
         "Testdekking verbeterd met 40% via de systematische benadering van testbare elementen",
         "Samenwerkingsefficiëntie verbeterd met 50% door real-time teamfuncties en gedeelde testrepositories",
         "Testtijd voor onderhoud verminderd met 70% door het automatiseren van de creatie van goed gestructureerde, onderhoudbare testcode"
-      ]
+      ],
+      developmentStatus: "completed"
     },
     {
       id: "time2bill",
@@ -223,7 +319,9 @@ const projectsData = {
       impact: [
         "Verbeterde bedrijfsefficiëntie: Stroomlijnt de volledige workflow van tijdregistratie tot betaling, waardoor administratieve overhead met ongeveer 60% wordt verminderd",
         "Verhoogde omzetregistratie: De gedetailleerde tijdregistratie heeft gebruikers geholpen 15-20% meer factureerbare tijd vast te leggen die voorheen niet werd geregistreerd"
-      ]
+      ],
+      developmentStatus: "in-development",
+      developmentInfo: "Momenteel bezig met het ontwikkelen van nieuwe functies om de gebruikerservaring te verbeteren en meer functionaliteit toe te voegen."
     },
     {
       id: "purepeau",
@@ -259,7 +357,9 @@ const projectsData = {
         "Professionele online aanwezigheid die vertrouwen opbouwt bij potentiële klanten",
         "Toegenomen boekingen: Het online boekingssysteem heeft geleid tot een toename van 40% in nieuwe klantacquisities",
         "Verbeterd contentbeheer: Het aangepaste CMS heeft websiteupdatetijden met 75% verminderd, waardoor de eigenaar zelf hun content kan onderhouden"
-      ]
+      ],
+      developmentStatus: "in-development",
+      developmentInfo: "Momenteel bezig met het verbeteren van de website met extra functies en content."
     },
     {
       id: "jaqai",
@@ -296,7 +396,9 @@ const projectsData = {
         "Verbeterde interactie-efficiëntie: Reduceert de benodigde tijd voor het verkrijgen van informatie met ongeveer 60% via natuurlijke taalvragen vergeleken met traditionele zoekmethoden",
         "Verbeterde toegankelijkheid: Biedt meerdere interactiemethoden (tekst, spraak, visueel) waardoor informatie toegankelijk wordt voor gebruikers met verschillende behoeften of voorkeuren",
         "Real-time informatietoegang: Levert kritische financiële en nieuwsgegevens binnen seconden, wat snellere besluitvorming mogelijk maakt"
-      ]
+      ],
+      developmentStatus: "in-development",
+      developmentInfo: "Momenteel bezig met het verbeteren van AI-mogelijkheden en het toevoegen van nieuwe functies."
     }
   ]
 };

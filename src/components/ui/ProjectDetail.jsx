@@ -78,9 +78,16 @@ const ProjectDetail = ({ project, onClose }) => {
   return (
     <div className="project-detail-overlay" ref={modalRef} onClick={handleCloseAnimation}>
       <div className="project-detail-content" ref={contentRef} onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={handleCloseAnimation}>×</button>
-          <div className="project-detail-header">
-          <h2>{project.title}</h2>
+        <button className="close-button" onClick={handleCloseAnimation}>×</button>        <div className="project-detail-header">
+          <h2>{project.title}</h2>          {project.developmentStatus && (
+            <div className={`detail-development-status ${project.developmentStatus}`}>
+              {project.developmentStatus === 'in-development' ? 'In ontwikkeling' : 
+               project.developmentStatus === 'planning' ? 'Gepland' : 'Voltooid'}
+              {project.developmentInfo && (project.developmentStatus === 'in-development' || project.developmentStatus === 'planning') && (
+                <p className="development-info">{project.developmentInfo}</p>
+              )}
+            </div>
+          )}
           <div className="project-detail-links">
             {project.repoUrl && (
               <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="detail-link">
