@@ -43,7 +43,7 @@ const ContactForm = () => {
         </div>
           <div className="email-display">
           <p>{t('emailLabel')}</p>
-          <span className="email-address">stanverbruggensj@protonmail.com</span>
+          <span className="email-address">stanverbruggen@protonmail.com</span>
         </div>
       </div>
     </div>
