@@ -90,7 +90,6 @@ const WelcomePage = () => {
               baseIntensity={0.2} 
               hoverIntensity={0.5} 
               enableHover={true}
-              fontSize={responsiveFontSize}
               color="#fff"
             >
               Stan's Portfolio
@@ -105,7 +104,6 @@ const WelcomePage = () => {
               baseIntensity={0.2}
               hoverIntensity={0.5}
               enableHover={true}
-              fontSize={responsiveFontSize}
               color="#fff"
             />
           </div>
