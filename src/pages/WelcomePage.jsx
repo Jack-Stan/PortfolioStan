@@ -59,6 +59,25 @@ const WelcomePage = () => {
     }
   }, []);
 
+  // Bepaal dynamisch de fontSize op basis van schermbreedte
+  const getResponsiveFontSize = () => {
+    if (window.innerWidth <= 480) {
+      return "clamp(3.5rem, 12vw, 5.5rem)";
+    } else if (window.innerWidth <= 768) {
+      return "clamp(3rem, 10vw, 5rem)";
+    } else {
+      return "clamp(2.5rem, 8vw, 4.5rem)";
+    }
+  };
+  const [responsiveFontSize, setResponsiveFontSize] = useState(getResponsiveFontSize());
+  useEffect(() => {
+    const handleResize = () => {
+      setResponsiveFontSize(getResponsiveFontSize());
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="welcome-page" ref={pageRef} style={{ position: 'relative' }}>
       {/* Dither background */}
@@ -71,7 +90,7 @@ const WelcomePage = () => {
               baseIntensity={0.2} 
               hoverIntensity={0.5} 
               enableHover={true}
-              fontSize="clamp(2.5rem, 8vw, 4.5rem)" // Aangepast voor grotere tekst op mobiel
+              fontSize={responsiveFontSize}
               color="#fff"
             >
               Stan's Portfolio
@@ -86,7 +105,7 @@ const WelcomePage = () => {
               baseIntensity={0.2}
               hoverIntensity={0.5}
               enableHover={true}
-              fontSize="clamp(2.5rem, 8vw, 4.5rem)" // Aangepast voor grotere tekst op mobiel
+              fontSize={responsiveFontSize}
               color="#fff"
             />
           </div>
