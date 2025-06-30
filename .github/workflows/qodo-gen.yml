@@ -23,7 +23,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate tests with Qodo Gen CLI
-        run: npx @qodo/gen
+      - name: Generate tests with Qodo Gen CLI (test)
+        run: npx @qodo/gen test --no-interactive
+        env:
+          QODO_API_KEY: ${{ secrets.QODO_API_KEY }}
+
+      - name: Generate tests with Qodo Gen CLI (generate)
+        if: failure()
+        run: npx @qodo/gen generate --no-interactive
         env:
           QODO_API_KEY: ${{ secrets.QODO_API_KEY }}
