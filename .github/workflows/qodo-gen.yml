@@ -25,3 +25,5 @@ jobs:
 
       - name: Generate tests with Qodo Gen CLI
         run: npx @qodo/gen
+        env:
+          Qodo_API_KEY: ${{ sk-HScr6KP7x2tZajId4AaHOLz0fDGvipGNoC4IP04bqUM-9JicrGYdz8XxjpusBdsOTEhoOSc0-_nmV6KqE2Du83I}}
