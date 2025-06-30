@@ -147,7 +147,7 @@
     margin-bottom: 1.5rem;
   }
   .title-container span, .title-container .fuzzy-text, .title-container .typewriter-fuzzy {
-    font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+    font-size: 10vw !important;
     line-height: 1.1;
   }
 }
@@ -180,7 +180,7 @@
     font-size: 2.8rem;
   }
   .title-container span, .title-container .fuzzy-text, .title-container .typewriter-fuzzy {
-    font-size: 2.8rem !important;
+    font-size: 12vw !important;
     line-height: 1.1;
   }
   
