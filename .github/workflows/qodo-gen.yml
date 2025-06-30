@@ -23,8 +23,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Qodo Gen CLI
-        run: npm install -g @qodo/gen
-
       - name: Generate tests with Qodo Gen CLI
-        run: qodo
+        run: npx @qodo/gen
