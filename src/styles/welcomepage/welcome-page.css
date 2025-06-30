@@ -177,7 +177,11 @@
   
   /* Ensure text is readable */
   .typed-title {
-    font-size: 2rem;
+    font-size: 2.8rem;
+  }
+  .title-container span, .title-container .fuzzy-text, .title-container .typewriter-fuzzy {
+    font-size: 2.8rem !important;
+    line-height: 1.1;
   }
   
   /* Fix for mobile browser address bar issues */
