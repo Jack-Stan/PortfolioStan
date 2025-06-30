@@ -1,6 +1,9 @@
 name: Generate Tests with Qodo Gen CLI
 
 on:
+  push:
+    branches:
+      - 'main'
   pull_request:
     branches:
       - 'main'
