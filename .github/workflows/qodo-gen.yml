@@ -27,4 +27,4 @@ jobs:
         run: npm install -g @qodo/gen
 
       - name: Generate tests with Qodo Gen CLI
-        run: qodo-gen
+        run: qodo
