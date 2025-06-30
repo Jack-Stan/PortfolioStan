@@ -71,7 +71,7 @@ const WelcomePage = () => {
               baseIntensity={0.2} 
               hoverIntensity={0.5} 
               enableHover={true}
-              fontSize="clamp(2rem, 5vw, 4rem)"
+              fontSize="clamp(2.5rem, 8vw, 4.5rem)" // Aangepast voor grotere tekst op mobiel
               color="#fff"
             >
               Stan's Portfolio
@@ -86,7 +86,7 @@ const WelcomePage = () => {
               baseIntensity={0.2}
               hoverIntensity={0.5}
               enableHover={true}
-              fontSize="clamp(2rem, 5vw, 4rem)"
+              fontSize="clamp(2.5rem, 8vw, 4.5rem)" // Aangepast voor grotere tekst op mobiel
               color="#fff"
             />
           </div>

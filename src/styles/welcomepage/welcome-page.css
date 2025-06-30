@@ -141,6 +141,17 @@
   }
 }
 
+@media (max-width: 600px) {
+  .title-container {
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+  .title-container span, .title-container .fuzzy-text, .title-container .typewriter-fuzzy {
+    font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+    line-height: 1.1;
+  }
+}
+
 @media (max-width: 480px) {
   .content {
     padding: 1.5rem;
