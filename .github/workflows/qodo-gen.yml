@@ -3,7 +3,7 @@ name: Generate Tests with Qodo Gen CLI
 on:
   pull_request:
     branches:
-      - '**'
+      - 'main'
 
 jobs:
   generate-tests:
