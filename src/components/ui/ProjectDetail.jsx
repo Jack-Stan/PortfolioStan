@@ -1,53 +1,128 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { gsap } from 'gsap';
 import '../../styles/homepage/project-detail.css';
+
+const detailContent = {
+  nl: {
+    viewProject: 'Bekijk project',
+    technologies: 'Technologieën',
+    keyFeatures: 'Belangrijkste functies',
+    projectImpact: 'Projectimpact',
+    challengesTitle: 'Uitdagingen & probleemoplossing',
+    challenge: 'Uitdaging',
+    approach: 'Mijn aanpak',
+    lessons: 'Lessen & groei',
+    status: {
+      'in-development': 'In ontwikkeling',
+      planning: 'Gepland',
+      completed: 'Voltooid',
+    },
+    challenges: {
+      brightest: {
+        challenge: 'De grootste uitdaging was het creëren van een systeem dat niet-technische gebruikers in staat stelt om geautomatiseerde tests te schrijven zonder codeerkennis, terwijl het ook gestructureerde, onderhoudbare testcode moest genereren die past binnen bestaande frameworks.',
+        approach: 'Ik ontwikkelde een systeem dat de webpagina analyseert en selecteerbare elementen identificeert. Voor de codegeneratie integreerde ik OpenAI\'s API om Page Object Models te genereren die voldoen aan bestaande codestandaarden, waardoor een brug ontstond tussen de visuele interface en professionele testcode.',
+        lessons: 'Dit project leerde me hoe belangrijk het is om complexe technische concepten te vertalen naar toegankelijke gebruikerservaringen. Ik verfijnde mijn vaardigheden in AI-integraties en leerde hoe ik technische barrières kan wegnemen zonder in te leveren op kwaliteit.',
+      },
+      time2bill: {
+        challenge: 'Het bouwen van een cross-platform applicatie die goed werkt op zowel web als mobiel, terwijl er complexe bedrijfslogica voor facturatie en internationale facturatiestandaarden geïmplementeerd moest worden.',
+        approach: 'Ik implementeerde een modulaire architectuur met Flutter, met een duidelijke scheiding tussen UI-logica en bedrijfsregels. Voor de facturatie ontwikkelde ik een abstractielaag die verschillende standaarden zoals UBL en Peppol ondersteunt zonder de kernfunctionaliteit te beïnvloeden.',
+        lessons: 'Dit project versterkte mijn begrip van domeingedreven design en het belang van flexibele architecturen die kunnen evolueren met veranderende bedrijfsbehoeften. Ik verbeterde mijn vaardigheden in het bouwen van schaalbare, toekomstbestendige applicaties.',
+      },
+      purepeau: {
+        challenge: 'Het creëren van CMS-functionaliteit die intuïtief genoeg was voor een niet-technische eigenaar om zelf content te beheren, terwijl het design en de merkidentiteit behouden blijven.',
+        approach: 'Ik ontwierp een aangepaste content editor met React die complexe styling verbergt achter intuïtieve knoppen en drag-and-drop functionaliteit, terwijl templates de merkidentiteit beschermen ongeacht welke content wordt toegevoegd.',
+        lessons: 'Ik leerde het belang van empathisch ontwerp: het begrijpen van de behoeften en beperkingen van niet-technische gebruikers. Deze ervaring heeft mijn benadering van UX/UI-ontwerp verbeterd en me geleerd hoe technologie toegankelijker kan worden gemaakt.',
+      },
+      default: {
+        challenge: 'Het integreren van meerdere AI-systemen, zoals spraakherkenning, emotiedetectie en NLP, in een coherente real-time gebruikerservaring die zowel performant als intuïtief is.',
+        approach: 'Ik ontwikkelde een microservice-architectuur waarbij elk AI-systeem onafhankelijk kon functioneren, maar synchroniseerde via een centrale state manager. Om performanceproblemen op te lossen, implementeerde ik client-side caching en intelligente debouncing van API-calls.',
+        lessons: 'Dit complexe project leerde me het belang van asynchroon denken en hoe verschillende AI-subsystemen effectief georkestreerd kunnen worden. Ik verdiepte mijn begrip van real-time systemen en frontend performance onder zware belasting.',
+      },
+    },
+  },
+  en: {
+    viewProject: 'View project',
+    technologies: 'Technologies',
+    keyFeatures: 'Key features',
+    projectImpact: 'Project impact',
+    challengesTitle: 'Challenges & problem solving',
+    challenge: 'Challenge',
+    approach: 'My approach',
+    lessons: 'Lessons & growth',
+    status: {
+      'in-development': 'In development',
+      planning: 'Planned',
+      completed: 'Completed',
+    },
+    challenges: {
+      brightest: {
+        challenge: 'The biggest challenge was creating a system that allows non-technical users to create automated tests without coding knowledge, while still generating structured, maintainable test code that fits existing frameworks.',
+        approach: 'I built a system that analyzes web pages and identifies selectable elements. For code generation, I integrated OpenAI\'s API to generate Page Object Models that follow existing code standards, connecting a visual interface with professional test code.',
+        lessons: 'This project taught me how important it is to translate complex technical concepts into accessible user experiences. I refined my AI integration skills and learned how to remove technical barriers without compromising quality.',
+      },
+      time2bill: {
+        challenge: 'Building a cross-platform application that works well on both web and mobile, while handling complex invoicing logic and international invoicing standards.',
+        approach: 'I implemented a modular Flutter architecture with a clear separation between UI logic and business rules. For invoicing, I created an abstraction layer that supports standards like UBL and Peppol without affecting the core functionality.',
+        lessons: 'This project strengthened my understanding of domain-driven design and flexible architectures that can evolve with changing business needs. It helped me improve at building scalable, future-ready applications.',
+      },
+      purepeau: {
+        challenge: 'Creating CMS functionality that is intuitive enough for a non-technical owner to manage content independently, while preserving the design and brand identity.',
+        approach: 'I designed a custom React content editor that hides complex styling behind intuitive controls and drag-and-drop functionality, while templates protect the brand identity regardless of the content being added.',
+        lessons: 'I learned the importance of empathetic design: understanding the needs and limitations of non-technical users. This improved my UX/UI approach and taught me how technology can be made more accessible.',
+      },
+      default: {
+        challenge: 'Integrating multiple AI systems, such as speech recognition, emotion detection, and NLP, into a coherent real-time experience that is both performant and intuitive.',
+        approach: 'I developed a microservice architecture where each AI system could function independently while synchronizing through a central state manager. To solve performance issues, I implemented client-side caching and intelligent API-call debouncing.',
+        lessons: 'This complex project taught me the importance of asynchronous thinking and how to orchestrate different AI subsystems effectively. I deepened my understanding of real-time systems and frontend performance under heavier load.',
+      },
+    },
+  },
+};
 
 const ProjectDetail = ({ project, onClose }) => {
   const modalRef = useRef(null);
   const contentRef = useRef(null);
+  const { i18n } = useTranslation();
+  const language = i18n.language === 'en' ? 'en' : 'nl';
+  const labels = detailContent[language];
+  const challengeText = labels.challenges[project?.id] || labels.challenges.default;
 
   useEffect(() => {
-    // Animation for modal opening
     if (modalRef.current && contentRef.current) {
-      // Set initial state
-      gsap.set(modalRef.current, { 
-        opacity: 0 
+      gsap.set(modalRef.current, {
+        opacity: 0
       });
-      
-      gsap.set(contentRef.current, { 
+
+      gsap.set(contentRef.current, {
         y: 30,
-        opacity: 0 
+        opacity: 0
       });
-      
-      // Animate modal background
+
       gsap.to(modalRef.current, {
         opacity: 1,
         duration: 0.3,
-        ease: "power2.out"
+        ease: 'power2.out'
       });
-      
-      // Animate content
+
       gsap.to(contentRef.current, {
         y: 0,
         opacity: 1,
         duration: 0.4,
         delay: 0.2,
-        ease: "power3.out"
+        ease: 'power3.out'
       });
     }
-    
-    // Add event listener to close on escape key
+
     const handleEscKey = (e) => {
       if (e.key === 'Escape') {
         onClose();
       }
     };
-    
+
     document.addEventListener('keydown', handleEscKey);
-    
-    // Prevent scrolling on body when modal is open
     document.body.style.overflow = 'hidden';
-    
+
     return () => {
       document.removeEventListener('keydown', handleEscKey);
       document.body.style.overflow = 'auto';
@@ -55,34 +130,33 @@ const ProjectDetail = ({ project, onClose }) => {
   }, [onClose]);
 
   const handleCloseAnimation = () => {
-    // Animation for modal closing
     gsap.to(contentRef.current, {
       y: 30,
       opacity: 0,
       duration: 0.3,
-      ease: "power2.in"
+      ease: 'power2.in'
     });
-    
+
     gsap.to(modalRef.current, {
       opacity: 0,
       duration: 0.3,
       delay: 0.1,
-      ease: "power2.in",
+      ease: 'power2.in',
       onComplete: onClose
     });
   };
 
-  // If no project is provided, don't render anything
   if (!project) return null;
 
   return (
     <div className="project-detail-overlay" ref={modalRef} onClick={handleCloseAnimation}>
       <div className="project-detail-content" ref={contentRef} onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={handleCloseAnimation}>×</button>        <div className="project-detail-header">
-          <h2>{project.title}</h2>          {project.developmentStatus && (
+        <button className="close-button" onClick={handleCloseAnimation}>×</button>
+        <div className="project-detail-header">
+          <h2>{project.title}</h2>
+          {project.developmentStatus && (
             <div className={`detail-development-status ${project.developmentStatus}`}>
-              {project.developmentStatus === 'in-development' ? 'In ontwikkeling' : 
-               project.developmentStatus === 'planning' ? 'Gepland' : 'Voltooid'}
+              {labels.status[project.developmentStatus] || labels.status.completed}
               {project.developmentInfo && (project.developmentStatus === 'in-development' || project.developmentStatus === 'planning') && (
                 <p className="development-info">{project.developmentInfo}</p>
               )}
@@ -96,28 +170,28 @@ const ProjectDetail = ({ project, onClose }) => {
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-                Bekijk Project
+                {labels.viewProject}
               </a>
             )}
           </div>
         </div>
-        
+
         {project.imageUrl && (
           <div className="project-detail-image">
             <img src={project.imageUrl} alt={project.title} />
           </div>
         )}
-        
+
         <div className="project-detail-body">
           {project.fullDescription ? (
             <div className="project-full-description" dangerouslySetInnerHTML={{ __html: project.fullDescription }} />
           ) : (
             <p className="project-description">{project.description}</p>
           )}
-          
+
           {project.technologies && project.technologies.length > 0 && (
             <div className="project-technologies">
-              <h3>Technologieën</h3>
+              <h3>{labels.technologies}</h3>
               <div className="tech-tags">
                 {project.technologies.map((tech, index) => (
                   <span key={index} className="tech-tag">
@@ -127,10 +201,10 @@ const ProjectDetail = ({ project, onClose }) => {
               </div>
             </div>
           )}
-          
+
           {project.features && project.features.length > 0 && (
             <div className="project-features">
-              <h3>Belangrijkste Functies</h3>
+              <h3>{labels.keyFeatures}</h3>
               <ul className="feature-list">
                 {project.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
@@ -138,10 +212,10 @@ const ProjectDetail = ({ project, onClose }) => {
               </ul>
             </div>
           )}
-          
+
           {project.impact && (
             <div className="project-impact">
-              <h3>Project Impact</h3>
+              <h3>{labels.projectImpact}</h3>
               <div className="impact-points">
                 {project.impact.map((point, index) => (
                   <div key={index} className="impact-point">
@@ -157,38 +231,22 @@ const ProjectDetail = ({ project, onClose }) => {
             </div>
           )}
 
-          {/* Add challenges and problem solving section */}
           <div className="project-challenges">
-            <h3>Uitdagingen & Probleemoplossing</h3>
+            <h3>{labels.challengesTitle}</h3>
             <div className="challenge-container">
               <div className="challenge-item">
-                <h4>Uitdaging</h4>                <p>{project.id === 'brightest'
-                  ? 'De grootste uitdaging was het creëren van een systeem dat niet-technische gebruikers in staat stelt om geautomatiseerde tests te schrijven zonder codeerkennis, terwijl het ook gestructureerde, onderhoudbare testcode moest genereren die past binnen bestaande frameworks.'
-                  : project.id === 'time2bill'
-                  ? 'Het bouwen van een cross-platform applicatie die effectief functioneert op zowel web als mobiel, terwijl er complexe bedrijfslogica voor facturatie en verschillende internationale facturatiestandaarden geïmplementeerd moesten worden.'
-                  : project.id === 'purepeau'
-                  ? 'Het creëren van een CMS-functionaliteit die intuïtief genoeg was voor een niet-technische eigenaar om zelf content te beheren, terwijl het design en de merkauthenticiteit behouden blijft.'
-                  : 'Het integreren van meerdere AI-systemen (spraakherkenning, emotiedetectie, NLP) in een coherente, real-time gebruikerservaring die zowel performant als intuïtief is.'}</p>
+                <h4>{labels.challenge}</h4>
+                <p>{challengeText.challenge}</p>
               </div>
-              
+
               <div className="challenge-item">
-                <h4>Mijn Aanpak</h4>                <p>{project.id === 'brightest' 
-                  ? 'Ik ontwikkelde een systeem dat de webpagina analyseert en selecteerbare elementen identificeert. Voor de codegeneratie integreerde ik OpenAI\'s API om Page Object Models te genereren die voldoen aan de bestaande codestandaarden, waardoor een brug werd geslagen tussen de visuele interface en professionele testcode.'
-                  : project.id === 'time2bill' 
-                  ? 'Ik implementeerde een modulaire architectuur met Flutter, waarbij ik een duidelijke scheiding tussen UI-logica en bedrijfsregels handhaafde. Voor de facturatie ontwikkelde ik een abstractielaag die verschillende standaarden (UBL, Peppol) ondersteunt zonder de kernfunctionaliteit te beïnvloeden.' 
-                  : project.id === 'purepeau' 
-                  ? 'Ik ontwierp een aangepaste content editor met React die complexe styling verbergt achter intuïtieve knoppen en drag-and-drop functionaliteit, terwijl ik templates creëerde die de merkidentiteit beschermen ongeacht welke content wordt toegevoegd.' 
-                  : 'Ik ontwikkelde een microservice-architectuur waarbij elk AI-systeem onafhankelijk kon functioneren maar synchroniseerde via een centrale state manager. Om performantieproblemen op te lossen, implementeerde ik client-side caching en intelligente debouncing van API-calls.'}</p>
+                <h4>{labels.approach}</h4>
+                <p>{challengeText.approach}</p>
               </div>
-              
+
               <div className="challenge-item">
-                <h4>Lessen & Groei</h4>                <p>{project.id === 'brightest'
-                  ? 'Dit project leerde me hoe belangrijk het is om complexe technische concepten te vertalen naar toegankelijke gebruikerservaringen. Ik verfijnde mijn vaardigheden in het werken met AI-integraties en leerde hoe ik technische barrières kan wegnemen zonder compromissen te sluiten op kwaliteit.'
-                  : project.id === 'time2bill'
-                  ? 'Dit project versterkte mijn begrip van domein-gedreven design en het belang van flexibele architecturen die kunnen evolueren met veranderende bedrijfsbehoeften. Ik verbeterde mijn vaardigheden in het bouwen van schaalbare, toekomstbestendige applicaties.'
-                  : project.id === 'purepeau'
-                  ? 'Ik leerde het belang van empathisch ontwerp - het begrijpen van de behoeften en beperkingen van niet-technische gebruikers. Deze ervaring heeft mijn benadering van UX/UI-ontwerp aanzienlijk verbeterd en me geleerd hoe ik technologie kan democratiseren.'
-                  : 'Dit complexe project leerde me het belang van asynchroon denken en hoe verschillende AI-subsystemen effectief te orkestreren. Ik verdiepte mijn begrip van realtime systemen en verbeterde mijn vaardigheden in het optimaliseren van frontend performance onder zware belasting.'}</p>
+                <h4>{labels.lessons}</h4>
+                <p>{challengeText.lessons}</p>
               </div>
             </div>
           </div>

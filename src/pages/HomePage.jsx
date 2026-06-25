@@ -30,7 +30,7 @@ const HomePage = () => {
   const location = useLocation();
   const [selectedProject, setSelectedProject] = useState(null);
   const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language || 'nl';
+  const currentLanguage = i18n.language?.startsWith('en') ? 'en' : 'nl';
 
   // Get the appropriate projects data and translations based on the current language
   const localizedProjects = projectsData[currentLanguage] || projectsData.en;
@@ -326,6 +326,8 @@ const HomePage = () => {
             <ProjectsChroma 
               handleProjectSelect={setSelectedProject} 
               projectsData={localizedProjects}
+              localizedText={localizedProjectsText}
+              language={currentLanguage}
             />
             
             <div className="projects-more">

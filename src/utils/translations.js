@@ -1,29 +1,7 @@
 // Translation dictionary
 const translations = {
   nl: {
-    aboutMe: 'About Me',
-    skills: 'Skills',
-    projects: 'Projects',
-    contact: 'Contact',
-    cv: 'CV',
-    contactIntro: 'Feel free to contact me through any of the following channels:',
-    contactMeIntro: 'Feel free to contact me through any of the following channels:',
-    name: 'Name',
-    email: 'Email',
-    message: 'Message',
-    send: 'Send',
-    protonmail: 'ProtonMail',
-    github: 'GitHub',
-    linkedin: 'LinkedIn',
-    emailLabel: 'Email:',
-    downloadCV: 'Download CV',
-    problemSolving: 'Problem Solving Ability',
-    codeQuality: 'Code Quality & Testing',
-    agileMethodology: 'Agile Methodology',
-    // Add more translations as needed
-  },
-  en: {
-    aboutMe: 'Over Mij',
+    aboutMe: 'Over mij',
     skills: 'Specialisaties',
     projects: 'Projecten',
     contact: 'Contact',
@@ -40,9 +18,29 @@ const translations = {
     emailLabel: 'E-mail:',
     downloadCV: 'Download CV',
     problemSolving: 'Probleemoplossend vermogen',
-    codeQuality: 'Code Kwaliteit & Testing',
-    agileMethodology: 'Agile Methodologie',
-    // Add more translations as needed
+    codeQuality: 'Codekwaliteit & testing',
+    agileMethodology: 'Agile methodologie',
+  },
+  en: {
+    aboutMe: 'About me',
+    skills: 'Skills',
+    projects: 'Projects',
+    contact: 'Contact',
+    cv: 'CV',
+    contactIntro: 'Feel free to contact me through any of the following channels:',
+    contactMeIntro: 'Feel free to contact me through any of the following channels:',
+    name: 'Name',
+    email: 'Email',
+    message: 'Message',
+    send: 'Send',
+    protonmail: 'ProtonMail',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    emailLabel: 'Email:',
+    downloadCV: 'Download CV',
+    problemSolving: 'Problem solving',
+    codeQuality: 'Code quality & testing',
+    agileMethodology: 'Agile methodology',
   }
 };
 

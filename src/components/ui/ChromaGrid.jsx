@@ -157,8 +157,7 @@ export const ChromaGrid = ({
           <div className="chroma-img-wrapper">
             <img src={c.image} alt={c.title} loading="lazy" />            {c.developmentStatus && (
               <div className={`chroma-development-status ${c.developmentStatus}`}>
-                {c.developmentStatus === 'in-development' ? 'In ontwikkeling' : 
-                 c.developmentStatus === 'planning' ? 'Gepland' : 'Voltooid'}
+                {c.developmentStatusLabel || c.developmentStatus}
               </div>
             )}
           </div>
