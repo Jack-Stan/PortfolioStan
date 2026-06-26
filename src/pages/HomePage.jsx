@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, Suspense, lazy } from "react";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { gsap } from "gsap";
@@ -10,19 +10,17 @@ import "../styles/homepage/decrypted-text.css";
 import "../styles/homepage/projects-chroma.css";
 import "../styles/homepage/project-section-divider.css";
 import SkillBar from "../components/SkillBar";
-import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
-import TypeWriter from "../components/ui/TypeWriter";
-import FuzzyText from "../components/ui/FuzzyText";
 import ProfileCard from "../components/ui/ProfileCard";
 import BackgroundDither from "../components/ui/BackgroundDither";
-import ProjectDetail from "../components/ui/ProjectDetail";
 import DecryptedText from "../components/ui/DecryptedText";
 import ProjectsChroma from "../components/section/ProjectsChroma";
 import CVDownloadButton from "../components/CVDownloadButton";
 import ContactForm from "../components/ContactForm";
 import projectsData from "../data/projectsData";
 import { aboutContent, skillsContent, projectsTranslations } from "../data/translations-content";
+
+const ProjectDetail = lazy(() => import("../components/ui/ProjectDetail"));
 
 const HomePage = () => {
   const sectionsRef = useRef([]);
@@ -120,10 +118,6 @@ const HomePage = () => {
     };
   }, [location.state]);
 
-  const handleProjectSelect = (project) => {
-    setSelectedProject(project);
-  };
-
   const handleCloseDetail = () => {
     setSelectedProject(null);
   };
@@ -137,10 +131,12 @@ const HomePage = () => {
       
       {/* Project Detail Modal */}
       {selectedProject && (
-        <ProjectDetail
-          project={selectedProject}
-          onClose={handleCloseDetail}
-        />
+        <Suspense fallback={null}>
+          <ProjectDetail
+            project={selectedProject}
+            onClose={handleCloseDetail}
+          />
+        </Suspense>
       )}
       
       <div className="home-page" ref={homePageRef}>
@@ -192,14 +188,14 @@ const HomePage = () => {
                   />
                 </h3>
                 <h4 className="about-title">
-                  <DecryptedText 
-                    text="Full-Stack Developer" 
-                    animateOn="view" 
-                    sequential={true} 
-                    speed={80}
+                  <DecryptedText
+                    text="Functional Analyst"
+                    animateOn="view"
+                    sequential={false}
+                    maxIterations={15}
+                    speed={30}
                     className="text-revealed"
                     encryptedClassName="text-encrypted"
-                    revealDirection="end"
                   />
                 </h4>
                 <p>
@@ -279,9 +275,9 @@ const HomePage = () => {
             <div className="skills-content">
               <div className="skills-column">
                 <h3>{localizedSkills.coreTitle}</h3>
-                <SkillBar skill="React Frontend Development" percentage={90} color="#61DAFB" />
-                <SkillBar skill="JavaScript Ecosysteem" percentage={85} color="#F7DF1E" />
-                <SkillBar skill="TypeScript" percentage={85} color="#3178C6" />
+                <SkillBar skill={currentLanguage === 'nl' ? 'Functionele analyse' : 'Functional analysis'} level={currentLanguage === 'nl' ? 'Dagelijkse tool' : 'Daily driver'} color="#61DAFB" />
+                <SkillBar skill="Vue" level={currentLanguage === 'nl' ? 'Dagelijkse tool' : 'Daily driver'} color="#42b883" />
+                <SkillBar skill=".NET & SQL" level={currentLanguage === 'nl' ? 'Zelfverzekerd' : 'Confident'} color="#3178C6" />
                 <div className="skill-description">
                   <p>{localizedSkills.skillDescription}</p>
                   <p><strong>{localizedSkills.projectExample}</strong></p>
@@ -289,19 +285,20 @@ const HomePage = () => {
               </div>
               <div className="skills-column">
                 <h3>{localizedSkills.supportTitle}</h3>
-                <SkillBar skill="Node.js Backend" percentage={75} color="#68A063" />
-                <SkillBar skill="Flutter" percentage={70} color="#02569B" />
-                <SkillBar skill="Firebase & Cloud Services" percentage={75} color="#FFCA28" />
-                <SkillBar skill="C#" percentage={65} color="#9B4F96" />
+                <SkillBar skill="Azure" level={currentLanguage === 'nl' ? 'Zelfverzekerd' : 'Confident'} color="#0078D4" />
+                <SkillBar skill="AI agents & MCP servers" level={currentLanguage === 'nl' ? 'Groeiend' : 'Growing'} color="#10A37F" />
+                <SkillBar skill="n8n & automatisering" level={currentLanguage === 'nl' ? 'Comfortabel' : 'Comfortable'} color="#68A063" />
+                <SkillBar skill="Flutter & Firebase" level={currentLanguage === 'nl' ? 'Comfortabel' : 'Comfortable'} color="#02569B" />
                 <div className="skill-description">
                   <p>{localizedSkills.supportDescription}</p>
                 </div>
-              </div>              <div className="skills-column">
+              </div>
+              <div className="skills-column">
                 <h3>{localizedSkills.professionalTitle}</h3>
-                <SkillBar skill={t('problemSolving', 'Probleemoplossend vermogen')} percentage={95} color="#e74c3c" />
-                <SkillBar skill="UI/UX Design" percentage={75} color="#f1c40f" />
-                <SkillBar skill={t('codeQuality', 'Code Kwaliteit & Testing')} percentage={75} color="#f1c40f" />
-                <SkillBar skill={t('agileMethodology', 'Agile Methodologie')} percentage={50} color="#2ecc71" />
+                <SkillBar skill={t('problemSolving', 'Probleemoplossend vermogen')} level={currentLanguage === 'nl' ? 'Dagelijkse tool' : 'Daily driver'} color="#e74c3c" />
+                <SkillBar skill={currentLanguage === 'nl' ? 'Stakeholdercommunicatie' : 'Stakeholder communication'} level={currentLanguage === 'nl' ? 'Zelfverzekerd' : 'Confident'} color="#f1c40f" />
+                <SkillBar skill={currentLanguage === 'nl' ? 'AI-ondersteunde ontwikkeling' : 'AI-assisted development'} level={currentLanguage === 'nl' ? 'Groeiend' : 'Growing'} color="#10A37F" />
+                <SkillBar skill={t('agileMethodology', 'Agile Methodologie')} level={currentLanguage === 'nl' ? 'Zelfverzekerd' : 'Confident'} color="#2ecc71" />
                 <div className="skill-description">
                   <p>{localizedSkills.professionalDescription}</p>
                 </div>

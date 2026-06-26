@@ -2,404 +2,694 @@
 const projectsData = {
   nl: [
     {
-          id: "jaqops",
-          title: "JAQOps",
-          description: "Een schaalbaar SaaS-platform dat field service bedrijven helpt hun bedrijfsprocessen te digitaliseren en stroomlijnen door klantenbeheer, techniekerplanning, voorraadbeheer en facturatie in één krachtig systeem te combineren.",
-          fullDescription: `
-            <h2>JAQOps</h2>
-            <p>Een schaalbaar SaaS-platform dat field service bedrijven zoals installatie- en onderhoudsbedrijven helpt hun bedrijfsprocessen te digitaliseren en stroomlijnen.</p>
+      id: "shield",
+      title: "SHIELD",
+      description: "Een bedrijfsapplicatie gericht op het centraliseren, beveiligen en overzichtelijk maken van operationele processen. De focus ligt op duidelijke workflows, betrouwbare data en een gebruiksvriendelijke interface voor dagelijkse opvolging.",
+      fullDescription: `
+        <h2>SHIELD</h2>
+        <p>SHIELD is een operationeel platform dat helpt om processen, controles en opvolging samen te brengen in één overzichtelijke applicatie.</p>
 
-            <h3>Project Overzicht</h3>
-            <p>JAQOps is een uitgebreid SaaS-platform dat voorziet in:</p>
-            <ul>
-              <li>Multi-tenant architectuur met data-isolatie en eigen branding</li>
-              <li>CRM module voor klantenbeheer, contactpersonen, historiek en offertes</li>
-              <li>Planning & Dispatch met real-time techniekerplanning</li>
-              <li>Voorraadbeheer gekoppeld aan werkbonnen</li>
-              <li>Automatische facturatie met PDF-export en e-mailnotificaties</li>
-              <li>Role-based Access Control (RBAC) voor verschillende gebruikersrollen</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/JaqAi.png"), // Tijdelijk dezelfde afbeelding als JaqAI, vervang later
-          technologies: ["ASP.NET Core 8", "React", "TypeScript", "PostgreSQL", "Docker", "SignalR", "TailwindCSS", "Entity Framework Core", "Hangfire", "PWA"],
-          liveUrl: "https://jaqops.example.com",
-          repoUrl: "https://github.com/Jack-Stan/jaqops",
-          features: [
-            "Multi-tenant architectuur met data-isolatie per klant",
-            "CRM module voor klantenbeheer en historiek",
-            "Real-time planning van techniekers met mobiele ondersteuning",
-            "Voorraadbeheer gekoppeld aan werkbonnen",
-            "Automatische factuur- en werkbongeneratie",
-            "Role-based Access Control (RBAC)",
-            "Realtime status updates via SignalR",
-            "Offline ondersteuning via PWA",
-            "Uitgebreide rapportage & analytics",
-            "Docker-gebaseerde deployment",
-            "Asynchrone taakverwerking met Hangfire"
-          ],
-          impact: [
-            "Efficiëntiewinst: Field service bedrijven kunnen hun operationele efficiëntie aanzienlijk verhogen door gestroomlijnde processen",
-            "Digitale transformatie: Stelt traditionele servicebedrijven in staat om te digitaliseren en hun concurrentiepositie te verbeteren",
-            "Schaalbaarheid: Het multi-tenant ontwerp maakt de oplossing toegankelijk voor zowel kleine als grote servicebedrijven"
-          ],
-          developmentStatus: "planning",
-          developmentInfo: "Nieuw project in planningsfase. Architectuur ontworpen en technologiekeuzes gemaakt. Ontwikkeling zal binnenkort starten."
-        },
+        <h3>Project Overzicht</h3>
+        <p>SHIELD is een operationeel platform dat helpt om processen, controles en opvolging samen te brengen in één overzichtelijke applicatie.</p>
+        <ul>
+          <li>Gestroomlijnde workflow voor operationele opvolging</li>\n          <li>Duidelijke schermen voor status, acties en verantwoordelijkheden</li>\n          <li>Focus op betrouwbaarheid, traceerbaarheid en gebruiksgemak</li>\n          <li>Ondersteuning voor schaalbare bedrijfsprocessen</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","Azure","SQL"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Gestroomlijnde workflow voor operationele opvolging",
+                "Duidelijke schermen voor status, acties en verantwoordelijkheden",
+                "Focus op betrouwbaarheid, traceerbaarheid en gebruiksgemak",
+                "Ondersteuning voor schaalbare bedrijfsprocessen"
+        ],
+      impact:       [
+                "Meer overzicht: gebruikers krijgen sneller zicht op lopende acties, statussen en prioriteiten",
+                "Betere opvolging: processen worden consistenter beheerd door duidelijke stappen en centrale data",
+                "Professionelere workflow: de applicatie helpt manuele opvolging te vervangen door een gestructureerde digitale flow"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "brightest",
-          title: "Brightest Test Automation Framework",
-          description: "Een full-stack JavaScript applicatie die gebruikers zonder codeerkennis in staat stelt om geautomatiseerde tests voor websites te creëren. Het combineert een React frontend met Material UI, een Node.js backend en Firebase voor opslag. De tool heeft testkosten met 65% verminderd en de testcreatie met 80% versneld door AI-gegenereerde testcode en een no-code interface.",
-          fullDescription: `
-            <h2>Brightest Test Automation Framework</h2>
-            <p>Een webgebaseerd test automatiseringsframework ontworpen om gebruikers zonder codeerkennis te helpen bij het maken van geautomatiseerde tests voor websites.</p>
+      id: "bird",
+      title: "BIRD",
+      description: "Een applicatieconcept rond gestructureerde data, analyse en workflowondersteuning. BIRD focust op het omzetten van complexe informatie naar bruikbare inzichten en duidelijke acties.",
+      fullDescription: `
+        <h2>BIRD</h2>
+        <p>BIRD brengt data, logica en gebruikersinteractie samen in een overzichtelijke tool voor analyse en besluitvorming.</p>
 
-            <h3>Project Overzicht</h3>
-            <p>Het Brightest Test Automation Framework is een full-stack JavaScript applicatie waarmee gebruikers:</p>
-            <ul>
-              <li>Geautomatiseerde tests kunnen maken en beheren via een gebruiksvriendelijke interface</li>
-              <li>Tests kunnen organiseren per klant (verschillende websites of applicaties)</li>
-              <li>Page Object Model (POM) code automatisch kunnen genereren</li>
-              <li>Kunnen samenwerken met teamleden aan testprojecten</li>
-              <li>Testtaken kunnen bijhouden en beheren</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/Brightest.png"),
-          technologies: ["React.js", "Node.js", "Firebase", "Material UI", "WebSockets", "OpenAI API", "Puppeteer"],
-          liveUrl: "https://brightest-framework.example.com",
-          repoUrl: "https://github.com/Jack-Stan/brightest-framework",
-          features: [
-            "No-code interface voor het maken van geautomatiseerde tests",
-            "AI-aangedreven testcode generatie",
-            "Visuele elementselectie uit website screenshots",
-            "Team samenwerkingsfuncties met real-time updates",
-            "Kanban-bord voor taakbeheer",
-            "Meertalige ondersteuning (EN, FR, NL, DE)"
-          ],
-          impact: [
-            "Testkosten verminderd met 65% door niet-technische teamleden in staat te stellen tests te maken zonder ontwikkelaars",
-            "Testcreatie versneld met 80% door de no-code interface en AI-aangedreven codegeneratie",
-            "Testdekking verbeterd met 40% via de systematische benadering van testbare elementen",
-            "Samenwerkingsefficiëntie verbeterd met 50% door real-time teamfuncties en gedeelde testrepositories",
-            "Testtijd voor onderhoud verminderd met 70% door het automatiseren van de creatie van goed gestructureerde, onderhoudbare testcode"
-          ],
-          developmentStatus: "completed"
-        },
+        <h3>Project Overzicht</h3>
+        <p>BIRD brengt data, logica en gebruikersinteractie samen in een overzichtelijke tool voor analyse en besluitvorming.</p>
+        <ul>
+          <li>Heldere visualisatie van belangrijke informatie</li>\n          <li>Ondersteuning voor gestructureerde analyseflows</li>\n          <li>Gebruiksvriendelijke interface voor complexe data</li>\n          <li>Modulaire opzet voor verdere uitbreiding</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","Azure"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Heldere visualisatie van belangrijke informatie",
+                "Ondersteuning voor gestructureerde analyseflows",
+                "Gebruiksvriendelijke interface voor complexe data",
+                "Modulaire opzet voor verdere uitbreiding"
+        ],
+      impact:       [
+                "Snellere interpretatie: complexe informatie wordt toegankelijker gemaakt voor gebruikers",
+                "Betere beslissingen: data wordt vertaald naar concrete inzichten",
+                "Schaalbare basis: de oplossing kan verder uitgebreid worden met extra modules en automatisering"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "time2bill",
-          title: "Time2Bill",
-          description: "Een uitgebreide applicatie voor tijdsregistratie en facturatie ontworpen voor freelancers en kleine bedrijven. Gebouwd met Flutter voor cross-platform functionaliteit, het stroomlijnt de volledige workflow van tijdsregistratie tot betaling, waardoor administratieve overhead met ongeveer 60% wordt verminderd.",
-          fullDescription: `
-            <h2>Time2Bill</h2>
-            <p>Een uitgebreide oplossing voor tijdsregistratie en facturatie die de workflow stroomlijnt voor freelancers en kleine bedrijven.</p>
+      id: "stockdetail",
+      title: "StockDetail",
+      description: "Een voorraadgerichte applicatie die detailinformatie rond stock, bewegingen en beschikbaarheid overzichtelijk maakt. De applicatie ondersteunt efficiëntere opvolging en betere datakwaliteit.",
+      fullDescription: `
+        <h2>StockDetail</h2>
+        <p>StockDetail helpt gebruikers om voorraadgegevens sneller te raadplegen, interpreteren en opvolgen.</p>
 
-            <h3>Project Overzicht</h3>
-            <p>Time2Bill is een cross-platform applicatie gebouwd met Flutter die voorziet in:</p>
-            <ul>
-              <li>Real-time tijdsregistratie met meerdere timer-opties</li>
-              <li>Project- en taakbeheermogelijkheden</li>
-              <li>Geautomatiseerde facturatie met aanpasbare sjablonen</li>
-              <li>Klantbeheer met specifieke instellingen per klant</li>
-              <li>Uitgebreide rapportage met visuele grafieken</li>
-              <li>UBL/Peppol e-facturatie integratie voor Europese bedrijven</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/Time2Bill.png"),
-          technologies: ["Flutter", "Firebase", "Firestore", "Cloud Functions", "Authentication", "Provider", "fl_chart", "UBL/Peppol"],
-          liveUrl: "https://time2bill.example.com",
-          repoUrl: "https://github.com/Jack-Stan/Time2Bill",
-          features: [
-            "Cross-platform applicatie (web, iOS, Android)",
-            "Projectbeheer met taakorganisatie",
-            "Real-time tijdsregistratie met timer",
-            "Geavanceerde facturatie met PDF-generatie",
-            "UBL XML-export en Peppol e-facturatie integratie",
-            "Uitgebreide rapportage met visuele grafieken",
-            "Klantbeheer met specifieke instellingen per klant"
-          ],
-          impact: [
-            "Verbeterde bedrijfsefficiëntie: Stroomlijnt de volledige workflow van tijdregistratie tot betaling, waardoor administratieve overhead met ongeveer 60% wordt verminderd",
-            "Verhoogde omzetregistratie: De gedetailleerde tijdregistratie heeft gebruikers geholpen 15-20% meer factureerbare tijd vast te leggen die voorheen niet werd geregistreerd"
-          ],
-          developmentStatus: "in-development",
-          developmentInfo: "Momenteel bezig met het ontwikkelen van nieuwe functies om de gebruikerservaring te verbeteren en meer functionaliteit toe te voegen."
-        },
+        <h3>Project Overzicht</h3>
+        <p>StockDetail helpt gebruikers om voorraadgegevens sneller te raadplegen, interpreteren en opvolgen.</p>
+        <ul>
+          <li>Overzichtelijke weergave van stockdetails</li>\n          <li>Ondersteuning voor filtering, detailanalyse en opvolging</li>\n          <li>Focus op datakwaliteit en transparantie</li>\n          <li>Gebruiksvriendelijke schermen voor operationele gebruikers</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","SQL","Azure"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Overzichtelijke weergave van stockdetails",
+                "Ondersteuning voor filtering, detailanalyse en opvolging",
+                "Focus op datakwaliteit en transparantie",
+                "Gebruiksvriendelijke schermen voor operationele gebruikers"
+        ],
+      impact:       [
+                "Meer transparantie: voorraadgegevens worden sneller en duidelijker raadpleegbaar",
+                "Efficiëntere opvolging: gebruikers verliezen minder tijd aan verspreide informatie",
+                "Betere datakwaliteit: detailinformatie wordt consistenter zichtbaar gemaakt"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "purepeau",
-          title: "PurePeau Website",
-          description: "Een moderne, responsive bedrijfswebsite voor een wellnessbedrijf gespecialiseerd in natuurlijke massagebehandelingen. Gebouwd in React met Tailwind CSS, met aandacht voor branding, gebruiksvriendelijkheid en mobiele responsiviteit. Bevat een diensten-overzicht, blogbeheersysteem en contactmogelijkheden.",
-          fullDescription: `
-            <h2>PurePeau Website</h2>
-            <p>Een responsive bedrijfswebsite ontworpen om diensten te presenteren en een professionele online aanwezigheid te vestigen voor een wellnessbedrijf.</p>
+      id: "approval-automation",
+      title: "Approval Automation",
+      description: "Een automatiseringsoplossing voor goedkeuringsprocessen. Het project vermindert manuele stappen door aanvragen, controles en beslissingen in een duidelijke digitale flow te brengen.",
+      fullDescription: `
+        <h2>Approval Automation</h2>
+        <p>Approval Automation digitaliseert goedkeuringsstromen zodat aanvragen sneller, consistenter en traceerbaarder verwerkt kunnen worden.</p>
 
-            <h3>Project Overzicht</h3>
-            <p>PurePeau Website is een React-gebaseerde webapplicatie die voorziet in:</p>
-            <ul>
-              <li>Een visueel aantrekkelijke presentatie van massage- en wellnessdiensten</li>
-              <li>Een gebruiksvriendelijk content management systeem voor de niet-technische eigenaar</li>
-              <li>Responsive design dat naadloos werkt op alle apparaten</li>
-              <li>Online boekingsfunctionaliteit geïntegreerd met externe kalendersystemen</li>
-              <li>Een blogsectie voor het delen van wellnesstips en bedrijfsupdates</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/PurePeau.png"),
-          technologies: ["React", "Tailwind CSS", "Responsive Design", "Content Management", "SEO Optimization"],
-          liveUrl: "https://purepeau.example.com",
-          repoUrl: "https://github.com/Jack-Stan/purepeau-website",
-          features: [
-            "Aangepast content management systeem voor eenvoudige updates",
-            "Dienstenpresentatie met aantrekkelijke visuele elementen",
-            "Online boekingsintegratie",
-            "Responsive design voor alle apparaatformaten",
-            "Blogbeheersysteem",
-            "SEO-geoptimaliseerde contentstructuur"
-          ],
-          impact: [
-            "Professionele online aanwezigheid die vertrouwen opbouwt bij potentiële klanten",
-            "Toegenomen boekingen: Het online boekingssysteem heeft geleid tot een toename van 40% in nieuwe klantacquisities",
-            "Verbeterd contentbeheer: Het aangepaste CMS heeft websiteupdatetijden met 75% verminderd, waardoor de eigenaar zelf hun content kan onderhouden"
-          ],
-          developmentStatus: "in-development",
-          developmentInfo: "Momenteel bezig met het verbeteren van de website met extra functies en content."
-        },
+        <h3>Project Overzicht</h3>
+        <p>Approval Automation digitaliseert goedkeuringsstromen zodat aanvragen sneller, consistenter en traceerbaarder verwerkt kunnen worden.</p>
+        <ul>
+          <li>Digitale goedkeuringsflow met duidelijke stappen</li>\n          <li>Automatische opvolging van statussen en beslissingen</li>\n          <li>Minder manuele communicatie rond approvals</li>\n          <li>Betere traceerbaarheid van acties en verantwoordelijkheden</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Power Automate","SharePoint","Microsoft 365","Azure"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Digitale goedkeuringsflow met duidelijke stappen",
+                "Automatische opvolging van statussen en beslissingen",
+                "Minder manuele communicatie rond approvals",
+                "Betere traceerbaarheid van acties en verantwoordelijkheden"
+        ],
+      impact:       [
+                "Minder manueel werk: terugkerende goedkeuringsstappen worden geautomatiseerd",
+                "Snellere doorlooptijd: aanvragen kunnen efficiënter opgevolgd worden",
+                "Betere controle: beslissingen en statussen blijven centraal zichtbaar"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "jaqai",
-          title: "JAQ AI",
-          description: "JAQ (Just Another Question Assistant) is een Jarvis-achtige AI-assistent met een moderne webinterface. Het combineert meerdere AI-subsystemen waaronder conversatie, gezichtsemotiedetectie, spraakherkenning en financiële data-analyse, en biedt een uitgebreide interactieve ervaring.",
-          fullDescription: `
-            <h2>JAQ AI</h2>
-            <p>Een Jarvis-achtige AI-assistent met een moderne webinterface die conversationele AI, emotiedetectie en data-analysemogelijkheden biedt.</p>
+      id: "tender-2-quote",
+      title: "Tender 2 Quote",
+      description: "Een AI-aangedreven automatisering die tenderdocumenten gedeeld in Microsoft Teams automatisch analyseert en omzet naar een bruikbare offerte. Gebouwd met n8n en de Claude API om manuele documentverwerking te elimineren.",
+      fullDescription: `
+        <h2>Tender 2 Quote</h2>
+        <p>Tender 2 Quote is een geautomatiseerde workflow die tenderdocumenten in Microsoft Teams herkent, analyseert en automatisch vertaalt naar offerte-informatie.</p>
 
-            <h3>Project Overzicht</h3>
-            <p>JAQ AI (Just Another Question Assistant) is een op React gebaseerde webapplicatie die meerdere AI-systemen integreert:</p>
-            <ul>
-              <li>Conversationele AI met contextueel geheugen</li>
-              <li>Gezichtsemotiedetectie door middel van computer vision</li>
-              <li>Spraakherkenning voor handsfree interactie</li>
-              <li>Nederlandse nieuwsintegratie en samenvatting</li>
-              <li>Financiële data-analyse en rapportage</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/JaqAi.png"),
-          technologies: ["React.js", "Face-api.js", "Python", "TensorFlow", "Web Speech API", "Node.js", "MongoDB"],
-          liveUrl: "https://jaq-ai.example.com",
-          repoUrl: "https://github.com/Jack-Stan/jaq-ai",
-          features: [
-            "Conversationele AI: Reageert op gebruikersvragen met contextuele antwoorden",
-            "Zelf-lerend: Verbetert in de loop van de tijd door nieuwe vraag/antwoord-paren op te slaan",
-            "Nieuwsintegratie: Haalt actueel nieuws op van meerdere Nederlandse bronnen en vat dit samen",
-            "Financiële Data: Biedt aandelenkoersen, marktoverzichten en cryptocurrency-informatie",
-            "Emotiedetectie: Herkent gebruikersemoties door gezichtsanalyse",
-            "Spraakherkenning: Ondersteunt handsfree bediening met spraak-naar-tekst",
-            "Persistent geheugen: Slaat conversatiegeschiedenis op in een database"
-          ],
-          impact: [
-            "Verbeterde interactie-efficiëntie: Reduceert de benodigde tijd voor het verkrijgen van informatie met ongeveer 60% via natuurlijke taalvragen vergeleken met traditionele zoekmethoden",
-            "Verbeterde toegankelijkheid: Biedt meerdere interactiemethoden (tekst, spraak, visueel) waardoor informatie toegankelijk wordt voor gebruikers met verschillende behoeften of voorkeuren",
-            "Real-time informatietoegang: Levert kritische financiële en nieuwsgegevens binnen seconden, wat snellere besluitvorming mogelijk maakt"
-          ],
-          developmentStatus: "in-development",
-          developmentInfo: "Momenteel bezig met het verbeteren van AI-mogelijkheden en het toevoegen van nieuwe functies."
-        }  ],
+        <h3>Project Overzicht</h3>
+        <p>Zodra een gebruiker een tenderdocument in een Teams-kanaal plaatst, leest een n8n-workflow het document uit en stuurt de inhoud naar de Claude API voor analyse. De AI haalt de relevante informatie eruit en levert die gestructureerd terug zodat ze direct te gebruiken is voor de offerte.</p>
+        <ul>
+          <li>Automatische detectie van documenten in Microsoft Teams</li>\n          <li>AI-gestuurde analyse van tenderdocumenten via de Claude API</li>\n          <li>Geautomatiseerde n8n-workflow van document tot offerte-informatie</li>\n          <li>Sterke vermindering van manuele documentverwerking</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["n8n","Claude API","Microsoft Teams","Workflow Automation"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Automatische detectie van documenten in Microsoft Teams",
+                "AI-gestuurde analyse van tenderdocumenten via de Claude API",
+                "Geautomatiseerde n8n-workflow van document tot offerte-informatie",
+                "Sterke vermindering van manuele documentverwerking"
+        ],
+      impact:       [
+                "Minder manueel werk: tenderdocumenten worden automatisch uitgelezen in plaats van handmatig nagekeken",
+                "Snellere doorlooptijd: offerte-informatie is beschikbaar zodra het document gedeeld wordt",
+                "Consistentere output: de AI-analyse levert herhaalbaar gestructureerde informatie op"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "discount-tree",
+      title: "Discount Tree",
+      description: "Een module binnen SHIELD voor het modelleren en beheren van kortingsstructuren. Discount Tree maakt complexe voorwaarden inzichtelijker en helpt gebruikers kortingen op een gecontroleerde manier te beheren.",
+      fullDescription: `
+        <h2>Discount Tree</h2>
+        <p>Discount Tree is een module binnen het SHIELD-platform die kortingslogica visualiseert en beheert in een boomstructuur, zodat complexe prijsafspraken overzichtelijker worden.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>Als onderdeel van SHIELD visualiseert en beheert Discount Tree kortingslogica in een boomstructuur, zodat complexe prijsafspraken overzichtelijker worden.</p>
+        <ul>
+          <li>Structureren van kortingsregels en voorwaarden</li>\n          <li>Overzichtelijke boomstructuur voor complexe logica</li>\n          <li>Ondersteuning voor validatie en beheer</li>\n          <li>Gebruiksvriendelijke interface voor commerciële teams</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","SQL"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Structureren van kortingsregels en voorwaarden",
+                "Overzichtelijke boomstructuur voor complexe logica",
+                "Ondersteuning voor validatie en beheer",
+                "Gebruiksvriendelijke interface voor commerciële teams"
+        ],
+      impact:       [
+                "Meer inzicht: complexe kortingsregels worden makkelijker te begrijpen",
+                "Betere controle: voorwaarden kunnen consistenter beheerd worden",
+                "Minder fouten: duidelijke structuur helpt verwarring in prijslogica te verminderen"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "testpipelines-shield-stockdetail",
+      title: "Testpipelines SHIELD & StockDetail",
+      description: "Een test- en CI/CD-opzet voor SHIELD en StockDetail. Het project focust op betrouwbaardere releases door geautomatiseerde controles en herhaalbare pipelines.",
+      fullDescription: `
+        <h2>Testpipelines SHIELD & StockDetail</h2>
+        <p>De testpipelines ondersteunen stabielere opleveringen door automatische controles toe te voegen aan de ontwikkel- en releaseflow.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>De testpipelines ondersteunen stabielere opleveringen door automatische controles toe te voegen aan de ontwikkel- en releaseflow.</p>
+        <ul>
+          <li>Geautomatiseerde teststappen in de pipeline</li>\n          <li>Ondersteuning voor herhaalbare builds en controles</li>\n          <li>Betere feedback bij wijzigingen</li>\n          <li>Basis voor stabielere releases</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Azure DevOps","CI/CD","Automated Testing","Vue",".NET"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Geautomatiseerde teststappen in de pipeline",
+                "Ondersteuning voor herhaalbare builds en controles",
+                "Betere feedback bij wijzigingen",
+                "Basis voor stabielere releases"
+        ],
+      impact:       [
+                "Betrouwbaardere releases: fouten worden vroeger in het proces zichtbaar",
+                "Snellere feedback: ontwikkelaars krijgen duidelijkere signalen bij wijzigingen",
+                "Meer vertrouwen: automatische checks ondersteunen kwaliteit over meerdere projecten"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "fabric-agent",
+      title: "Fabric Agent",
+      description: "Een AI-agentconcept rond Microsoft Fabric en data-analyse. Het project verkent hoe gebruikers sneller inzichten kunnen vinden via een agent die data, context en acties samenbrengt.",
+      fullDescription: `
+        <h2>Fabric Agent</h2>
+        <p>Fabric Agent onderzoekt hoe AI kan helpen om data binnen Microsoft Fabric toegankelijker en actiegerichter te maken.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>Fabric Agent onderzoekt hoe AI kan helpen om data binnen Microsoft Fabric toegankelijker en actiegerichter te maken.</p>
+        <ul>
+          <li>Agentgerichte interactie met data en context</li>\n          <li>Ondersteuning voor snellere analyse en vraagstelling</li>\n          <li>Focus op bruikbare inzichten in plaats van losse data</li>\n          <li>Basis voor verdere uitbreiding met automatisering</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Microsoft Fabric","AI Agents","Azure","Data Analytics"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Agentgerichte interactie met data en context",
+                "Ondersteuning voor snellere analyse en vraagstelling",
+                "Focus op bruikbare inzichten in plaats van losse data",
+                "Basis voor verdere uitbreiding met automatisering"
+        ],
+      impact:       [
+                "Toegankelijkere data: gebruikers kunnen sneller richting inzichten werken",
+                "Meer productiviteit: analysevragen worden ondersteund door een agentgerichte flow",
+                "Innovatieve basis: het project legt de basis voor AI-ondersteunde dataworkflows"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "brightest",
+      title: "Brightest Test Automation Framework",
+      description: "Een full-stack JavaScript applicatie die gebruikers zonder codeerkennis in staat stelt om geautomatiseerde tests voor websites te creëren. Het combineert een React frontend met Material UI, een Node.js backend en Firebase voor opslag.",
+      fullDescription: `
+        <h2>Brightest Test Automation Framework</h2>
+        <p>Het Brightest Test Automation Framework is een webgebaseerde tool om testautomatisering toegankelijker te maken voor niet-technische gebruikers.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>Het Brightest Test Automation Framework is een webgebaseerde tool om testautomatisering toegankelijker te maken voor niet-technische gebruikers.</p>
+        <ul>
+          <li>No-code interface voor het maken van geautomatiseerde tests</li>\n          <li>AI-aangedreven testcodegeneratie</li>\n          <li>Visuele elementselectie uit website screenshots</li>\n          <li>Teamfuncties voor samenwerking en opvolging</li>\n          <li>Kanban-bord voor taakbeheer</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/Brightest.png"),
+      technologies: ["React.js","Node.js","Firebase","Material UI","OpenAI API","Puppeteer"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "No-code interface voor het maken van geautomatiseerde tests",
+                "AI-aangedreven testcodegeneratie",
+                "Visuele elementselectie uit website screenshots",
+                "Teamfuncties voor samenwerking en opvolging",
+                "Kanban-bord voor taakbeheer"
+        ],
+      impact:       [
+                "Lagere testkosten: niet-technische teamleden kunnen tests opzetten zonder afhankelijkheid van developers",
+                "Snellere testcreatie: de no-code interface versnelt het opzetten van testscenario’s",
+                "Betere onderhoudbaarheid: gegenereerde testcode volgt een duidelijke structuur"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "time2bill",
+      title: "Time2Bill",
+      description: "Een uitgebreide applicatie voor tijdsregistratie en facturatie, ontworpen voor freelancers en kleine bedrijven. Gebouwd met Flutter voor cross-platform gebruik en gericht op de volledige flow van tijdsregistratie tot betaling.",
+      fullDescription: `
+        <h2>Time2Bill</h2>
+        <p>Time2Bill is een cross-platform oplossing die tijdsregistratie, projectbeheer en facturatie samenbrengt in één workflow.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>Time2Bill is een cross-platform oplossing die tijdsregistratie, projectbeheer en facturatie samenbrengt in één workflow.</p>
+        <ul>
+          <li>Cross-platform applicatie voor web, iOS en Android</li>\n          <li>Projectbeheer met taakorganisatie</li>\n          <li>Real-time tijdsregistratie met timer</li>\n          <li>Facturatie met PDF-generatie</li>\n          <li>UBL XML-export en Peppol e-facturatie-integratie</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/Time2Bill.png"),
+      technologies: ["Flutter","Firebase","Firestore","Cloud Functions","Provider","UBL/Peppol"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Cross-platform applicatie voor web, iOS en Android",
+                "Projectbeheer met taakorganisatie",
+                "Real-time tijdsregistratie met timer",
+                "Facturatie met PDF-generatie",
+                "UBL XML-export en Peppol e-facturatie-integratie"
+        ],
+      impact:       [
+                "Minder administratie: de workflow van tijdsregistratie tot facturatie wordt gestroomlijnd",
+                "Betere omzetregistratie: gedetailleerde tijdsregistratie helpt factureerbare tijd beter vast te leggen",
+                "Professionelere facturatie: facturen en exportformaten worden consistenter beheerd"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "purepeau",
+      title: "PurePeau Website",
+      description: "Een moderne, responsive bedrijfswebsite voor een wellnessbedrijf gespecialiseerd in natuurlijke massagebehandelingen. De focus ligt op branding, gebruiksvriendelijkheid en mobiele responsiviteit.",
+      fullDescription: `
+        <h2>PurePeau Website</h2>
+        <p>PurePeau Website presenteert diensten, merkidentiteit en contactmogelijkheden in een professionele online ervaring.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>PurePeau Website presenteert diensten, merkidentiteit en contactmogelijkheden in een professionele online ervaring.</p>
+        <ul>
+          <li>Responsive design voor verschillende schermformaten</li>\n          <li>Dienstenpresentatie met visuele elementen</li>\n          <li>Contactmogelijkheden en online aanwezigheid</li>\n          <li>SEO-gerichte contentstructuur</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/PurePeau.png"),
+      technologies: ["React","Tailwind CSS","Responsive Design","SEO Optimization"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Responsive design voor verschillende schermformaten",
+                "Dienstenpresentatie met visuele elementen",
+                "Contactmogelijkheden en online aanwezigheid",
+                "SEO-gerichte contentstructuur"
+        ],
+      impact:       [
+                "Professionelere online aanwezigheid: bezoekers krijgen sneller vertrouwen in het merk",
+                "Betere gebruikservaring: de site is duidelijk en mobielvriendelijk opgebouwd",
+                "Eenvoudigere communicatie: diensten en contactopties zijn overzichtelijk beschikbaar"
+        ],
+      developmentStatus: "completed"
+    }
+  ],
   en: [
     {
-          id: "jaqops",
-          title: "JAQOps",
-          description: "A scalable SaaS platform that helps field service companies digitize and streamline their business processes by combining customer management, technician scheduling, inventory management, and invoicing in one powerful system.",
-          fullDescription: `
-            <h2>JAQOps</h2>
-            <p>A scalable SaaS platform that helps field service companies such as installation and maintenance businesses digitize and streamline their business processes.</p>
+      id: "shield",
+      title: "SHIELD",
+      description: "A business application focused on centralizing, securing, and clarifying operational processes. The focus is on clear workflows, reliable data, and a user-friendly interface for daily follow-up.",
+      fullDescription: `
+        <h2>SHIELD</h2>
+        <p>SHIELD is an operational platform that brings processes, controls, and follow-up into one clear application.</p>
 
-            <h3>Project Overview</h3>
-            <p>JAQOps is a comprehensive SaaS platform that provides:</p>
-            <ul>
-              <li>Multi-tenant architecture with data isolation and custom branding</li>
-              <li>CRM module for customer management, contacts, history, and quotes</li>
-              <li>Planning & Dispatch with real-time technician scheduling</li>
-              <li>Inventory management linked to work orders</li>
-              <li>Automated invoicing with PDF export and email notifications</li>
-              <li>Role-based Access Control (RBAC) for different user roles</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/JaqAi.png"), // Temporarily using the same image as JaqAI, replace later
-          technologies: ["ASP.NET Core 8", "React", "TypeScript", "PostgreSQL", "Docker", "SignalR", "TailwindCSS", "Entity Framework Core", "Hangfire", "PWA"],
-          liveUrl: "https://jaqops.example.com",
-          repoUrl: "https://github.com/Jack-Stan/jaqops",
-          features: [
-            "Multi-tenant architecture with data isolation per client",
-            "CRM module for customer management and history",
-            "Real-time scheduling of technicians with mobile support",
-            "Inventory management linked to work orders",
-            "Automated invoice and work order generation",
-            "Role-based Access Control (RBAC)",
-            "Real-time status updates via SignalR",
-            "Offline support via PWA",
-            "Comprehensive reporting & analytics",
-            "Docker-based deployment",
-            "Asynchronous task processing with Hangfire"
-          ],
-          impact: [
-            "Efficiency gains: Field service companies can significantly increase their operational efficiency through streamlined processes",
-            "Digital transformation: Enables traditional service companies to digitize and improve their competitive position",
-            "Scalability: The multi-tenant design makes the solution accessible to both small and large service companies"
-          ],
-          developmentStatus: "planning",
-          developmentInfo: "New project in planning phase. Architecture designed and technology choices made. Development will begin soon."
-        },
+        <h3>Project Overview</h3>
+        <p>SHIELD is an operational platform that brings processes, controls, and follow-up into one clear application.</p>
+        <ul>
+          <li>Streamlined workflow for operational follow-up</li>\n          <li>Clear screens for statuses, actions, and responsibilities</li>\n          <li>Focus on reliability, traceability, and usability</li>\n          <li>Support for scalable business processes</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","Azure","SQL"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Streamlined workflow for operational follow-up",
+                "Clear screens for statuses, actions, and responsibilities",
+                "Focus on reliability, traceability, and usability",
+                "Support for scalable business processes"
+        ],
+      impact:       [
+                "More overview: users can see ongoing actions, statuses, and priorities faster",
+                "Better follow-up: processes are managed more consistently through clear steps and centralized data",
+                "More professional workflow: the application helps replace manual tracking with a structured digital flow"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "brightest",
-          title: "Brightest Test Automation Framework",
-          description: "A full-stack JavaScript application that enables users without coding knowledge to create automated tests for websites. It combines a React frontend with Material UI, a Node.js backend, and Firebase for storage. The tool has reduced testing costs by 65% and accelerated test creation by 80% through AI-generated test code and a no-code interface.",
-          fullDescription: `
-            <h2>Brightest Test Automation Framework</h2>
-            <p>A web-based test automation framework designed to help users without coding knowledge create automated tests for websites.</p>
+      id: "bird",
+      title: "BIRD",
+      description: "An application concept around structured data, analysis, and workflow support. BIRD focuses on turning complex information into usable insights and clear actions.",
+      fullDescription: `
+        <h2>BIRD</h2>
+        <p>BIRD combines data, logic, and user interaction in a clear tool for analysis and decision-making.</p>
 
-            <h3>Project Overview</h3>
-            <p>The Brightest Test Automation Framework is a full-stack JavaScript application that allows users to:</p>
-            <ul>
-              <li>Create and manage automated tests through a user-friendly interface</li>
-              <li>Organize tests by client (different websites or applications)</li>
-              <li>Automatically generate Page Object Model (POM) code</li>
-              <li>Collaborate with team members on test projects</li>
-              <li>Track and manage test tasks</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/Brightest.png"),
-          technologies: ["React.js", "Node.js", "Firebase", "Material UI", "WebSockets", "OpenAI API", "Puppeteer"],
-          liveUrl: "https://brightest-framework.example.com",
-          repoUrl: "https://github.com/Jack-Stan/brightest-framework",
-          features: [
-            "No-code interface for creating automated tests",
-            "AI-powered test code generation",
-            "Visual element selection from website screenshots",
-            "Team collaboration features with real-time updates",
-            "Kanban board for task management",
-            "Multilingual support (EN, FR, NL, DE)"
-          ],
-          impact: [
-            "Testing costs reduced by 65% by enabling non-technical team members to create tests without developers",
-            "Test creation accelerated by 80% through the no-code interface and AI-powered code generation",
-            "Test coverage improved by 40% through the systematic approach to testable elements",
-            "Collaboration efficiency improved by 50% through real-time team features and shared test repositories",
-            "Test maintenance time reduced by 70% by automating the creation of well-structured, maintainable test code"
-          ],
-          developmentStatus: "completed"
-        },
+        <h3>Project Overview</h3>
+        <p>BIRD combines data, logic, and user interaction in a clear tool for analysis and decision-making.</p>
+        <ul>
+          <li>Clear visualization of important information</li>\n          <li>Support for structured analysis flows</li>\n          <li>User-friendly interface for complex data</li>\n          <li>Modular setup for further expansion</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","Azure"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Clear visualization of important information",
+                "Support for structured analysis flows",
+                "User-friendly interface for complex data",
+                "Modular setup for further expansion"
+        ],
+      impact:       [
+                "Faster interpretation: complex information becomes more accessible to users",
+                "Better decisions: data is translated into concrete insights",
+                "Scalable foundation: the solution can be extended with extra modules and automation"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "time2bill",
-          title: "Time2Bill",
-          description: "A comprehensive time tracking and invoicing application designed for freelancers and small businesses. Built with Flutter for cross-platform functionality, it streamlines the entire workflow from time registration to payment, reducing administrative overhead by approximately 60%.",
-          fullDescription: `
-            <h2>Time2Bill</h2>
-            <p>A comprehensive time tracking and invoicing solution that streamlines the workflow for freelancers and small businesses.</p>
+      id: "stockdetail",
+      title: "StockDetail",
+      description: "An inventory-focused application that makes detailed stock information, movements, and availability easier to understand. The application supports more efficient follow-up and better data quality.",
+      fullDescription: `
+        <h2>StockDetail</h2>
+        <p>StockDetail helps users consult, interpret, and follow up inventory data faster.</p>
 
-            <h3>Project Overview</h3>
-            <p>Time2Bill is a cross-platform application built with Flutter that provides:</p>
-            <ul>
-              <li>Real-time time tracking with multiple timer options</li>
-              <li>Project and task management capabilities</li>
-              <li>Automated invoicing with customizable templates</li>
-              <li>Client management with specific settings per client</li>
-              <li>Comprehensive reporting with visual charts</li>
-              <li>UBL/Peppol e-invoicing integration for European businesses</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/Time2Bill.png"),
-          technologies: ["Flutter", "Firebase", "Firestore", "Cloud Functions", "Authentication", "Provider", "fl_chart", "UBL/Peppol"],
-          liveUrl: "https://time2bill.example.com",
-          repoUrl: "https://github.com/Jack-Stan/Time2Bill",
-          features: [
-            "Cross-platform application (web, iOS, Android)",
-            "Project management with task organization",
-            "Real-time time tracking with timer",
-            "Advanced invoicing with PDF generation",
-            "UBL XML export and Peppol e-invoicing integration",
-            "Comprehensive reporting with visual charts",
-            "Client management with specific settings per client"
-          ],
-          impact: [
-            "Improved business efficiency: Streamlines the entire workflow from time tracking to payment, reducing administrative overhead by approximately 60%",
-            "Increased revenue capture: The detailed time tracking has helped users capture 15-20% more billable time that was previously not recorded"
-          ],
-          developmentStatus: "in-development",
-          developmentInfo: "Currently developing new features to enhance the user experience and add more functionality."
-        },
+        <h3>Project Overview</h3>
+        <p>StockDetail helps users consult, interpret, and follow up inventory data faster.</p>
+        <ul>
+          <li>Clear display of stock details</li>\n          <li>Support for filtering, detailed analysis, and follow-up</li>\n          <li>Focus on data quality and transparency</li>\n          <li>User-friendly screens for operational users</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","SQL","Azure"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Clear display of stock details",
+                "Support for filtering, detailed analysis, and follow-up",
+                "Focus on data quality and transparency",
+                "User-friendly screens for operational users"
+        ],
+      impact:       [
+                "More transparency: inventory data becomes faster and clearer to consult",
+                "More efficient follow-up: users spend less time searching through scattered information",
+                "Better data quality: detailed information is made more consistently visible"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "purepeau",
-          title: "PurePeau Website",
-          description: "A modern, responsive business website for a wellness company specializing in natural massage treatments. Built in React with Tailwind CSS, with attention to branding, user-friendliness and mobile responsiveness. Features a service overview, blog management system and contact options.",
-          fullDescription: `
-            <h2>PurePeau Website</h2>
-            <p>A responsive business website designed to showcase services and establish a professional online presence for a wellness company.</p>
+      id: "approval-automation",
+      title: "Approval Automation",
+      description: "An automation solution for approval processes. The project reduces manual steps by bringing requests, checks, and decisions into a clear digital flow.",
+      fullDescription: `
+        <h2>Approval Automation</h2>
+        <p>Approval Automation digitizes approval flows so requests can be processed faster, more consistently, and with better traceability.</p>
 
-            <h3>Project Overview</h3>
-            <p>PurePeau Website is a React-based web application that provides:</p>
-            <ul>
-              <li>A visually appealing presentation of massage and wellness services</li>
-              <li>A user-friendly content management system for the non-technical owner</li>
-              <li>Responsive design that works seamlessly across all devices</li>
-              <li>Online booking functionality integrated with external calendar systems</li>
-              <li>A blog section for sharing wellness tips and company updates</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/PurePeau.png"),
-          technologies: ["React", "Tailwind CSS", "Responsive Design", "Content Management", "SEO Optimization"],
-          liveUrl: "https://purepeau.example.com",
-          repoUrl: "https://github.com/Jack-Stan/purepeau-website",
-          features: [
-            "Custom content management system for easy updates",
-            "Service presentation with attractive visual elements",
-            "Online booking integration",
-            "Responsive design for all device sizes",
-            "Blog management system",
-            "SEO-optimized content structure"
-          ],
-          impact: [
-            "Professional online presence that builds trust with potential clients",
-            "Increased bookings: The online booking system has led to a 40% increase in new client acquisitions",
-            "Improved content management: The custom CMS has reduced website update times by 75%, allowing the owner to maintain their own content"
-          ],
-          developmentStatus: "in-development",
-          developmentInfo: "Currently improving the website with additional features and content."
-        },
+        <h3>Project Overview</h3>
+        <p>Approval Automation digitizes approval flows so requests can be processed faster, more consistently, and with better traceability.</p>
+        <ul>
+          <li>Digital approval flow with clear steps</li>\n          <li>Automatic follow-up of statuses and decisions</li>\n          <li>Less manual communication around approvals</li>\n          <li>Better traceability of actions and responsibilities</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Power Automate","SharePoint","Microsoft 365","Azure"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Digital approval flow with clear steps",
+                "Automatic follow-up of statuses and decisions",
+                "Less manual communication around approvals",
+                "Better traceability of actions and responsibilities"
+        ],
+      impact:       [
+                "Less manual work: recurring approval steps are automated",
+                "Faster turnaround: requests can be followed up more efficiently",
+                "Better control: decisions and statuses remain centrally visible"
+        ],
+      developmentStatus: "completed"
+    },
     {
-          id: "jaqai",
-          title: "JAQ AI",
-          description: "JAQ (Just Another Question Assistant) is a Jarvis-like AI assistant with a modern web interface. It combines multiple AI subsystems including conversation, facial emotion detection, speech recognition, and financial data analysis, offering a comprehensive interactive experience.",
-          fullDescription: `
-            <h2>JAQ AI</h2>
-            <p>A Jarvis-like AI assistant with a modern web interface that offers conversational AI, emotion detection, and data analysis capabilities.</p>
+      id: "tender-2-quote",
+      title: "Tender 2 Quote",
+      description: "An AI-powered automation that analyzes tender documents shared in Microsoft Teams and turns them into a usable quote. Built with n8n and the Claude API to eliminate manual document processing.",
+      fullDescription: `
+        <h2>Tender 2 Quote</h2>
+        <p>Tender 2 Quote is an automated workflow that detects tender documents in Microsoft Teams, analyzes them, and automatically translates them into quote information.</p>
 
-            <h3>Project Overview</h3>
-            <p>JAQ AI (Just Another Question Assistant) is a React-based web application that integrates multiple AI systems:</p>
-            <ul>
-              <li>Conversational AI with contextual memory</li>
-              <li>Facial emotion detection through computer vision</li>
-              <li>Speech recognition for hands-free interaction</li>
-              <li>Dutch news integration and summarization</li>
-              <li>Financial data analysis and reporting</li>
-            </ul>
-          `,
-          imageUrl: require("../data/photo/JaqAi.png"),
-          technologies: ["React.js", "Face-api.js", "Python", "TensorFlow", "Web Speech API", "Node.js", "MongoDB"],
-          liveUrl: "https://jaq-ai.example.com",
-          repoUrl: "https://github.com/Jack-Stan/jaq-ai",
-          features: [
-            "Conversational AI: Responds to user questions with contextual answers",
-            "Self-learning: Improves over time by storing new question/answer pairs",
-            "News integration: Retrieves current news from multiple Dutch sources and summarizes it",
-            "Financial data: Provides stock prices, market overviews, and cryptocurrency information",
-            "Emotion detection: Recognizes user emotions through facial analysis",
-            "Speech recognition: Supports hands-free operation with speech-to-text",
-            "Persistent memory: Stores conversation history in a database"
-          ],
-          impact: [
-            "Improved interaction efficiency: Reduces the time needed to obtain information by about 60% via natural language questions compared to traditional search methods",
-            "Improved accessibility: Provides multiple interaction methods (text, speech, visual) making information accessible to users with different needs or preferences",
-            "Real-time information access: Delivers critical financial and news data within seconds, enabling faster decision making"
-          ],
-          developmentStatus: "in-development",
-          developmentInfo: "Currently enhancing AI capabilities and adding new features."
-        }  ]
+        <h3>Project Overview</h3>
+        <p>As soon as a user drops a tender document into a Teams channel, an n8n workflow picks it up and sends the content to the Claude API for analysis. The AI extracts the relevant information and returns it in a structured format ready to use for the quote.</p>
+        <ul>
+          <li>Automatic detection of documents in Microsoft Teams</li>\n          <li>AI-driven analysis of tender documents via the Claude API</li>\n          <li>Automated n8n workflow from document to quote information</li>\n          <li>Significant reduction in manual document processing</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["n8n","Claude API","Microsoft Teams","Workflow Automation"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Automatic detection of documents in Microsoft Teams",
+                "AI-driven analysis of tender documents via the Claude API",
+                "Automated n8n workflow from document to quote information",
+                "Significant reduction in manual document processing"
+        ],
+      impact:       [
+                "Less manual work: tender documents are read automatically instead of reviewed by hand",
+                "Faster turnaround: quote information is available as soon as the document is shared",
+                "More consistent output: the AI analysis produces repeatable, structured information"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "discount-tree",
+      title: "Discount Tree",
+      description: "A module within SHIELD for modeling and managing discount structures. Discount Tree makes complex conditions easier to understand and helps users manage discounts in a controlled way.",
+      fullDescription: `
+        <h2>Discount Tree</h2>
+        <p>Discount Tree is a module within the SHIELD platform that visualizes and manages discount logic in a tree structure, making complex pricing agreements clearer.</p>
+
+        <h3>Project Overview</h3>
+        <p>As part of SHIELD, Discount Tree visualizes and manages discount logic in a tree structure, making complex pricing agreements clearer.</p>
+        <ul>
+          <li>Structuring discount rules and conditions</li>\n          <li>Clear tree structure for complex logic</li>\n          <li>Support for validation and management</li>\n          <li>User-friendly interface for commercial teams</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","TypeScript",".NET","SQL"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Structuring discount rules and conditions",
+                "Clear tree structure for complex logic",
+                "Support for validation and management",
+                "User-friendly interface for commercial teams"
+        ],
+      impact:       [
+                "More insight: complex discount rules become easier to understand",
+                "Better control: conditions can be managed more consistently",
+                "Fewer mistakes: clear structure helps reduce confusion in pricing logic"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "testpipelines-shield-stockdetail",
+      title: "Testpipelines SHIELD & StockDetail",
+      description: "A testing and CI/CD setup for SHIELD and StockDetail. The project focuses on more reliable releases through automated checks and repeatable pipelines.",
+      fullDescription: `
+        <h2>Testpipelines SHIELD & StockDetail</h2>
+        <p>The test pipelines support more stable delivery by adding automated checks to the development and release flow.</p>
+
+        <h3>Project Overview</h3>
+        <p>The test pipelines support more stable delivery by adding automated checks to the development and release flow.</p>
+        <ul>
+          <li>Automated test steps in the pipeline</li>\n          <li>Support for repeatable builds and checks</li>\n          <li>Better feedback when changes are introduced</li>\n          <li>Foundation for more stable releases</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Azure DevOps","CI/CD","Automated Testing","Vue",".NET"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Automated test steps in the pipeline",
+                "Support for repeatable builds and checks",
+                "Better feedback when changes are introduced",
+                "Foundation for more stable releases"
+        ],
+      impact:       [
+                "More reliable releases: issues become visible earlier in the process",
+                "Faster feedback: developers get clearer signals when changes are made",
+                "More confidence: automated checks support quality across multiple projects"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "fabric-agent",
+      title: "Fabric Agent",
+      description: "An AI agent concept around Microsoft Fabric and data analysis. The project explores how users can find insights faster through an agent that combines data, context, and actions.",
+      fullDescription: `
+        <h2>Fabric Agent</h2>
+        <p>Fabric Agent explores how AI can make data in Microsoft Fabric more accessible and action-oriented.</p>
+
+        <h3>Project Overview</h3>
+        <p>Fabric Agent explores how AI can make data in Microsoft Fabric more accessible and action-oriented.</p>
+        <ul>
+          <li>Agent-oriented interaction with data and context</li>\n          <li>Support for faster analysis and questioning</li>\n          <li>Focus on usable insights instead of isolated data</li>\n          <li>Foundation for further automation expansion</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Microsoft Fabric","AI Agents","Azure","Data Analytics"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Agent-oriented interaction with data and context",
+                "Support for faster analysis and questioning",
+                "Focus on usable insights instead of isolated data",
+                "Foundation for further automation expansion"
+        ],
+      impact:       [
+                "More accessible data: users can move toward insights faster",
+                "More productivity: analysis questions are supported by an agent-driven flow",
+                "Innovative foundation: the project creates a basis for AI-supported data workflows"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "brightest",
+      title: "Brightest Test Automation Framework",
+      description: "A full-stack JavaScript application that enables users without coding knowledge to create automated tests for websites. It combines a React frontend with Material UI, a Node.js backend, and Firebase for storage.",
+      fullDescription: `
+        <h2>Brightest Test Automation Framework</h2>
+        <p>The Brightest Test Automation Framework is a web-based tool that makes test automation more accessible for non-technical users.</p>
+
+        <h3>Project Overview</h3>
+        <p>The Brightest Test Automation Framework is a web-based tool that makes test automation more accessible for non-technical users.</p>
+        <ul>
+          <li>No-code interface for creating automated tests</li>\n          <li>AI-powered test code generation</li>\n          <li>Visual element selection from website screenshots</li>\n          <li>Team features for collaboration and follow-up</li>\n          <li>Kanban board for task management</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/Brightest.png"),
+      technologies: ["React.js","Node.js","Firebase","Material UI","OpenAI API","Puppeteer"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "No-code interface for creating automated tests",
+                "AI-powered test code generation",
+                "Visual element selection from website screenshots",
+                "Team features for collaboration and follow-up",
+                "Kanban board for task management"
+        ],
+      impact:       [
+                "Lower testing costs: non-technical team members can set up tests without depending on developers",
+                "Faster test creation: the no-code interface accelerates test scenario setup",
+                "Better maintainability: generated test code follows a clear structure"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "time2bill",
+      title: "Time2Bill",
+      description: "A comprehensive time tracking and invoicing application designed for freelancers and small businesses. Built with Flutter for cross-platform use and focused on the full flow from time registration to payment.",
+      fullDescription: `
+        <h2>Time2Bill</h2>
+        <p>Time2Bill is a cross-platform solution that brings time tracking, project management, and invoicing together in one workflow.</p>
+
+        <h3>Project Overview</h3>
+        <p>Time2Bill is a cross-platform solution that brings time tracking, project management, and invoicing together in one workflow.</p>
+        <ul>
+          <li>Cross-platform application for web, iOS, and Android</li>\n          <li>Project management with task organization</li>\n          <li>Real-time time tracking with timer</li>\n          <li>Invoicing with PDF generation</li>\n          <li>UBL XML export and Peppol e-invoicing integration</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/Time2Bill.png"),
+      technologies: ["Flutter","Firebase","Firestore","Cloud Functions","Provider","UBL/Peppol"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Cross-platform application for web, iOS, and Android",
+                "Project management with task organization",
+                "Real-time time tracking with timer",
+                "Invoicing with PDF generation",
+                "UBL XML export and Peppol e-invoicing integration"
+        ],
+      impact:       [
+                "Less administration: the workflow from time tracking to invoicing is streamlined",
+                "Better revenue capture: detailed time tracking helps record billable time more accurately",
+                "More professional invoicing: invoices and export formats are managed more consistently"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "purepeau",
+      title: "PurePeau Website",
+      description: "A modern, responsive business website for a wellness company specializing in natural massage treatments. The focus is on branding, usability, and mobile responsiveness.",
+      fullDescription: `
+        <h2>PurePeau Website</h2>
+        <p>PurePeau Website presents services, brand identity, and contact options in a professional online experience.</p>
+
+        <h3>Project Overview</h3>
+        <p>PurePeau Website presents services, brand identity, and contact options in a professional online experience.</p>
+        <ul>
+          <li>Responsive design for different screen sizes</li>\n          <li>Service presentation with visual elements</li>\n          <li>Contact options and online presence</li>\n          <li>SEO-oriented content structure</li>
+        </ul>
+      `,
+      imageUrl: require("../data/photo/PurePeau.png"),
+      technologies: ["React","Tailwind CSS","Responsive Design","SEO Optimization"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Responsive design for different screen sizes",
+                "Service presentation with visual elements",
+                "Contact options and online presence",
+                "SEO-oriented content structure"
+        ],
+      impact:       [
+                "More professional online presence: visitors gain trust in the brand faster",
+                "Better user experience: the site is clear and mobile-friendly",
+                "Simpler communication: services and contact options are easy to find"
+        ],
+      developmentStatus: "completed"
+    }
+  ]
 };
 
 export default projectsData;

@@ -26,14 +26,6 @@ const Navigation = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
-    }
-  };
-
   const handleCVDownload = () => {
     // Dit zorgt ervoor dat de browser het bestand direct downloadt
     const link = document.createElement('a');

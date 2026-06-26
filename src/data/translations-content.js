@@ -1,18 +1,18 @@
 // About section translations
 const aboutContent = {
   nl: {
-    aboutIntro: "Wat me het meest boeit aan software development? Hoe iets van nul kan uitgroeien tot iets dat echt werkt, impact maakt en mensen blij maakt. Ik hou ervan om te zien hoe een idee vorm krijgt en dat ik daar als developer iets creatiefs en tastbaars van kan maken.",
-    aboutStrengths: "Mijn sterkte ligt vooral in frontend, met React als mijn thuishaven. Daar kan ik mijn creativiteit kwijt en zorgen dat dingen niet alleen goed werken, maar ook fijn aanvoelen voor de gebruiker. Tegelijk vind ik backend ook belangrijk, want het geeft me controle over hoe alles achter de schermen klopt en vlot draait.",
-    aboutTeamwork: "In een team ben ik diegene die op de details let, altijd op zoek is naar creatieve insteken en oplossingen, en het belangrijk vindt dat code begrijpelijk blijft voor anderen. Ik hecht veel waarde aan gebruiksvriendelijkheid, zowel voor de eindgebruiker als voor andere developers.",
-    aboutProjects: "Twee projecten waar ik trots op ben: mijn portfolio (je kijkt er nu naar 😉) en mijn Time2Bill-applicatie. Die tonen goed hoe ik denk, werk en ontwikkel.",
-    aboutGoals: "Mijn doel is om door te groeien tot een sterke senior full-stack developer. Ik ben net afgestudeerd, dus ik weet dat het nog een weg is, maar ik ben er klaar voor. Wat ik zoek in een job? Doorgroeimogelijkheden en vooral: nieuwe technologieën leren die je niet in een klaslokaal tegenkomt."
+    aboutIntro: "Ik ben gestart als developer, maar werk nu als Functional Analyst bij RF-Technologies. Het stuk dat ik het leukst vind is uitzoeken wat een businessprobleem nu eigenlijk nodig heeft voor er één lijn code geschreven wordt, en dan zorgen dat de oplossing ook standhoudt eens ze gebouwd is.",
+    aboutStrengths: "Mijn technische achtergrond in .NET, SQL, Vue en Azure helpt daar enorm bij. Ik kan de code lezen, een designkeuze in vraag stellen, en een oplossing zelf checken in plaats van gewoon te geloven wat me verteld wordt.",
+    aboutTeamwork: "In een team ben ik meestal degene die 'wacht, waarom doen we het zo' zegt voordat het verkeerd gebouwd wordt. Ik probeer zowel de eindgebruikers als de developers tevreden te houden, en dat is niet altijd hetzelfde.",
+    aboutProjects: "Bij RF-Technologies werk ik aan SHIELD en BIRD, twee bedrijfskritische applicaties, en volg ik projecten op van analyse tot implementatie, inclusief het minder leuke stuk waarbij iets crasht in productie en ik moet uitzoeken waarom. Tijdens werkuren bouw ik ook AI agents (een Fabric agent, een D365 agent) op basis van MCP servers en Claude models. Buiten het werk zit ik te prutsen aan een personal finance agent en iets dat Mythos heet, eigenlijk Claude Code dat Kali Linux draait in een Docker container zodat het websites kan pentesten met echte Kali tools. Daarvoor bouwde ik Time2Bill, een facturatie-app in Flutter.",
+    aboutGoals: "Op lange termijn wil ik vooral blijven groeien tussen business en technologie, en onderweg dingen oppikken die je in geen klaslokaal leert."
   },
   en: {
-    aboutIntro: "What fascinates me most about software development? How something can grow from nothing into something that really works, makes an impact, and makes people happy. I love seeing an idea take shape and being able to turn it into something creative and tangible as a developer.",
-    aboutStrengths: "My strength lies mainly in frontend development, with React as my home base. That is where I can use my creativity and make sure things not only work well, but also feel good for the user. At the same time, I also value backend development because it gives me control over how everything works behind the scenes.",
-    aboutTeamwork: "In a team, I am the person who pays attention to details, looks for creative approaches and solutions, and values keeping code understandable for others. I care a lot about usability, both for end users and for other developers.",
-    aboutProjects: "Two projects I am proud of are my portfolio (you are looking at it now 😉) and my Time2Bill application. They show how I think, work, and build.",
-    aboutGoals: "My goal is to grow into a strong senior full-stack developer. I just graduated, so I know it is still a journey, but I am ready for it. What am I looking for in a job? Growth opportunities and, above all, learning new technologies you do not encounter in a classroom."
+    aboutIntro: "I started out as a developer, but these days I work as a Functional Analyst at RF-Technologies. The part I actually enjoy most is figuring out what a business problem really needs before anyone writes a line of code, and then making sure the solution holds up once it's built.",
+    aboutStrengths: "Having a technical background in .NET, SQL, Vue and Azure helps a lot here. I can read the code, question a design choice, and check a solution myself instead of just trusting whatever I'm told.",
+    aboutTeamwork: "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. I try to keep both the end users and the developers happy, which isn't always the same thing.",
+    aboutProjects: "At RF-Technologies I work on SHIELD and BIRD, two business-critical applications, and I follow projects from analysis all the way through implementation, including the not-so-fun part where something breaks in production and I have to go find out why. During work hours I've also been building AI agents (a Fabric agent, a D365 agent) on top of MCP servers and Claude models. Outside of work I'm tinkering with a personal finance agent and something called Mythos, basically Claude Code running Kali Linux inside a Docker container so it can pentest websites with actual Kali tools. Before that I built Time2Bill, an invoicing app in Flutter.",
+    aboutGoals: "Long term I just want to keep growing in that space between business and tech, and pick up things along the way that you'd never learn in a classroom."
   }
 };
 
@@ -20,25 +20,25 @@ const aboutContent = {
 const skillsContent = {
   nl: {
     sectionTitle: "Mijn specialisaties",
-    sectionIntro: "Als developer focus ik mij op de volgende kerngebieden, waarbij ik technische expertise combineer met gevoel voor design en gebruikservaring:",
+    sectionIntro: "Als Functional Analyst met een technische achtergrond combineer ik business-analyse met hands-on development, en een groeiende interesse in AI agents:",
     coreTitle: "Kernspecialisaties",
     supportTitle: "Ondersteunende vaardigheden",
     professionalTitle: "Professionele competenties",
-    skillDescription: "Met React als mijn primaire frontend-framework heb ik ervaring in het bouwen van interactieve, performante en onderhoudbare user interfaces. Mijn kennis van het JavaScript/TypeScript-ecosysteem helpt me om robuuste applicaties te ontwikkelen met duidelijke structuur en typeveiligheid.",
-    projectExample: "Projectvoorbeeld: bij het Brightest Test Automation Framework zorgde mijn React-expertise voor een intuïtieve UI die testkosten met 65% hielp verminderen.",
-    supportDescription: "Deze vaardigheden vullen mijn kernexpertise aan, waardoor ik full-stack oplossingen kan leveren. Mijn ervaring met Node.js en Firebase helpt me schaalbare backends te bouwen, terwijl mijn Flutter-kennis nuttig is voor cross-platform ontwikkeling.",
-    professionalDescription: "Naast technische vaardigheden breng ik sterke soft skills en een resultaatgerichte aanpak mee. Ik analyseer graag complexe problemen en zoek naar oplossingen die duidelijk, werkbaar en onderhoudbaar zijn."
+    skillDescription: "Ik ben gestart als developer, maar werk nu als Functional Analyst bij RF-Technologies. Ik vertaal businessbehoeften naar concrete oplossingen en blijf daarbij technisch mee aan tafel: dagelijks met Vue, en aan de backend met .NET en SQL, voor applicaties die zowel functioneel als technisch kloppen.",
+    projectExample: "Projectvoorbeeld: bij SHIELD en BIRD volg ik projecten end-to-end op, van functionele analyse en technical lead tot het debuggen van productieproblemen, zodat oplossingen ook in de praktijk standhouden.",
+    supportDescription: "Deze vaardigheden vullen mijn kernexpertise aan. Met Azure bouw ik schaalbare oplossingen, en ik experimenteer veel met AI agents via MCP servers, zoals een Fabric agent en een D365 agent op het werk. Automatisering met n8n en Flutter gebruik ik vooral voor eigen projecten.",
+    professionalDescription: "Naast technische vaardigheden breng ik sterke soft skills mee: ik analyseer graag complexe problemen en schakel makkelijk tussen business en developers. Buiten het werk verdiep ik me ook in security, met Mythos, mijn eigen agent die via Kali Linux websites test op kwetsbaarheden."
   },
   en: {
     sectionTitle: "My specializations",
-    sectionIntro: "As a developer, I focus on the following core areas, combining technical expertise with a strong sense for design and user experience:",
+    sectionIntro: "As a Functional Analyst with a technical background, I combine business analysis with hands-on development, plus a growing interest in AI agents:",
     coreTitle: "Core specializations",
     supportTitle: "Supporting skills",
     professionalTitle: "Professional competencies",
-    skillDescription: "With React as my primary frontend framework, I have experience building interactive, performant, and maintainable user interfaces. My knowledge of the JavaScript/TypeScript ecosystem helps me develop robust applications with clear structure and type safety.",
-    projectExample: "Project example: at the Brightest Test Automation Framework, my React expertise helped create an intuitive UI that reduced testing costs by 65%.",
-    supportDescription: "These skills complement my core expertise and allow me to deliver full-stack solutions. My experience with Node.js and Firebase helps me build scalable backends, while my Flutter knowledge supports cross-platform development.",
-    professionalDescription: "In addition to technical skills, I bring strong soft skills and a results-oriented mindset. I enjoy analyzing complex problems and finding solutions that are clear, practical, and maintainable."
+    skillDescription: "I started out as a developer, but these days I work as a Functional Analyst at RF-Technologies. I translate business needs into concrete solutions and stay technically involved: daily with Vue, and on the backend with .NET and SQL, for applications that hold up both functionally and technically.",
+    projectExample: "Project example: on SHIELD and BIRD I own projects end-to-end, from functional analysis and technical lead to debugging production issues, so solutions actually hold up in practice.",
+    supportDescription: "These skills complement my core expertise. I build scalable solutions with Azure, and spend a lot of time experimenting with AI agents through MCP servers, like a Fabric agent and a D365 agent at work. Automation with n8n and Flutter are mostly things I use on my own projects.",
+    professionalDescription: "Beyond technical skills, I bring strong soft skills: I enjoy analyzing complex problems and switch easily between business and developers. Outside of work I dig into security too, with Mythos, my own agent that uses Kali Linux to test websites for vulnerabilities."
   }
 };
 

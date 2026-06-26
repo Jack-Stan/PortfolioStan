@@ -155,7 +155,17 @@ export const ChromaGrid = ({
           }}
         >
           <div className="chroma-img-wrapper">
-            <img src={c.image} alt={c.title} loading="lazy" />            {c.developmentStatus && (
+            {c.image ? (
+              <img src={c.image} alt={c.title} loading="lazy" />
+            ) : (
+              <div
+                className="chroma-img-placeholder"
+                style={{ background: c.gradient }}
+              >
+                <span>{c.title?.slice(0, 2).toUpperCase()}</span>
+              </div>
+            )}
+            {c.developmentStatus && (
               <div className={`chroma-development-status ${c.developmentStatus}`}>
                 {c.developmentStatusLabel || c.developmentStatus}
               </div>

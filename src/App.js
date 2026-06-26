@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import WelcomePage from './pages/WelcomePage';
-import HomePage from './pages/HomePage';
 import Navigation from './components/Navigation';
 import { ThreeProvider } from './context/ThreeContext';
 import { LanguageProvider } from './context/LanguageContext';
@@ -11,6 +9,9 @@ import './styles/global.css'; // Import global styles first
 import './styles/theme.css'; // Import theme styles
 import './App.css';
 
+const WelcomePage = lazy(() => import('./pages/WelcomePage'));
+const HomePage = lazy(() => import('./pages/HomePage'));
+
 function App() {
   return (
     <ThreeProvider>
@@ -19,14 +20,16 @@ function App() {
           <Router>
             <div className="App">
               <Navigation />
-              <Routes>
-                <Route path="/" element={<WelcomePage />} />
-                <Route 
-                  path="/home" 
-                  element={<HomePage />} 
-                />
-                <Route path="*" element={<Navigate to="/" />} />
-              </Routes>
+              <Suspense fallback={null}>
+                <Routes>
+                  <Route path="/" element={<WelcomePage />} />
+                  <Route
+                    path="/home"
+                    element={<HomePage />}
+                  />
+                  <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+              </Suspense>
             </div>
           </Router>
         </ThemeProvider>
