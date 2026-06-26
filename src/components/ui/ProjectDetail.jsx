@@ -19,46 +19,6 @@ const detailContent = {
       completed: 'Voltooid',
     },
     challenges: {
-      shield: {
-        challenge: 'SHIELD moest losse operationele processen en controles, die voorheen verspreid over verschillende tools en handmatige stappen liepen, samenbrengen in één betrouwbare applicatie zonder de bestaande workflows te verstoren.',
-        approach: 'Ik werkte mee aan een .NET-backend met een Vue/TypeScript-frontend, opgebouwd uit afzonderlijke business-modules per domein. Voor betrouwbare communicatie tussen onderdelen gebruikte ik Azure Event Grid voor event-gedreven integratie en Polly voor resilience- en retrybeleid bij externe aanroepen.',
-        lessons: 'Dit project leerde me hoe belangrijk een duidelijke modulaire opdeling is wanneer veel verschillende operationele domeinen in dezelfde applicatie samenkomen. Ik verdiepte mijn kennis van resiliente architecturen en gestructureerde logging om problemen sneller te kunnen herleiden.',
-      },
-      bird: {
-        challenge: 'BIRD moest complexe, sterk genormaliseerde data omzetten naar overzichtelijke informatie voor gebruikers, terwijl de onderliggende structuur regelmatig moest evolueren zonder bestaande rapportages te breken.',
-        approach: 'Ik bouwde BIRD als eigen domeinmodule binnen het bredere platform, met een .NET-laag voor de datalogica en een Vue-frontend voor visualisatie. Ik besteedde extra aandacht aan database-architectuur en migraties, zodat schema-aanpassingen gecontroleerd konden verlopen.',
-        lessons: 'Ik leerde hoe belangrijk vroege schemavalidatie en duidelijke rollen/rechten zijn in een tool die door meerdere teams gebruikt wordt. Dit scherpte mijn aanpak rond data-architectuur en het beheren van wijzigingen in een levende databron.',
-      },
-      stockdetail: {
-        challenge: 'Voorraadgegevens kwamen uit meerdere bronnen en moesten betrouwbaar en met lage latency raadpleegbaar zijn voor operationele gebruikers, ook bij pieken in datavolume.',
-        approach: 'Ik ontwikkelde een .NET 8 Web API met een aparte data- en migratielaag, en zette gestructureerde logging op met Serilog om sneller inzicht te krijgen in fouten. De testlaag combineerde unit-, integratie- en performancetests om regressies vroeg op te sporen.',
-        lessons: 'Dit project versterkte mijn focus op datakwaliteit en observability: zonder goede logging en tests is het moeilijk om vertrouwen te houden in voorraadcijfers. Ik leerde hoe testlagen met verschillende doelen (unit, integratie, performance) elkaar aanvullen.',
-      },
-      'approval-automation': {
-        challenge: 'Goedkeuringsprocessen liepen via e-mail en handmatige opvolging, wat traceerbaarheid en consistentie lastig maakte, vooral bij meerdere goedkeurders of uitzonderingen.',
-        approach: 'Ik digitaliseerde de flow met Power Automate en SharePoint als basis, met duidelijke stappen voor aanvraag, beoordeling en beslissing. Ik bouwde notificaties en statusopvolging in zodat betrokkenen automatisch op de hoogte blijven zonder manuele check-ins.',
-        lessons: 'Ik leerde hoe je met low-code automatisering processen kan digitaliseren zonder een volledige applicatie te bouwen, en waar de grenzen van die aanpak liggen. Dit scherpte mijn inzicht in wanneer Power Automate volstaat en wanneer een eigen applicatie nodig is.',
-      },
-      'tender-2-quote': {
-        challenge: 'Tenderdocumenten werden manueel opgevolgd nadat ze in een Teams-kanaal terechtkwamen, wat veel herhaaldelijk leeswerk en kans op gemiste of verkeerd geïnterpreteerde details met zich meebracht.',
-        approach: 'Ik bouwde een n8n-workflow die automatisch reageert wanneer een document in Teams wordt gedeeld, het document doorstuurt naar de Claude API voor analyse, en de geëxtraheerde informatie gestructureerd teruggeeft als basis voor de offerte.',
-        lessons: 'Dit project leerde me hoe je AI-documentanalyse betrouwbaar inbedt in een bestaande workflow-tool zoals n8n, en hoe belangrijk goede prompting en output-structurering zijn als de AI rechtstreeks input levert voor een zakelijk proces.',
-      },
-      'discount-tree': {
-        challenge: 'Binnen SHIELD konden kortingsregels sterk in elkaar grijpen met voorwaarden die van elkaar afhingen, waardoor het voor gebruikers moeilijk was te begrijpen welke regel uiteindelijk toegepast werd.',
-        approach: 'Ik bouwde Discount Tree als module binnen het bestaande SHIELD-platform, met een Vue-component die de kortingslogica als boomstructuur toont en een .NET/SQL-laag die afhankelijkheden tussen voorwaarden valideert. Zo bleven nieuwe of aangepaste takken consistent met de rest van de structuur.',
-        lessons: 'Ik leerde hoe visuele structuren (zoals een boom) complexe logica veel toegankelijker maken dan platte regelformulieren, en hoe je een nieuwe module netjes inpast in een bestaand platform zonder de rest van de applicatie te verstoren.',
-      },
-      'testpipelines-shield-stockdetail': {
-        challenge: 'SHIELD en StockDetail moesten betrouwbaarder releasen, maar het ontbrak aan geautomatiseerde controles die regressies, kwetsbaarheden of secrets vroeg in het proces opvangen.',
-        approach: 'Ik zette aparte Azure DevOps-pipelines op voor build, unit-/smoketests en periodieke validatie, met een mix van self-hosted agents voor .NET-tests en Microsoft-hosted agents voor dependency- en secret-scanning. Playwright-e2e-tests vulden de .NET-testlaag aan om kritieke gebruikersflows te bewaken.',
-        lessons: 'Dit project leerde me hoe je teststrategie en pipeline-architectuur op elkaar afstemt: niet elke test moet op dezelfde agent of in dezelfde stage draaien. Ik verdiepte mijn kennis van CI/CD-pipelineontwerp, inclusief scheduling, security scanning en het bewaken van pipelineduur.',
-      },
-      'fabric-agent': {
-        challenge: 'Ruwe bronsystemen leverden data in een structuur die niet direct geschikt was voor analyse, waardoor gebruikers veel handmatig werk nodig hadden om tot bruikbare inzichten te komen.',
-        approach: 'Ik verkende een medallion-architectuur binnen Microsoft Fabric (landing zone, verrijkte laag, analysegerede laag) en onderzocht hoe een AI-agent op die gestructureerde lagen kan bevragen en samenvatten. Validatieregels per laag hielpen om datakwaliteit te bewaken voordat data de analyselaag bereikte.',
-        lessons: 'Dit project leerde me hoe belangrijk een degelijke datafundering is vóór je een AI-agent erop loslaat: zonder gestructureerde, gevalideerde lagen geeft een agent net zo makkelijk verkeerde als juiste inzichten. Ik verdiepte mijn begrip van medallion-architecturen en het ontwerpen van AI-interacties rond data.',
-      },
       brightest: {
         challenge: 'De grootste uitdaging was het creëren van een systeem dat niet-technische gebruikers in staat stelt om geautomatiseerde tests te schrijven zonder codeerkennis, terwijl het ook gestructureerde, onderhoudbare testcode moest genereren die past binnen bestaande frameworks.',
         approach: 'Ik ontwikkelde een systeem dat de webpagina analyseert en selecteerbare elementen identificeert. Voor de codegeneratie integreerde ik OpenAI\'s API om Page Object Models te genereren die voldoen aan bestaande codestandaarden, waardoor een brug ontstond tussen de visuele interface en professionele testcode.',
@@ -96,46 +56,6 @@ const detailContent = {
       completed: 'Completed',
     },
     challenges: {
-      shield: {
-        challenge: 'SHIELD needed to bring together operational processes and controls that used to run across separate tools and manual steps into one reliable application, without disrupting the existing workflows people already depended on.',
-        approach: 'I worked on a .NET backend paired with a Vue/TypeScript frontend, structured into separate business modules per domain. For reliable communication between components I used Azure Event Grid for event-driven integration and Polly for resilience and retry policies on external calls.',
-        lessons: 'This project taught me how important a clear modular split is when many different operational domains come together in the same application. I deepened my knowledge of resilient architectures and structured logging to trace issues faster.',
-      },
-      bird: {
-        challenge: 'BIRD needed to turn complex, highly normalized data into clear information for users, while the underlying structure had to keep evolving without breaking existing reports.',
-        approach: 'I built BIRD as its own domain module within the broader platform, with a .NET layer for data logic and a Vue frontend for visualization. I paid extra attention to database architecture and migrations so schema changes could roll out in a controlled way.',
-        lessons: 'I learned how important early schema validation and clear roles/permissions are in a tool used by multiple teams. This sharpened my approach to data architecture and managing change in a live data source.',
-      },
-      stockdetail: {
-        challenge: 'Inventory data came from multiple sources and had to be reliably accessible with low latency for operational users, even during spikes in data volume.',
-        approach: 'I built a .NET 8 Web API with a separate data and migration layer, and set up structured logging with Serilog to get faster insight into failures. The test layer combined unit, integration, and performance tests to catch regressions early.',
-        lessons: 'This project strengthened my focus on data quality and observability: without good logging and tests, it is hard to keep trust in inventory figures. I learned how test layers with different goals (unit, integration, performance) complement each other.',
-      },
-      'approval-automation': {
-        challenge: 'Approval processes ran through email and manual follow-up, which made traceability and consistency difficult, especially with multiple approvers or exceptions.',
-        approach: 'I digitized the flow using Power Automate and SharePoint as the foundation, with clear steps for request, review, and decision. I built in notifications and status tracking so stakeholders stay informed automatically without manual check-ins.',
-        lessons: 'I learned how low-code automation can digitize processes without building a full application, and where the limits of that approach lie. This sharpened my judgment on when Power Automate is enough and when a dedicated application is needed.',
-      },
-      'tender-2-quote': {
-        challenge: 'Tender documents were followed up manually after landing in a Teams channel, which meant repetitive reading work and a real risk of missing or misreading important details.',
-        approach: 'I built an n8n workflow that automatically triggers when a document is shared in Teams, sends it to the Claude API for analysis, and returns the extracted information in a structured format ready to use for the quote.',
-        lessons: 'This project taught me how to reliably embed AI document analysis into an existing workflow tool like n8n, and how important careful prompting and output structuring are when the AI directly feeds into a business process.',
-      },
-      'discount-tree': {
-        challenge: 'Within SHIELD, discount rules could be tightly interdependent, with conditions relying on each other, making it hard for users to understand which rule would ultimately apply.',
-        approach: 'I built Discount Tree as a module inside the existing SHIELD platform, with a Vue component that visualizes the discount logic as a tree and a .NET/SQL layer that validates dependencies between conditions, so new or modified branches stayed consistent with the rest of the structure.',
-        lessons: 'I learned how visual structures like a tree make complex logic far more accessible than flat rule forms, and how to fit a new module cleanly into an existing platform without disrupting the rest of the application.',
-      },
-      'testpipelines-shield-stockdetail': {
-        challenge: 'SHIELD and StockDetail needed more reliable releases, but lacked automated checks that would catch regressions, vulnerabilities, or leaked secrets early in the process.',
-        approach: 'I set up separate Azure DevOps pipelines for builds, unit/smoke tests, and periodic validation, using a mix of self-hosted agents for .NET tests and Microsoft-hosted agents for dependency and secret scanning. Playwright e2e tests complemented the .NET test layer to guard critical user flows.',
-        lessons: 'This project taught me how to align test strategy with pipeline architecture: not every test needs to run on the same agent or in the same stage. I deepened my knowledge of CI/CD pipeline design, including scheduling, security scanning, and keeping pipeline duration in check.',
-      },
-      'fabric-agent': {
-        challenge: 'Raw source systems delivered data in a structure that was not directly suited for analysis, requiring users to do a lot of manual work to reach usable insights.',
-        approach: 'I explored a medallion architecture within Microsoft Fabric (landing zone, enriched layer, analysis-ready layer) and looked at how an AI agent could query and summarize across those structured layers. Per-layer validation rules helped safeguard data quality before data reached the analysis layer.',
-        lessons: 'This project taught me how important a solid data foundation is before pointing an AI agent at it: without structured, validated layers, an agent can surface wrong insights just as easily as right ones. I deepened my understanding of medallion architectures and designing AI interactions around data.',
-      },
       brightest: {
         challenge: 'The biggest challenge was creating a system that allows non-technical users to create automated tests without coding knowledge, while still generating structured, maintainable test code that fits existing frameworks.',
         approach: 'I built a system that analyzes web pages and identifies selectable elements. For code generation, I integrated OpenAI\'s API to generate Page Object Models that follow existing code standards, connecting a visual interface with professional test code.',
