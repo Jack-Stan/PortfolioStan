@@ -38,20 +38,15 @@ const ProjectsChroma = ({ handleProjectSelect, projectsData, localizedText, lang
     ];
 
     const techString = project.technologies.slice(0, 3).join(' · ');
+    // Lead with the result — let CSS line-clamp handle any overflow ellipsis.
     const impactSummary = project.impact && project.impact.length > 0
-      ? `${project.impact[0].substring(0, 70)}...`
+      ? project.impact[0]
       : '';
-
-    const shortDescription = project.description.length > 100
-      ? `${project.description.substring(0, 100)}...`
-      : project.description;
 
     return {
       image: project.imageUrl,
       title: project.title,
       subtitle: techString,
-      description: shortDescription,
-      handle: project.id,
       impact: impactSummary,
       borderColor: borderColors[index % borderColors.length],
       gradient: gradients[index % gradients.length],

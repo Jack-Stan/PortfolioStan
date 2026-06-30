@@ -161,9 +161,7 @@ export const ChromaGrid = ({
               <div
                 className="chroma-img-placeholder"
                 style={{ background: c.gradient }}
-              >
-                <span>{c.title?.slice(0, 2).toUpperCase()}</span>
-              </div>
+              />
             )}
             {c.developmentStatus && (
               <div className={`chroma-development-status ${c.developmentStatus}`}>
@@ -178,7 +176,6 @@ export const ChromaGrid = ({
             </div>
             <p className="role">{c.subtitle}</p>
             <div className="chroma-content">
-              {c.description && <p className="description">{c.description}</p>}
               {c.impact && <p className="impact">{c.impact}</p>}
               {c.location && <span className="location">{c.location}</span>}
             </div>

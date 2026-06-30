@@ -217,7 +217,7 @@
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  max-width: 75%;
+  max-width: 100%;
 }
 
 .handle {
@@ -235,36 +235,21 @@
   width: 100%;
 }
 
-.description, .impact {
+.impact {
   margin: 0;
-  font-size: 0.825rem;
-  line-height: 1.45;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
-  color: rgba(255, 255, 255, 0.75);
   width: 100%;
-}
-
-.description {
-  margin-bottom: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 3.5rem;
-  box-sizing: border-box;
-}
-
-.impact {
-  font-style: italic;
-  opacity: 0.85;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 8px;
-  border-radius: 4px;
-  margin-top: 4px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+  padding: 10px 12px;
+  border-left: 2px solid var(--card-border, rgba(255, 255, 255, 0.3));
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0 4px 4px 0;
   box-sizing: border-box;
 }
 
