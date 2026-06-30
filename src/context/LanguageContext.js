@@ -9,7 +9,7 @@ export const LanguageProvider = ({ children }) => {
 
   // Initialize language from localStorage or default to 'nl'
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') || 'nl';
+    const savedLanguage = localStorage.getItem('language') || 'en';
     i18n.changeLanguage(savedLanguage);
     document.documentElement.setAttribute('lang', savedLanguage);
   }, [i18n]);

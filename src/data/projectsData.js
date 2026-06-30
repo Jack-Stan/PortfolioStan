@@ -343,6 +343,38 @@ const projectsData = {
                 "Eenvoudigere communicatie: diensten en contactopties zijn overzichtelijk beschikbaar"
         ],
       developmentStatus: "completed"
+    },
+    {
+      id: "hoppy-route-manager",
+      title: "Hoppy Route Manager",
+      description: "Een slim routebeheersysteem voor batterijwissel-diensten doorheen Europa, met rolgebaseerde toegang voor admins, fleet managers en battery swappers, en real-time tracking over 23 regio's.",
+      fullDescription: `
+        <h2>Hoppy Route Manager</h2>
+        <p>Een volledige oplossing voor het beheren van batterijwissel-operaties over meerdere Europese regio's, met rolgebaseerde toegang en real-time tracking voor efficiënt vlootbeheer.</p>
+
+        <h3>Project Overzicht</h3>
+        <p>Het systeem combineert een .NET Core API met een React Native mobiele app om zones, voertuigen en routes op te volgen over 23 regio's in België, Spanje, Griekenland en Gibraltar. Admins, fleet managers en battery swappers krijgen elk hun eigen rolgebaseerde weergave, van zonebeheer en routeoptimalisatie tot het uitvoeren van routes en het updaten van voertuigstatus.</p>
+        <ul>
+          <li>Real-time tracking van voertuigen per zone over meerdere landen</li>\n          <li>Rolgebaseerde toegang voor admins, fleet managers en battery swappers</li>\n          <li>Routeoptimalisatie voor batterijwissel-rondes</li>\n          <li>Batterijmonitoring met detectie van voertuigen met laag batterijniveau</li>\n          <li>Out-of-zone detectie voor voertuigen buiten het operationele gebied</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: [".NET Core","React Native","TypeScript","SQL Server","Entity Framework","JWT"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Real-time tracking van voertuigen per zone over meerdere landen",
+                "Rolgebaseerde toegang voor admins, fleet managers en battery swappers",
+                "Routeoptimalisatie voor batterijwissel-rondes",
+                "Batterijmonitoring met detectie van voertuigen met laag batterijniveau",
+                "Out-of-zone detectie voor voertuigen buiten het operationele gebied"
+        ],
+      impact:       [
+                "Meer overzicht: fleet managers zien in real-time waar voertuigen en batterijen staan over 23 regio's",
+                "Efficiëntere routes: battery swappers krijgen geoptimaliseerde routes in plaats van handmatige planning",
+                "Betere controle: rolgebaseerde toegang houdt verantwoordelijkheden duidelijk afgebakend tussen teams"
+        ],
+      developmentStatus: "completed"
     }
   ],
   en: [
@@ -686,6 +718,38 @@ const projectsData = {
                 "More professional online presence: visitors gain trust in the brand faster",
                 "Better user experience: the site is clear and mobile-friendly",
                 "Simpler communication: services and contact options are easy to find"
+        ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "hoppy-route-manager",
+      title: "Hoppy Route Manager",
+      description: "A smart route management system for battery swapping services across Europe, with role-based access for admins, fleet managers, and battery swappers, plus real-time tracking across 23 regions.",
+      fullDescription: `
+        <h2>Hoppy Route Manager</h2>
+        <p>A comprehensive solution for managing battery swapping operations across multiple European regions, with role-based access control and real-time tracking for efficient fleet management.</p>
+
+        <h3>Project Overview</h3>
+        <p>The system pairs a .NET Core API with a React Native mobile app to track zones, vehicles, and routes across 23 regions in Belgium, Spain, Greece, and Gibraltar. Admins, fleet managers, and battery swappers each get their own role-based view, from zone management and route optimization to executing routes and updating vehicle status.</p>
+        <ul>
+          <li>Real-time vehicle tracking per zone across multiple countries</li>\n          <li>Role-based access control for admins, fleet managers, and battery swappers</li>\n          <li>Route optimization for battery swapping rounds</li>\n          <li>Battery monitoring with low-battery vehicle detection</li>\n          <li>Out-of-zone detection for vehicles outside operational areas</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: [".NET Core","React Native","TypeScript","SQL Server","Entity Framework","JWT"],
+      liveUrl: "",
+      repoUrl: "",
+      features:       [
+                "Real-time vehicle tracking per zone across multiple countries",
+                "Role-based access control for admins, fleet managers, and battery swappers",
+                "Route optimization for battery swapping rounds",
+                "Battery monitoring with low-battery vehicle detection",
+                "Out-of-zone detection for vehicles outside operational areas"
+        ],
+      impact:       [
+                "More visibility: fleet managers see vehicle and battery status in real time across 23 regions",
+                "More efficient routes: battery swappers get optimized routes instead of manual planning",
+                "Better control: role-based access keeps responsibilities clearly separated between teams"
         ],
       developmentStatus: "completed"
     }

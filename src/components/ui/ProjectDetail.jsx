@@ -74,6 +74,11 @@ const detailContent = {
         approach: 'Ik ontwierp een aangepaste content editor met React die complexe styling verbergt achter intuïtieve knoppen en drag-and-drop functionaliteit, terwijl templates de merkidentiteit beschermen ongeacht welke content wordt toegevoegd.',
         lessons: 'Ik leerde het belang van empathisch ontwerp: het begrijpen van de behoeften en beperkingen van niet-technische gebruikers. Deze ervaring heeft mijn benadering van UX/UI-ontwerp verbeterd en me geleerd hoe technologie toegankelijker kan worden gemaakt.',
       },
+      'hoppy-route-manager': {
+        challenge: 'Vlootbeheer voor batterijwissel-diensten liep verspreid over 23 regio\'s in vier landen, zonder gecentraliseerd overzicht van voertuigen, batterijstatus en rolverdeling tussen admins, fleet managers en battery swappers.',
+        approach: 'Ik bouwde een .NET Core API met Entity Framework als backend en een React Native/TypeScript-app als mobiele frontend, met JWT-gebaseerde rolgebaseerde toegang. De database werd geseed met zones en voertuigen per regio, zodat elke rol direct een relevante, gefilterde weergave krijgt van wat ze nodig hebben.',
+        lessons: 'Dit project leerde me hoe je rolgebaseerde toegang en datamodellen ontwerpt voor een systeem dat over meerdere landen en gebruikersgroepen tegelijk moet werken. Ik verdiepte mijn kennis van mobiele app-architectuur met React Native en van het structureren van een API rond duidelijk afgebakende verantwoordelijkheden per rol.',
+      },
       default: {
         challenge: 'Het integreren van meerdere AI-systemen, zoals spraakherkenning, emotiedetectie en NLP, in een coherente real-time gebruikerservaring die zowel performant als intuïtief is.',
         approach: 'Ik ontwikkelde een microservice-architectuur waarbij elk AI-systeem onafhankelijk kon functioneren, maar synchroniseerde via een centrale state manager. Om performanceproblemen op te lossen, implementeerde ik client-side caching en intelligente debouncing van API-calls.',
@@ -150,6 +155,11 @@ const detailContent = {
         challenge: 'Creating CMS functionality that is intuitive enough for a non-technical owner to manage content independently, while preserving the design and brand identity.',
         approach: 'I designed a custom React content editor that hides complex styling behind intuitive controls and drag-and-drop functionality, while templates protect the brand identity regardless of the content being added.',
         lessons: 'I learned the importance of empathetic design: understanding the needs and limitations of non-technical users. This improved my UX/UI approach and taught me how technology can be made more accessible.',
+      },
+      'hoppy-route-manager': {
+        challenge: 'Fleet management for battery swapping services was spread across 23 regions in four countries, with no centralized view of vehicles, battery status, or role responsibilities between admins, fleet managers, and battery swappers.',
+        approach: 'I built a .NET Core API with Entity Framework as the backend and a React Native/TypeScript app as the mobile frontend, with JWT-based role-based access control. The database was seeded with zones and vehicles per region, so each role gets an immediately relevant, filtered view of what they need.',
+        lessons: 'This project taught me how to design role-based access and data models for a system that has to work across multiple countries and user groups at once. I deepened my knowledge of mobile app architecture with React Native and of structuring an API around clearly separated responsibilities per role.',
       },
       default: {
         challenge: 'Integrating multiple AI systems, such as speech recognition, emotion detection, and NLP, into a coherent real-time experience that is both performant and intuitive.',
