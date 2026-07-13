@@ -67,9 +67,10 @@ const WelcomePage = () => {
       <div className="content" ref={contentRef}>
         {typingComplete ? (
           <div className="title-container">
-            <FuzzyText 
-              baseIntensity={0.2} 
-              hoverIntensity={0.5} 
+            <FuzzyText
+              fontSize="clamp(2rem, 8vw, 4rem)"
+              baseIntensity={0.2}
+              hoverIntensity={0.5}
               enableHover={true}
               color="#fff"
             >
@@ -78,10 +79,11 @@ const WelcomePage = () => {
           </div>
         ) : (
           <div className="title-container">
-            <TypewriterFuzzy 
-              text="Stan's Portfolio" 
-              delay={100} 
-              onComplete={handleTypingComplete} 
+            <TypewriterFuzzy
+              text="Stan's Portfolio"
+              delay={100}
+              onComplete={handleTypingComplete}
+              fontSize="clamp(2rem, 8vw, 4rem)"
               baseIntensity={0.2}
               hoverIntensity={0.5}
               enableHover={true}

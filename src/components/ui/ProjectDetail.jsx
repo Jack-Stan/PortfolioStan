@@ -69,11 +69,6 @@ const detailContent = {
         approach: 'Ik implementeerde een modulaire architectuur met Flutter, met een duidelijke scheiding tussen UI-logica en bedrijfsregels. Voor de facturatie ontwikkelde ik een abstractielaag die verschillende standaarden zoals UBL en Peppol ondersteunt zonder de kernfunctionaliteit te beïnvloeden.',
         lessons: 'Dit project versterkte mijn begrip van domeingedreven design en het belang van flexibele architecturen die kunnen evolueren met veranderende bedrijfsbehoeften. Ik verbeterde mijn vaardigheden in het bouwen van schaalbare, toekomstbestendige applicaties.',
       },
-      purepeau: {
-        challenge: 'Het creëren van CMS-functionaliteit die intuïtief genoeg was voor een niet-technische eigenaar om zelf content te beheren, terwijl het design en de merkidentiteit behouden blijven.',
-        approach: 'Ik ontwierp een aangepaste content editor met React die complexe styling verbergt achter intuïtieve knoppen en drag-and-drop functionaliteit, terwijl templates de merkidentiteit beschermen ongeacht welke content wordt toegevoegd.',
-        lessons: 'Ik leerde het belang van empathisch ontwerp: het begrijpen van de behoeften en beperkingen van niet-technische gebruikers. Deze ervaring heeft mijn benadering van UX/UI-ontwerp verbeterd en me geleerd hoe technologie toegankelijker kan worden gemaakt.',
-      },
       'hoppy-route-manager': {
         challenge: 'Vlootbeheer voor batterijwissel-diensten liep verspreid over 23 regio\'s in vier landen, zonder gecentraliseerd overzicht van voertuigen, batterijstatus en rolverdeling tussen admins, fleet managers en battery swappers.',
         approach: 'Ik bouwde een .NET Core API met Entity Framework als backend en een React Native/TypeScript-app als mobiele frontend, met JWT-gebaseerde rolgebaseerde toegang. De database werd geseed met zones en voertuigen per regio, zodat elke rol direct een relevante, gefilterde weergave krijgt van wat ze nodig hebben.',
@@ -150,11 +145,6 @@ const detailContent = {
         challenge: 'Building a cross-platform application that works well on both web and mobile, while handling complex invoicing logic and international invoicing standards.',
         approach: 'I implemented a modular Flutter architecture with a clear separation between UI logic and business rules. For invoicing, I created an abstraction layer that supports standards like UBL and Peppol without affecting the core functionality.',
         lessons: 'This project strengthened my understanding of domain-driven design and flexible architectures that can evolve with changing business needs. It helped me improve at building scalable, future-ready applications.',
-      },
-      purepeau: {
-        challenge: 'Creating CMS functionality that is intuitive enough for a non-technical owner to manage content independently, while preserving the design and brand identity.',
-        approach: 'I designed a custom React content editor that hides complex styling behind intuitive controls and drag-and-drop functionality, while templates protect the brand identity regardless of the content being added.',
-        lessons: 'I learned the importance of empathetic design: understanding the needs and limitations of non-technical users. This improved my UX/UI approach and taught me how technology can be made more accessible.',
       },
       'hoppy-route-manager': {
         challenge: 'Fleet management for battery swapping services was spread across 23 regions in four countries, with no centralized view of vehicles, battery status, or role responsibilities between admins, fleet managers, and battery swappers.',

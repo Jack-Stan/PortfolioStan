@@ -298,7 +298,7 @@ const projectsData = {
       imageUrl: require("../data/photo/Time2Bill.png"),
       technologies: ["Flutter","Firebase","Firestore","Cloud Functions","Provider","UBL/Peppol"],
       liveUrl: "",
-      repoUrl: "",
+      repoUrl: "https://github.com/Jack-Stan/Time2Bill",
       features:       [
                 "Cross-platform applicatie voor web, iOS en Android",
                 "Projectbeheer met taakorganisatie",
@@ -310,37 +310,6 @@ const projectsData = {
                 "Minder administratie: de workflow van tijdsregistratie tot facturatie wordt gestroomlijnd",
                 "Betere omzetregistratie: gedetailleerde tijdsregistratie helpt factureerbare tijd beter vast te leggen",
                 "Professionelere facturatie: facturen en exportformaten worden consistenter beheerd"
-        ],
-      developmentStatus: "completed"
-    },
-    {
-      id: "purepeau",
-      title: "PurePeau Website",
-      description: "Een moderne, responsive bedrijfswebsite voor een wellnessbedrijf gespecialiseerd in natuurlijke massagebehandelingen. De focus ligt op branding, gebruiksvriendelijkheid en mobiele responsiviteit.",
-      fullDescription: `
-        <h2>PurePeau Website</h2>
-        <p>PurePeau Website presenteert diensten, merkidentiteit en contactmogelijkheden in een professionele online ervaring.</p>
-
-        <h3>Project Overzicht</h3>
-        <p>PurePeau Website presenteert diensten, merkidentiteit en contactmogelijkheden in een professionele online ervaring.</p>
-        <ul>
-          <li>Responsive design voor verschillende schermformaten</li>\n          <li>Dienstenpresentatie met visuele elementen</li>\n          <li>Contactmogelijkheden en online aanwezigheid</li>\n          <li>SEO-gerichte contentstructuur</li>
-        </ul>
-      `,
-      imageUrl: require("../data/photo/PurePeau.png"),
-      technologies: ["React","Tailwind CSS","Responsive Design","SEO Optimization"],
-      liveUrl: "",
-      repoUrl: "",
-      features:       [
-                "Responsive design voor verschillende schermformaten",
-                "Dienstenpresentatie met visuele elementen",
-                "Contactmogelijkheden en online aanwezigheid",
-                "SEO-gerichte contentstructuur"
-        ],
-      impact:       [
-                "Professionelere online aanwezigheid: bezoekers krijgen sneller vertrouwen in het merk",
-                "Betere gebruikservaring: de site is duidelijk en mobielvriendelijk opgebouwd",
-                "Eenvoudigere communicatie: diensten en contactopties zijn overzichtelijk beschikbaar"
         ],
       developmentStatus: "completed"
     },
@@ -361,7 +330,7 @@ const projectsData = {
       imageUrl: null,
       technologies: [".NET Core","React Native","TypeScript","SQL Server","Entity Framework","JWT"],
       liveUrl: "",
-      repoUrl: "",
+      repoUrl: "https://github.com/Jack-Stan/AutomatedRoutePlanner",
       features:       [
                 "Real-time tracking van voertuigen per zone over meerdere landen",
                 "Rolgebaseerde toegang voor admins, fleet managers en battery swappers",
@@ -675,7 +644,7 @@ const projectsData = {
       imageUrl: require("../data/photo/Time2Bill.png"),
       technologies: ["Flutter","Firebase","Firestore","Cloud Functions","Provider","UBL/Peppol"],
       liveUrl: "",
-      repoUrl: "",
+      repoUrl: "https://github.com/Jack-Stan/Time2Bill",
       features:       [
                 "Cross-platform application for web, iOS, and Android",
                 "Project management with task organization",
@@ -687,37 +656,6 @@ const projectsData = {
                 "Less administration: the workflow from time tracking to invoicing is streamlined",
                 "Better revenue capture: detailed time tracking helps record billable time more accurately",
                 "More professional invoicing: invoices and export formats are managed more consistently"
-        ],
-      developmentStatus: "completed"
-    },
-    {
-      id: "purepeau",
-      title: "PurePeau Website",
-      description: "A modern, responsive business website for a wellness company specializing in natural massage treatments. The focus is on branding, usability, and mobile responsiveness.",
-      fullDescription: `
-        <h2>PurePeau Website</h2>
-        <p>PurePeau Website presents services, brand identity, and contact options in a professional online experience.</p>
-
-        <h3>Project Overview</h3>
-        <p>PurePeau Website presents services, brand identity, and contact options in a professional online experience.</p>
-        <ul>
-          <li>Responsive design for different screen sizes</li>\n          <li>Service presentation with visual elements</li>\n          <li>Contact options and online presence</li>\n          <li>SEO-oriented content structure</li>
-        </ul>
-      `,
-      imageUrl: require("../data/photo/PurePeau.png"),
-      technologies: ["React","Tailwind CSS","Responsive Design","SEO Optimization"],
-      liveUrl: "",
-      repoUrl: "",
-      features:       [
-                "Responsive design for different screen sizes",
-                "Service presentation with visual elements",
-                "Contact options and online presence",
-                "SEO-oriented content structure"
-        ],
-      impact:       [
-                "More professional online presence: visitors gain trust in the brand faster",
-                "Better user experience: the site is clear and mobile-friendly",
-                "Simpler communication: services and contact options are easy to find"
         ],
       developmentStatus: "completed"
     },
@@ -738,7 +676,7 @@ const projectsData = {
       imageUrl: null,
       technologies: [".NET Core","React Native","TypeScript","SQL Server","Entity Framework","JWT"],
       liveUrl: "",
-      repoUrl: "",
+      repoUrl: "https://github.com/Jack-Stan/AutomatedRoutePlanner",
       features:       [
                 "Real-time vehicle tracking per zone across multiple countries",
                 "Role-based access control for admins, fleet managers, and battery swappers",
