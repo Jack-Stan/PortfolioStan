@@ -1,0 +1,45 @@
+STAN VERBRUGGEN
+Functional Analyst & Full-Stack Developer
+Oosterzele, Belgium | 0477 27 70 64 | stanverbruggen@protonmail.com | sjvportfolio.netlify.app | LinkedIn: /in/stan-verbruggen-67b928198
+
+PROFILE
+Full-stack developer who made the deliberate move into a Functional Analyst role, bridging business requirements and technical implementation across enterprise applications and independently built projects. Comfortable across the stack — React/Vue frontends, C#/.NET/Node.js backends, SQL Server — with hands-on experience in cloud security (Azure Key Vault) and AI-driven workflow automation (n8n, Claude API). Brings a self-driven grasp of modern AI-assisted development into team projects. Looking to grow further within a collaborative, international development team.
+
+PROFESSIONAL EXPERIENCE
+
+Functional Analyst & Developer — RF-Technologies                          2025 – Present
+- Own business-critical applications end-to-end: functional analysis, technical lead on implementation, and production debugging — including SHIELD (operational workflow platform) and BIRD (data & analysis tooling).
+- Built supporting modules including Discount Tree (visual discount-rule management) and StockDetail (inventory tracking), plus an automated Azure DevOps CI/CD test pipeline for SHIELD & StockDetail.
+- Digitized manual approval workflows with Power Automate & SharePoint, and built an AI-driven automation (n8n + Claude API) that reads tender documents shared in Microsoft Teams and converts them into quote information.
+- Explored a Microsoft Fabric medallion architecture with AI-agent data querying as a forward-looking data analytics initiative.
+
+Student Developer — Brightest                                              2025
+- Built the Brightest Test Automation Framework: a React/Node.js/Firebase web app letting non-technical users create automated tests, using the OpenAI API for AI-generated test code — cutting testing costs by 65% and speeding up test creation by 80%.
+
+Earlier experience (alongside studies)                                     2021 – 2025
+- Student Admin Assistant, FOD Wapens — managed permits, processed data, handled archiving.
+- Student Logistics Assistant, Hoppy — maintained and transported shared scooters/bikes.
+
+PERSONAL PROJECTS
+
+Time2Bill — Flutter / Firebase, 2025
+- Cross-platform time tracking & invoicing app with automated billing, financial analytics and UBL/Peppol e-invoicing — cut administrative tasks by 60% and improved payment cycles by 45%.
+
+JaqAI — Python, 2025
+- Exploratory project building a custom language model from scratch in Python — hands-on deep dive into tokenization, model architecture and training pipelines to understand LLMs at a fundamental level.
+
+Portfolio Website — React, 2025
+- This site — designed and built with smooth animations, optimized performance and full responsiveness.
+
+SKILLS
+Frontend: React, Vue, TypeScript, JavaScript, HTML/CSS, Flutter
+Backend: .NET, C#, Node.js, REST APIs, SQL Server
+Cloud & DevOps: Azure (Key Vault, DevOps Pipelines), Docker, CI/CD, Git/GitHub
+AI & Automation: Claude API, OpenAI API, n8n, Power Automate
+Testing: xUnit, Jest, Playwright, automated test frameworks
+Databases: SQL Server, Firebase/Firestore, MySQL
+Languages: Dutch (native), English (professional), French (intermediate)
+
+EDUCATION & CERTIFICATIONS
+Graduaat in Programmeren (Professional Bachelor, short-cycle) — 2021 – 2025
+Oracle Database 12c: SQL Fundamentals — Certification — 2022

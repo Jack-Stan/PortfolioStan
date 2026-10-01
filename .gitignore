@@ -51,3 +51,6 @@ netlify/functions/node_modules
 .stylelintcache
 .cache/
 tsconfig.tsbuildinfo
+
+# Claude Code local machine-specific permissions, not project content
+.claude/settings.local.json
