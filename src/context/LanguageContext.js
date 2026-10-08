@@ -7,9 +7,9 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const { i18n } = useTranslation();
 
-  // Initialize language from localStorage or default to 'nl'
+  // The site is English only: always start in English, ignore any stored or browser language
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') || 'en';
+    const savedLanguage = 'en';
     i18n.changeLanguage(savedLanguage);
     document.documentElement.setAttribute('lang', savedLanguage);
   }, [i18n]);

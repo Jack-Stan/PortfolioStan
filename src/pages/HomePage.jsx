@@ -189,7 +189,7 @@ const HomePage = () => {
                 </h3>
                 <h4 className="about-title">
                   <DecryptedText
-                    text="Functional Analyst"
+                    text="Automation Engineer"
                     animateOn="view"
                     sequential={false}
                     maxIterations={15}
