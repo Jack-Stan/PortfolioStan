@@ -344,6 +344,32 @@ const projectsData = {
                 "Betere controle: rolgebaseerde toegang houdt verantwoordelijkheden duidelijk afgebakend tussen teams"
         ],
       developmentStatus: "completed"
+    },
+    {
+      id: "booking-systeem",
+      title: "BookingSysteem",
+      description: "Een klein boekingssysteem met een Vue-frontend en een Express- en TypeScript-backend, met een Netlify-configuratie voor de frontend.",
+      fullDescription: `
+        <h2>BookingSysteem</h2>
+        <p>Een klein boekingssysteem opgebouwd als gescheiden frontend en backend.</p>
+        <h3>Opbouw</h3>
+        <ul>
+          <li>Vite + Vue frontend met client-side routing</li>
+          <li>Express + TypeScript backend als aparte Node-applicatie</li>
+          <li>Netlify-configuratie die de frontend als SPA publiceert</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","Vite","TypeScript","Express","Netlify"],
+      liveUrl: "",
+      repoUrl: "https://github.com/Jack-Stan/BookingSysteem",
+      features: [
+                "Vite + Vue frontend met client-side routing",
+                "Express + TypeScript backend als aparte Node-applicatie",
+                "Netlify-deployconfiguratie voor de frontend"
+        ],
+      impact: [],
+      developmentStatus: "completed"
     }
   ],
   en: [
@@ -689,6 +715,32 @@ const projectsData = {
                 "More efficient routes: battery swappers get optimized routes instead of manual planning",
                 "Better control: role-based access keeps responsibilities clearly separated between teams"
         ],
+      developmentStatus: "completed"
+    },
+    {
+      id: "booking-systeem",
+      title: "BookingSysteem",
+      description: "A small booking system with a Vue frontend and an Express and TypeScript backend, with a Netlify configuration for the frontend.",
+      fullDescription: `
+        <h2>BookingSysteem</h2>
+        <p>A small booking system built as a separate frontend and backend.</p>
+        <h3>Structure</h3>
+        <ul>
+          <li>Vite + Vue frontend with client-side routing</li>
+          <li>Express + TypeScript backend as a separate Node application</li>
+          <li>Netlify configuration that publishes the frontend as an SPA</li>
+        </ul>
+      `,
+      imageUrl: null,
+      technologies: ["Vue","Vite","TypeScript","Express","Netlify"],
+      liveUrl: "",
+      repoUrl: "https://github.com/Jack-Stan/BookingSysteem",
+      features: [
+                "Vite + Vue frontend with client-side routing",
+                "Express + TypeScript backend as a separate Node application",
+                "Netlify deployment configuration for the frontend"
+        ],
+      impact: [],
       developmentStatus: "completed"
     }
   ]
