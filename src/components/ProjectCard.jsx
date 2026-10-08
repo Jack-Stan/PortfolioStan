@@ -45,8 +45,8 @@ const ProjectCard = ({
           </div>
         </div>        {developmentStatus && (
           <div className={`development-status ${developmentStatus}`}>
-            {developmentStatus === 'in-development' ? 'In ontwikkeling' : 
-             developmentStatus === 'planning' ? 'Gepland' : 'Voltooid'}
+            {developmentStatus === 'in-development' ? 'In development' : 
+             developmentStatus === 'planning' ? 'Planned' : 'Completed'}
           </div>
         )}
       </div>

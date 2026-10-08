@@ -8,10 +8,10 @@ const aboutContent = {
     aboutGoals: "Op lange termijn wil ik vooral blijven groeien tussen business en technologie, en onderweg dingen oppikken die je in geen klaslokaal leert."
   },
   en: {
-    aboutIntro: "I started out as a developer, but these days I work as a Functional Analyst at an enterprise software company. The part I actually enjoy most is figuring out what a business problem really needs before anyone writes a line of code, and then making sure the solution holds up once it's built.",
+    aboutIntro: "I started out as a developer, moved into functional analysis, and these days I work as an Automation Engineer at Attentia. The part I actually enjoy most is figuring out what a business problem really needs before anyone writes a line of code, and then making sure the solution holds up once it's built.",
     aboutStrengths: "Having a technical background in .NET, SQL, Vue and Azure helps a lot here. I can read the code, question a design choice, and check a solution myself instead of just trusting whatever I'm told.",
     aboutTeamwork: "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. I try to keep both the end users and the developers happy, which isn't always the same thing.",
-    aboutProjects: "In my current role I work on several business-critical applications and follow projects from analysis all the way through implementation, including the not-so-fun part where something breaks in production and I have to go find out why. During work hours I've also been building AI agents on top of MCP servers and Claude models. Outside of work I'm tinkering with a personal finance agent and something called Mythos, basically Claude Code running Kali Linux inside a Docker container so it can pentest websites with actual Kali tools. Before that I built Time2Bill, an invoicing app in Flutter.",
+    aboutProjects: "Before Attentia I worked as a Functional Analyst and Lead Developer at RF-Technologies, where I followed business-critical applications from analysis all the way through implementation, including the not-so-fun part where something breaks in production and I have to go find out why. There I also built AI agents on top of MCP servers and Claude models. Outside of work I'm tinkering with a personal finance agent and something called Mythos, basically Claude Code running Kali Linux inside a Docker container so it can pentest websites with actual Kali tools. Before that I built Time2Bill, an invoicing app in Flutter.",
     aboutGoals: "Long term I just want to keep growing in that space between business and tech, and pick up things along the way that you'd never learn in a classroom."
   }
 };
@@ -31,13 +31,13 @@ const skillsContent = {
   },
   en: {
     sectionTitle: "My specializations",
-    sectionIntro: "As a Functional Analyst with a technical background, I combine business analysis with hands-on development, plus a growing interest in AI agents:",
+    sectionIntro: "As an Automation Engineer with a background in development and functional analysis, I combine business analysis with hands-on development, plus a growing interest in AI agents:",
     coreTitle: "Core specializations",
     supportTitle: "Supporting skills",
     professionalTitle: "Professional competencies",
-    skillDescription: "I started out as a developer, but these days I work as a Functional Analyst at an enterprise software company. I translate business needs into concrete solutions and stay technically involved: daily with Vue, and on the backend with .NET and SQL, for applications that hold up both functionally and technically.",
-    projectExample: "Project example: on business-critical applications I own projects end-to-end, from functional analysis and technical lead to debugging production issues, so solutions actually hold up in practice.",
-    supportDescription: "These skills complement my core expertise. I build scalable solutions with Azure, and spend a lot of time experimenting with AI agents through MCP servers at work. Automation with n8n and Flutter are mostly things I use on my own projects.",
+    skillDescription: "I started out as a developer, moved into functional analysis, and now work as an Automation Engineer at Attentia. I translate business needs into concrete solutions and stay technically involved, with a background in Vue on the frontend and .NET and SQL on the backend, so what I build holds up both functionally and technically.",
+    projectExample: "Project example: at RF-Technologies I owned business-critical applications end-to-end, from functional analysis and technical lead to debugging production issues, so solutions actually hold up in practice.",
+    supportDescription: "These skills complement my core expertise. I build scalable solutions with Azure, and have spent a lot of time building AI agents through MCP servers. I use n8n for automation, and Flutter mostly on my own projects.",
     professionalDescription: "Beyond technical skills, I bring strong soft skills: I enjoy analyzing complex problems and switch easily between business and developers. Outside of work I dig into security too, with Mythos, my own agent that uses Kali Linux to test websites for vulnerabilities."
   }
 };

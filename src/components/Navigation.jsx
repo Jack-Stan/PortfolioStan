@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/homepage/navigation.css';
 import ThemeToggle from './ThemeToggle';
-import LanguageToggle from './LanguageToggle';
 import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
@@ -60,7 +59,6 @@ const Navigation = () => {
           <li><button onClick={handleCVDownload} className="nav-cv-button">{t('cv')}</button></li>
           <li className="toggle-container">
             <ThemeToggle />
-            <LanguageToggle />
           </li>
         </ul>
       </div>
