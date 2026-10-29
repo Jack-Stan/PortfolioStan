@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import TheNav from './components/TheNav.vue'
-import HeroTerminal from './components/HeroTerminal.vue'
+import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import StackSection from './components/StackSection.vue'
@@ -53,7 +53,7 @@ onMounted(() => {
 <template>
   <TheNav />
   <main>
-    <HeroTerminal />
+    <HeroSection />
     <ProjectsSection :featured="featured" :also-built="alsoBuilt" @open="open" />
     <ExperienceSection />
     <StackSection />
