@@ -3,9 +3,9 @@
 # Build settings
 [build]
   # Directory to publish (relative to root of your repo)
-  publish = "build"
+  publish = "dist"
   # Default build command
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "npm ci && npm run build"
 
 # Redirects and headers
 [[redirects]]

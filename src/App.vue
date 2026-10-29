@@ -1,0 +1,62 @@
+<script setup lang="ts">
+import { onMounted, ref, watch } from 'vue'
+import TheNav from './components/TheNav.vue'
+import HeroTerminal from './components/HeroTerminal.vue'
+import AboutSection from './components/AboutSection.vue'
+import StackSection from './components/StackSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import ProjectModal from './components/ProjectModal.vue'
+import { featured, alsoBuilt, type Project } from './data/projects'
+
+const all = [...featured, ...alsoBuilt]
+const selected = ref<Project | null>(null)
+
+// Project details are deep-linkable as #project/<id>.
+function syncFromHash() {
+  const match = location.hash.match(/^#project\/(.+)$/)
+  selected.value = match ? all.find((p) => p.id === match[1]) ?? null : null
+}
+
+function open(project: Project) {
+  location.hash = `project/${project.id}`
+}
+
+function close() {
+  history.pushState(null, '', location.pathname + '#projects')
+  selected.value = null
+}
+
+watch(selected, (p) => {
+  document.body.style.overflow = p ? 'hidden' : ''
+})
+
+onMounted(() => {
+  syncFromHash()
+  window.addEventListener('hashchange', syncFromHash)
+
+  const observer = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible')
+          observer.unobserve(e.target)
+        }
+      }),
+    { threshold: 0.12 },
+  )
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+})
+</script>
+
+<template>
+  <TheNav />
+  <main>
+    <HeroTerminal />
+    <AboutSection />
+    <StackSection />
+    <ProjectsSection :featured="featured" :also-built="alsoBuilt" @open="open" />
+    <ContactSection />
+  </main>
+  <ProjectModal v-if="selected" :project="selected" @close="close" />
+</template>

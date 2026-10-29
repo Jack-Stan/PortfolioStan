@@ -51,3 +51,4 @@ netlify/functions/node_modules
 .stylelintcache
 .cache/
 tsconfig.tsbuildinfo
+dist
