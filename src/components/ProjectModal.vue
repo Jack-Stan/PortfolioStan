@@ -31,55 +31,45 @@ onBeforeUnmount(() => {
 <template>
   <div class="backdrop" @click.self="emit('close')">
     <div class="modal" role="dialog" aria-modal="true" :aria-labelledby="`title-${project.id}`">
-      <div class="bar">
-        <span class="path">~/projects/{{ project.id }}</span>
-        <button ref="closeBtn" class="close" aria-label="Close" @click="emit('close')">esc ✕</button>
-      </div>
+      <button ref="closeBtn" class="close" aria-label="Close" @click="emit('close')">Close ✕</button>
       <div class="content">
-        <div class="meta">
-          <span>{{ project.context }} · {{ project.year }}</span>
-          <StatusBadge :status="project.status" />
-        </div>
+        <p class="meta">{{ project.context }}, {{ project.year }}</p>
         <h2 :id="`title-${project.id}`">{{ project.title }}</h2>
+        <StatusBadge :status="project.status" />
         <p class="summary">{{ project.summary }}</p>
 
         <img v-if="project.image" :src="project.image" :alt="`${project.title} screenshot`" class="shot" loading="lazy" />
 
         <div v-if="project.scenario" class="block">
-          <h3># watch it run</h3>
+          <h3>Watch it run</h3>
           <AgentConsole :only="project.scenario" />
         </div>
         <div v-else-if="project.flow" class="block">
-          <h3># flow</h3>
+          <h3>How it flows</h3>
           <FlowDiagram :steps="project.flow" />
         </div>
 
         <div class="block">
-          <h3># highlights</h3>
+          <h3>What it does</h3>
           <ul>
             <li v-for="h in project.highlights" :key="h">{{ h }}</li>
           </ul>
         </div>
 
         <div v-for="g in project.groups" :key="g.title" class="block">
-          <h3># {{ g.title.toLowerCase() }}</h3>
+          <h3>{{ g.title }}</h3>
           <ul>
             <li v-for="item in g.items" :key="item">{{ item }}</li>
           </ul>
         </div>
 
-        <p v-if="project.note" class="note">! {{ project.note }}</p>
+        <p v-if="project.note" class="note">{{ project.note }}</p>
 
-        <div class="block">
-          <h3># stack</h3>
-          <div class="tags">
-            <span v-for="t in project.stack" :key="t" class="tag">{{ t }}</span>
-          </div>
-        </div>
+        <p class="stack"><span class="meta">Built with</span> {{ project.stack.join(', ') }}</p>
 
-        <div v-if="project.repoUrl || project.liveUrl" class="links">
-          <a v-if="project.liveUrl" :href="project.liveUrl" class="btn primary" target="_blank" rel="noopener">live site</a>
-          <a v-if="project.repoUrl" :href="project.repoUrl" class="btn" target="_blank" rel="noopener">source on github</a>
+        <div v-if="project.repoUrl || project.liveUrl" class="links-row">
+          <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener">Live site</a>
+          <a v-if="project.repoUrl" :href="project.repoUrl" target="_blank" rel="noopener">Source on GitHub</a>
         </div>
       </div>
     </div>
@@ -91,8 +81,7 @@ onBeforeUnmount(() => {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: rgba(3, 6, 9, 0.78);
-  backdrop-filter: blur(4px);
+  background: rgba(8, 7, 6, 0.82);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -100,115 +89,84 @@ onBeforeUnmount(() => {
   overflow-y: auto;
 }
 .modal {
+  position: relative;
   width: 100%;
   max-width: 760px;
-  background: var(--bg-raised);
+  background: var(--bg);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
-  overflow: hidden;
-}
-.bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--line);
-  background: var(--bg-sunken);
-  font-family: var(--mono);
-  font-size: 0.8rem;
-}
-.path {
-  color: var(--faint);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   background: none;
-  border: 1px solid var(--line-strong);
+  border: 0;
   color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 3px 8px;
-  border-radius: 6px;
+  font: inherit;
+  font-size: 0.85rem;
   cursor: pointer;
 }
 .close:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--amber);
 }
 .content {
-  padding: 26px 28px 30px;
-}
-.meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--faint);
+  padding: 34px 36px 38px;
 }
 h2 {
-  margin: 12px 0 10px;
-  font-size: 1.6rem;
-  letter-spacing: -0.02em;
+  margin: 6px 0 6px;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  line-height: 1.15;
+  padding-right: 60px;
 }
 .summary {
-  color: var(--muted);
-  margin: 0 0 8px;
+  margin: 16px 0 0;
+  font-size: 1.05rem;
 }
 .shot {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius);
   border: 1px solid var(--line);
-  margin-top: 16px;
+  margin-top: 22px;
 }
 .block {
-  margin-top: 24px;
+  margin-top: 30px;
 }
 h3 {
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  color: var(--accent);
+  font-size: 1.2rem;
   margin: 0 0 10px;
-  font-weight: 500;
 }
 ul {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 li {
-  margin-bottom: 7px;
-  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--muted);
 }
 li::marker {
-  color: var(--accent-dim);
+  color: var(--faint);
 }
 .note {
-  margin: 24px 0 0;
-  padding: 10px 14px;
-  border-left: 3px solid var(--amber);
-  background: rgba(251, 191, 36, 0.06);
+  margin: 28px 0 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--amber);
   color: var(--amber);
-  font-family: var(--mono);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
 }
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.stack {
+  margin: 28px 0 0;
+  color: var(--muted);
 }
-.links {
-  display: flex;
-  gap: 10px;
-  margin-top: 28px;
-  flex-wrap: wrap;
+.stack .meta {
+  margin-right: 8px;
+}
+.links-row {
+  margin-top: 26px;
 }
 @media (max-width: 600px) {
   .content {
-    padding: 20px 18px 24px;
+    padding: 26px 20px 28px;
   }
 }
 </style>

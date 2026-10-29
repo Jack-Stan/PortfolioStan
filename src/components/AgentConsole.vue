@@ -198,7 +198,6 @@ onBeforeUnmount(() => {
   background: var(--bg-sunken);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
-  box-shadow: 0 30px 80px -30px rgba(94, 234, 212, 0.18);
   overflow: hidden;
   font-family: var(--mono);
 }
@@ -276,7 +275,6 @@ onBeforeUnmount(() => {
 }
 .dot {
   fill: var(--accent);
-  filter: drop-shadow(0 0 6px var(--accent));
 }
 .node rect {
   fill: var(--bg-raised);
@@ -296,7 +294,7 @@ onBeforeUnmount(() => {
 }
 .node.lit rect {
   stroke: var(--accent);
-  fill: #0f2422;
+  fill: #18241d;
 }
 .node.lit text {
   fill: var(--text);

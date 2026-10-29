@@ -4,7 +4,6 @@ import TheNav from './components/TheNav.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
-import StackSection from './components/StackSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import ProjectModal from './components/ProjectModal.vue'
@@ -35,18 +34,6 @@ watch(selected, (p) => {
 onMounted(() => {
   syncFromHash()
   window.addEventListener('hashchange', syncFromHash)
-
-  const observer = new IntersectionObserver(
-    (entries) =>
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible')
-          observer.unobserve(e.target)
-        }
-      }),
-    { threshold: 0.12 },
-  )
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
 })
 </script>
 
@@ -56,7 +43,6 @@ onMounted(() => {
     <HeroSection />
     <ProjectsSection :featured="featured" :also-built="alsoBuilt" @open="open" />
     <ExperienceSection />
-    <StackSection />
     <AboutSection />
     <ContactSection />
   </main>

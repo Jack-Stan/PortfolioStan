@@ -1,21 +1,29 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/400-italic.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+/* Warm near-black, one human colour (amber) and one agent colour (sage).
+   Amber marks people and links; sage only appears where agents are talking. */
 :root {
-  --bg: #0b0f14;
-  --bg-raised: #10161e;
-  --bg-sunken: #070a0e;
-  --line: #1e2833;
-  --line-strong: #2c3a49;
-  --text: #d6dee8;
-  --muted: #8392a4;
-  --faint: #74849a;
-  --accent: #5eead4;
-  --accent-dim: #2b7f74;
-  --amber: #fbbf24;
-  --violet: #a78bfa;
-  --red: #f87171;
-  --mono: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace;
-  --sans: Inter, 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
-  --radius: 10px;
-  --max: 1080px;
+  --bg: #121110;
+  --bg-raised: #1a1917;
+  --bg-sunken: #0d0c0b;
+  --line: #2a2825;
+  --line-strong: #3a3733;
+  --text: #ece8e1;
+  --muted: #b0aa9f;
+  --faint: #8a857b;
+  --amber: #f0b45a;
+  --accent: #8fd3ad;
+  --accent-dim: #4d7a62;
+  --serif: 'Fraunces Variable', Georgia, serif;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  --radius: 6px;
+  --max: 1040px;
   color-scheme: dark;
 }
 
@@ -35,128 +43,81 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(circle at 1px 1px, #16202b 1px, transparent 0);
-  background-size: 28px 28px;
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--amber);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--amber);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--amber);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .container {
   max-width: var(--max);
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 section {
-  padding-top: 112px;
+  padding-top: 120px;
 }
 
 @media (max-width: 680px) {
   section {
-    padding-top: 80px;
+    padding-top: 84px;
   }
 }
 
-.section-head {
-  font-family: var(--mono);
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin: 0 0 8px;
-}
-
-.section-head .prompt {
-  color: var(--accent);
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-variation-settings: 'SOFT' 50, 'opsz' 72;
+  letter-spacing: -0.01em;
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  font-weight: 700;
-  margin: 0 0 28px;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  margin: 0 0 36px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
 }
 
-.tag {
-  display: inline-block;
+.meta {
   font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  color: var(--muted);
-  white-space: nowrap;
+  font-size: 0.78rem;
+  color: var(--faint);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--line-strong);
-  color: var(--text);
-  background: var(--bg-raised);
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-
-.btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.btn.primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
-  font-weight: 600;
-}
-
-.btn.primary:hover {
-  background: transparent;
-  color: var(--accent);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: none;
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
   * {
     animation: none !important;
+    transition: none !important;
   }
 }

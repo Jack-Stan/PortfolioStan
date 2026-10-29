@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Project } from '../data/projects'
-import FlowDiagram from './FlowDiagram.vue'
 import StatusBadge from './StatusBadge.vue'
 import { profile } from '../data/profile'
 
@@ -10,159 +9,151 @@ const emit = defineEmits<{ open: [project: Project] }>()
 
 <template>
   <section id="projects" class="container">
-    <div class="reveal">
-      <p class="section-head"><span class="prompt">$</span> ls projects/ --featured</p>
-      <h2 class="section-title">Projects</h2>
-    </div>
+    <h2 class="section-title">Projects</h2>
 
-    <div class="featured">
-      <article v-for="p in featured" :key="p.id" class="card reveal">
-        <button class="card-hit" :aria-label="`Open details for ${p.title}`" @click="emit('open', p)"></button>
-        <header>
-          <span class="context">{{ p.context }} · {{ p.year }}</span>
-          <StatusBadge :status="p.status" />
-        </header>
-        <h3>{{ p.title }}</h3>
-        <p class="summary">{{ p.summary }}</p>
-        <FlowDiagram v-if="p.flow" :steps="p.flow" compact />
-        <div class="tags">
-          <span v-for="t in p.stack.slice(0, 5)" :key="t" class="tag">{{ t }}</span>
+    <ol class="featured">
+      <li v-for="p in featured" :key="p.id">
+        <div class="side">
+          <span class="meta">{{ p.year }}</span>
+          <span class="meta">{{ p.context }}</span>
         </div>
-        <span class="more">details →</span>
-      </article>
-    </div>
-
-    <div class="also reveal">
-      <p class="section-head"><span class="prompt">$</span> ls projects/ --also-built</p>
-      <ul>
-        <li v-for="p in alsoBuilt" :key="p.id">
-          <button @click="emit('open', p)">
-            <span class="name">{{ p.title }}</span>
-            <span class="meta">{{ p.context }} · {{ p.year }}</span>
-            <span class="stack">{{ p.stack.slice(0, 3).join(' · ') }}</span>
+        <div class="body">
+          <h3>
+            <button class="title" @click="emit('open', p)">{{ p.title }}</button>
+          </h3>
+          <p class="summary">{{ p.summary }}</p>
+          <p class="foot">
+            <StatusBadge :status="p.status" />
+            <span class="stack">{{ p.stack.slice(0, 5).join(', ') }}</span>
+          </p>
+          <button class="more" @click="emit('open', p)">
+            {{ p.scenario ? 'Read more and watch it run' : 'Read more' }} →
           </button>
-        </li>
-      </ul>
-      <a :href="profile.github" class="btn" target="_blank" rel="noopener">more on github →</a>
-    </div>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="also-title">Also built</h3>
+    <ul class="also">
+      <li v-for="p in alsoBuilt" :key="p.id">
+        <button @click="emit('open', p)">
+          <span class="name">{{ p.title }}</span>
+          <span class="meta">{{ p.context }}, {{ p.year }}</span>
+        </button>
+      </li>
+    </ul>
+    <p class="gh">The personal ones have their code on <a :href="profile.github" target="_blank" rel="noopener">GitHub</a>.</p>
   </section>
 </template>
 
 <style scoped>
 .featured {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.card {
-  position: relative;
+.featured li {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 28px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+.featured li:first-child {
+  padding-top: 0;
+}
+.side {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 22px;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.card:hover,
-.card:focus-within {
-  border-color: var(--accent-dim);
-  transform: translateY(-2px);
-}
-.card-hit {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  border-radius: var(--radius);
-  z-index: 1;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.context {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--faint);
+  gap: 2px;
+  padding-top: 8px;
 }
 h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  font-size: 1.65rem;
+  line-height: 1.2;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.title:hover {
+  color: var(--amber);
 }
 .summary {
-  margin: 0;
+  margin: 0 0 14px;
   color: var(--muted);
-  font-size: 0.95rem;
+  max-width: 44rem;
 }
-.tags {
+.foot {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: auto;
+  align-items: baseline;
+  gap: 4px 18px;
+  margin: 0 0 12px;
+}
+.stack {
+  font-size: 0.85rem;
+  color: var(--faint);
 }
 .more {
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  color: var(--accent);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-decoration-color: var(--amber);
+  text-underline-offset: 4px;
+}
+.more:hover {
+  color: var(--amber);
+}
+.also-title {
+  font-size: 1.3rem;
+  margin: 64px 0 8px;
 }
 .also {
-  margin-top: 56px;
-}
-.also ul {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 0 0 24px;
-  border-top: 1px solid var(--line);
 }
 .also li {
   border-bottom: 1px solid var(--line);
 }
 .also button {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1.2fr;
-  gap: 12px;
+  display: flex;
+  justify-content: space-between;
   align-items: baseline;
-  padding: 14px 4px;
-  background: none;
-  border: 0;
-  color: var(--text);
-  text-align: left;
-  cursor: pointer;
-  font: inherit;
+  gap: 16px;
+  padding: 13px 0;
 }
 .also button:hover .name {
-  color: var(--accent);
+  color: var(--amber);
 }
-.name {
-  font-weight: 600;
-}
-.meta,
-.stack {
-  font-family: var(--mono);
-  font-size: 0.8rem;
+.gh {
+  margin-top: 22px;
+  font-size: 0.92rem;
   color: var(--muted);
 }
-@media (max-width: 860px) {
-  .featured {
+@media (max-width: 680px) {
+  .featured li {
     grid-template-columns: 1fr;
+    gap: 6px;
   }
-}
-@media (max-width: 600px) {
-  .card :deep(.flow) {
-    display: none;
+  .side {
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+  }
+  h3 {
+    font-size: 1.4rem;
   }
   .also button {
-    grid-template-columns: 1fr;
-    gap: 2px;
+    flex-direction: column;
+    gap: 0;
   }
 }
 </style>
