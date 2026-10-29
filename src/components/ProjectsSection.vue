@@ -149,7 +149,7 @@ h3 {
 .stack {
   font-family: var(--mono);
   font-size: 0.8rem;
-  color: var(--faint);
+  color: var(--muted);
 }
 @media (max-width: 860px) {
   .featured {
@@ -157,6 +157,9 @@ h3 {
   }
 }
 @media (max-width: 600px) {
+  .card :deep(.flow) {
+    display: none;
+  }
   .also button {
     grid-template-columns: 1fr;
     gap: 2px;

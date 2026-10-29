@@ -7,7 +7,7 @@ export const profile = {
   github: 'https://github.com/Jack-Stan',
   linkedin: 'https://www.linkedin.com/in/stan-verbruggen-67b928198',
   cv: '/data/cv/StanVCV.pdf',
-  photo: '/data/photo/stanpffoto.png',
+  photo: '/data/photo/stanpffoto-round.png',
   focus: ['multi-agent systems', 'MCP servers', 'n8n automation', 'Vue + .NET'],
 }
 

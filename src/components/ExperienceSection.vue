@@ -33,7 +33,7 @@ import { experience, extras } from '../data/profile'
 }
 li {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 20px;
   padding: 0 0 26px 22px;
   position: relative;
@@ -78,7 +78,7 @@ p {
 }
 .extras div {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 20px;
 }
 dt {
