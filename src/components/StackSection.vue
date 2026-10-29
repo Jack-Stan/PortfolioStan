@@ -20,7 +20,7 @@ import { stack } from '../data/profile'
 <style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 .group {
@@ -28,6 +28,16 @@ import { stack } from '../data/profile'
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px 20px;
+}
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 h3 {
   font-family: var(--mono);

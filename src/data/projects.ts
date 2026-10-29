@@ -22,6 +22,8 @@ export interface Project {
   stack: string[]
   groups?: DetailGroup[]
   flow?: FlowStep[]
+  // id of a replayable agent conversation in flows.ts
+  scenario?: string
   note?: string
   repoUrl?: string
   liveUrl?: string
@@ -49,6 +51,7 @@ export const featured: Project[] = [
   },
   {
     id: 'agentjack',
+    scenario: 'this-site',
     title: 'AgentJACK',
     context: 'Personal',
     year: '2026',
@@ -71,6 +74,7 @@ export const featured: Project[] = [
   },
   {
     id: 'second-line-hub',
+    scenario: 'incident',
     title: '2nd-line support agents',
     context: 'Attentia',
     year: '2026',
@@ -95,6 +99,7 @@ export const featured: Project[] = [
   },
   {
     id: 'personal-work-agent',
+    scenario: 'dev-flow',
     title: 'Personal Work Agent',
     context: 'Attentia',
     year: '2026',

@@ -2,6 +2,7 @@
 import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import type { Project } from '../data/projects'
 import FlowDiagram from './FlowDiagram.vue'
+import AgentConsole from './AgentConsole.vue'
 import StatusBadge from './StatusBadge.vue'
 
 defineProps<{ project: Project }>()
@@ -44,7 +45,11 @@ onBeforeUnmount(() => {
 
         <img v-if="project.image" :src="project.image" :alt="`${project.title} screenshot`" class="shot" loading="lazy" />
 
-        <div v-if="project.flow" class="block">
+        <div v-if="project.scenario" class="block">
+          <h3># watch it run</h3>
+          <AgentConsole :only="project.scenario" />
+        </div>
+        <div v-else-if="project.flow" class="block">
           <h3># flow</h3>
           <FlowDiagram :steps="project.flow" />
         </div>

@@ -26,9 +26,10 @@ import { about, profile } from '../data/profile'
   width: 220px;
   height: 220px;
   object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--line-strong);
-  filter: grayscale(0.25) contrast(1.05);
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid var(--accent-dim);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 40px -8px rgba(94, 234, 212, 0.35);
 }
 .text p {
   margin: 0 0 16px;
