@@ -13,8 +13,8 @@ export const profile = {
 
 export const about = [
   "I started out as a developer, moved into functional analysis, and these days I work as an Automation Engineer at Attentia. I build n8n flows, MCP servers and agent setups for my colleagues, and I do 2nd-line support on the systems they run on.",
-  "The part I actually enjoy most is figuring out what a business problem really needs before anyone writes a line of code, and then making sure the solution holds up once it's built. Knowing .NET, SQL and Vue helps a lot there: I can read the code, question a design choice, and check a fix myself instead of just trusting whatever I'm told.",
-  "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. Outside of work I'm tinkering with my own agents, including a personal assistant that runs half my admin and Claude Code running Kali Linux in Docker, which I use on in-scope bug-bounty targets.",
+  "What I enjoy most is working out what a business problem actually needs before anyone writes code, and then checking the fix holds up once it's built. Because I know .NET, SQL and Vue, I can read the code and test a fix myself instead of taking someone's word for it.",
+  "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. Outside of work I'm tinkering with my own agents, including AgentJACK, the assistant further up this page, and a security agent: Claude Code driving Kali Linux in Docker, pointed only at targets I'm allowed to test.",
 ]
 
 export const experience = [
@@ -22,13 +22,13 @@ export const experience = [
     role: 'Automation Engineer',
     org: 'Attentia',
     period: 'Oct 2026 – now',
-    text: 'n8n automations, MCP servers and agent setups for colleagues, 2nd-line dev support, and keeping an eye on bank payments going through the systems.',
+    text: 'n8n automations, MCP servers and agent setups for colleagues, 2nd-line dev support, and keeping an eye on the bank payments going through it all.',
   },
   {
     role: 'Functional Analyst & Lead Developer',
     org: 'RF-Technologies',
     period: 'Sep 2025 – Oct 2026',
-    text: 'Owned business-critical enterprise apps from analysis to production debugging. Built the MCP servers our AI agents used, a CI/CD test pipeline, and an n8n + Claude flow that turns tender documents into quotes.',
+    text: 'Analysis, lead development and production debugging on the apps the business ran on. Built the MCP servers our AI agents used, a CI/CD test pipeline, and an n8n + Claude flow that pulls quote details out of tender documents.',
   },
   {
     role: 'Software Developer Intern',

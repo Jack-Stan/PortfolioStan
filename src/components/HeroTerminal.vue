@@ -9,7 +9,7 @@ interface Line {
 
 const script: Line[] = [
   { cmd: 'whoami', out: `${profile.name}, ${profile.role}` },
-  { cmd: 'cat now.txt', out: `${profile.employer}: n8n flows, MCP servers, agents for colleagues` },
+  { cmd: 'cat now.txt', out: `${profile.employer}: n8n flows, MCP servers, 2nd-line support` },
   { cmd: 'ls focus/', out: profile.focus.join('   ') },
 ]
 
