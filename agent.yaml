@@ -1,7 +1,0 @@
-agent:
-  name: test-generator
-  description: Genereer automatisch tests voor deze codebase
-  tasks:
-    - type: generate-tests
-      target: ./src
-      output: ./tests
