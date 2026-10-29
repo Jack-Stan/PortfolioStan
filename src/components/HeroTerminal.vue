@@ -8,8 +8,8 @@ interface Line {
 }
 
 const script: Line[] = [
-  { cmd: 'whoami', out: `${profile.name} — ${profile.role}` },
-  { cmd: 'cat now.txt', out: `${profile.employer}: n8n automation, MCP servers, multi-agent flows` },
+  { cmd: 'whoami', out: `${profile.name}, ${profile.role}` },
+  { cmd: 'cat now.txt', out: `${profile.employer}: n8n flows, MCP servers, agents for colleagues` },
   { cmd: 'ls focus/', out: profile.focus.join('   ') },
 ]
 
@@ -45,12 +45,11 @@ onMounted(async () => {
   <section id="top" class="hero">
     <div class="container hero-grid">
       <div class="intro">
-        <p class="kicker">// hello, I build agents that do the boring work</p>
         <h1>{{ profile.name }}</h1>
         <p class="role">{{ profile.role }}</p>
         <p class="lede">
-          I design multi-agent systems, MCP servers and n8n automations, and I build the Vue and .NET apps around them. Analyst
-          first, so the thing I build is the thing the business actually needed.
+          Automation Engineer at Attentia. I build n8n flows, MCP servers and Claude Code agent setups, and before that I
+          spent a year as functional analyst and lead developer on enterprise apps.
         </p>
         <div class="ctas">
           <a href="#projects" class="btn primary">view projects</a>
