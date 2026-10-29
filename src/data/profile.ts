@@ -14,28 +14,33 @@ export const profile = {
 export const about = [
   "I started out as a developer, moved into functional analysis, and these days I work as an Automation Engineer at Attentia. I build n8n flows, MCP servers and agent setups for my colleagues, and I do 2nd-line support on the systems they run on.",
   "The part I actually enjoy most is figuring out what a business problem really needs before anyone writes a line of code, and then making sure the solution holds up once it's built. Knowing .NET, SQL and Vue helps a lot there: I can read the code, question a design choice, and check a fix myself instead of just trusting whatever I'm told.",
-  "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. Outside of work I'm tinkering with my own agents, including a personal assistant that runs half my admin and Claude Code running Kali Linux in Docker so it can pentest websites with real Kali tools.",
+  "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. Outside of work I'm tinkering with my own agents, including a personal assistant that runs half my admin and Claude Code running Kali Linux in Docker, which I use on in-scope bug-bounty targets.",
 ]
 
 export const experience = [
   {
     role: 'Automation Engineer',
     org: 'Attentia',
-    period: '2026 – now',
+    period: 'Oct 2026 – now',
     text: 'n8n automations, MCP servers and agent setups for colleagues, 2nd-line dev support, and keeping an eye on bank payments going through the systems.',
   },
   {
     role: 'Functional Analyst & Lead Developer',
     org: 'RF-Technologies',
-    period: '2025 – 2026',
+    period: 'Sep 2025 – Oct 2026',
     text: 'Owned business-critical enterprise apps from analysis to production debugging. Built the MCP servers our AI agents used, a CI/CD test pipeline, and an n8n + Claude flow that turns tender documents into quotes.',
   },
   {
-    role: 'Student Developer',
+    role: 'Software Developer Intern',
     org: 'Brightest',
-    period: '2025',
-    text: 'Internship. Co-built a no-code test automation framework with AI-generated test code (React, Node, Firebase, OpenAI).',
+    period: 'Feb – May 2025',
+    text: 'Co-built a no-code test automation framework with AI-generated test code (React, Node, Firebase, OpenAI).',
   },
+]
+
+export const extras = [
+  { label: 'education', value: 'Associate Degree in Software Development (Graduaat Programmeren), 2025 · Oracle Database 12c: SQL Fundamentals, 2022' },
+  { label: 'languages', value: 'Dutch (native) · English (fluent) · French (intermediate)' },
 ]
 
 export const stack: { title: string; items: string[] }[] = [

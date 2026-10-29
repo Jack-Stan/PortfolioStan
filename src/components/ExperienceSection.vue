@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { experience } from '../data/profile'
+import { experience, extras } from '../data/profile'
 </script>
 
 <template>
@@ -15,6 +15,12 @@ import { experience } from '../data/profile'
         </div>
       </li>
     </ol>
+    <dl class="extras">
+      <div v-for="x in extras" :key="x.label">
+        <dt>{{ x.label }}</dt>
+        <dd>{{ x.value }}</dd>
+      </div>
+    </dl>
   </section>
 </template>
 
@@ -65,7 +71,31 @@ p {
   color: var(--muted);
   max-width: 42rem;
 }
+.extras {
+  margin: 12px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.extras div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+}
+dt {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--faint);
+  padding-top: 2px;
+}
+dd {
+  margin: 0;
+  color: var(--muted);
+}
 @media (max-width: 600px) {
+  .extras div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
   li {
     grid-template-columns: 1fr;
     gap: 2px;

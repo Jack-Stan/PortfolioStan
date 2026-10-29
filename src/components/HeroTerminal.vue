@@ -48,8 +48,8 @@ onMounted(async () => {
         <h1>{{ profile.name }}</h1>
         <p class="role">{{ profile.role }}</p>
         <p class="lede">
-          Automation Engineer at Attentia. I build n8n flows, MCP servers and Claude Code agent setups, and before that I
-          spent a year as functional analyst and lead developer on enterprise apps.
+          Automation Engineer at Attentia, building n8n flows and Claude Code agent setups. Before that I was primary author
+          of five production MCP servers on Azure, with per-user Entra sign-in.
         </p>
         <div class="ctas">
           <a href="#projects" class="btn primary">view projects</a>

@@ -4,10 +4,10 @@ import { profile } from '../data/profile'
 
 const open = ref(false)
 const links = [
-  { href: '#about', label: 'about' },
+  { href: '#projects', label: 'projects' },
   { href: '#experience', label: 'experience' },
   { href: '#stack', label: 'stack' },
-  { href: '#projects', label: 'projects' },
+  { href: '#about', label: 'about' },
   { href: '#contact', label: 'contact' },
 ]
 </script>

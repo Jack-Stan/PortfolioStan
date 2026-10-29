@@ -32,6 +32,22 @@ export interface Project {
 // no internal system, vendor, entity or ticket names leave the company.
 export const featured: Project[] = [
   {
+    id: 'mcp-servers',
+    title: 'MCP servers',
+    context: 'RF-Technologies',
+    year: '2025 – 2026',
+    status: 'Production',
+    summary:
+      "At RF-Technologies I built the MCP servers our AI agents used to reach the company's own systems: an ERP, a CRM, a data platform, time registration and SQL. I wrote most or all of five of them.",
+    highlights: [
+      'Each user signs in with their own Microsoft account. No shared service account',
+      'Hosted on Azure App Service, with a UAT → production release pipeline',
+      'Most of the work went into the dull parts: token refresh, timeouts, retries on 429 and 503, and caching',
+      'Diagnosed a sign-in incident on the test environment',
+    ],
+    stack: ['MCP', 'Node.js', 'TypeScript', 'Azure App Service', 'Entra ID', 'OData'],
+  },
+  {
     id: 'agentjack',
     title: 'AgentJACK',
     context: 'Personal',
@@ -84,7 +100,7 @@ export const featured: Project[] = [
     year: '2026',
     status: 'Internal tool',
     summary:
-      "A local agent team that helps me run my working day. In the morning it goes through my inbox and open to-dos and suggests what to do first. Bigger work goes through an analyst, a planner and a set of developers, then a tester and a reviewer. It's all plain Claude Code, held in check with PowerShell hooks.",
+      "A local agent team that helps me run my working day. In the morning it goes through my open to-dos and suggests what to do first. Bigger work goes through an analyst, a planner and a set of developers, then a tester and a reviewer. It's all plain Claude Code, held in check with PowerShell hooks.",
     highlights: [
       'The plan comes back to me before anyone writes code',
       'A hook on every tool call blocks or asks about secrets, force pushes, destructive SQL and deploys',
@@ -109,32 +125,15 @@ export const featured: Project[] = [
     year: '2026',
     status: 'POC / UAT, not yet in production',
     summary:
-      "Around 30 n8n workflows. The biggest job is replacing the robots that send bank payments with a flow I can actually follow. Because it's money, most of the work goes into making sure a file never gets paid twice and that a failure is loud instead of silent.",
+      "Around 30 n8n workflows for payments, finance and CRM data. Because a lot of it touches money, most of the work goes into making sure nothing gets processed twice and that a failure is loud instead of silent.",
     highlights: [
-      'Each payment file gets validated (IBAN, BIC, schema) and hashed, so a duplicate gets refused',
-      'One run at a time, a log written before anything goes out, three retries, and a quarantine folder for files that keep failing',
-      'Only one flow is allowed to own the bank token. Every other flow asks it for one',
-      'Other flows: collection exports per legal entity from the CRM, and enriching company data in the CRM from the public company register',
-      'Custom n8n nodes I wrote: a database connector, a secrets-vault lookup and a CRM case node',
+      'Every incoming file is validated and fingerprinted, so a duplicate gets refused instead of processed again',
+      'One run at a time, a log written before anything goes out, and retries that give up loudly instead of silently',
+      'Flows for finance exports and for keeping company data in the CRM up to date',
+      'A few custom n8n nodes I wrote where the built-in ones fell short',
     ],
     note: "None of this runs in production yet. The payment flows are proofs of concept or still on the test environment.",
-    stack: ['n8n', 'TypeScript', 'Custom n8n nodes', 'mTLS', 'REST / SOAP', 'SQL'],
-  },
-  {
-    id: 'mcp-servers',
-    title: 'MCP servers',
-    context: 'RF-Technologies',
-    year: '2025 – 2026',
-    status: 'Production',
-    summary:
-      "At RF-Technologies I built the MCP servers our AI agents used to reach the company's own systems: an ERP, a CRM, a data platform, time registration and SQL. I wrote most or all of five of them.",
-    highlights: [
-      'Each user signs in with their own Microsoft account. No shared service account',
-      'Hosted on Azure App Service, with a UAT → production release pipeline',
-      'Most of the work went into the dull parts: token refresh, timeouts, retries on 429 and 503, and caching',
-      'Found and fixed a live sign-in problem on the test environment',
-    ],
-    stack: ['MCP', 'Node.js', 'TypeScript', 'Azure App Service', 'Entra ID', 'OData'],
+    stack: ['n8n', 'TypeScript', 'Custom n8n nodes', 'REST / SOAP', 'SQL'],
   },
   {
     id: 'recruitment-crm',
@@ -143,10 +142,10 @@ export const featured: Project[] = [
     year: '2026',
     status: 'Production',
     summary:
-      "A CRM for a door-to-door marketing and recruitment agency. Team managers plan shifts and admins approve them, and recruiters move leads through a funnel. A map shows which streets have been covered. It runs on Firebase's free plan, which means no server code, so all the access rules live in the Firestore rules.",
+      "A CRM for a field-marketing and recruitment agency. Team managers plan shifts and admins approve them, and recruiters move leads through a funnel. A map shows which areas each team has worked. It runs on Firebase's free plan, which means no server code, so all the access rules live in the Firestore rules.",
     highlights: [
       'Three roles plus a team-leader flag, across multiple offices',
-      'Leaflet map with drawn zones, a visit log and coverage stats',
+      'Leaflet map with drawn zones and a visit log',
       'The Firestore rules have their own test suite running against the emulator',
       'iOS and Android apps from the same code with Capacitor',
     ],
@@ -211,9 +210,9 @@ export const alsoBuilt: Project[] = [
     context: 'Personal',
     year: '2025',
     status: 'Completed',
-    summary: 'Route management for battery-swapping crews across 23 regions, with role-based views for admins, fleet managers and swappers.',
+    summary: 'A route-manager concept for battery-swap crews, modelled on 23 regions, with role-based views for admins, fleet managers and swappers.',
     highlights: [
-      'Real-time vehicle tracking per zone',
+      'Vehicle tracking per zone',
       'Route optimisation for swap rounds and low-battery detection',
       'Out-of-zone detection and JWT role-based access',
     ],
@@ -226,7 +225,7 @@ export const alsoBuilt: Project[] = [
     context: 'Brightest (internship)',
     year: '2025',
     status: 'Completed',
-    summary: 'Lets non-developers build automated website tests, with AI-generated test code and visual element picking from screenshots.',
+    summary: 'Co-built during my internship: lets non-developers build automated website tests, with AI-generated test code and visual element picking from screenshots.',
     highlights: [
       'No-code test builder with AI test-code generation',
       'Visual element selection from website screenshots',

@@ -8,7 +8,7 @@ const year = new Date().getFullYear()
   <section id="contact" class="container reveal">
     <p class="section-head"><span class="prompt">$</span> ./contact --open</p>
     <h2 class="section-title">Let's talk</h2>
-    <p class="lede">Open to conversations about automation, agentic AI and full-stack roles. Mail is the fastest way to reach me.</p>
+    <p class="lede">Happy to talk automation, agents and MCP. Mail is the fastest way to reach me.</p>
     <div class="links">
       <a :href="`mailto:${profile.email}`" class="btn primary">{{ profile.email }}</a>
       <a :href="profile.linkedin" class="btn" target="_blank" rel="noopener">linkedin</a>
