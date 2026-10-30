@@ -24,6 +24,8 @@ export interface Project {
   flow?: FlowStep[]
   // id of a replayable agent conversation in flows.ts
   scenario?: string
+  // short factual margin note, shown in handwriting next to the project
+  aside?: string
   note?: string
   repoUrl?: string
   liveUrl?: string
@@ -35,6 +37,7 @@ export interface Project {
 export const featured: Project[] = [
   {
     id: 'mcp-servers',
+    aside: '80–100% of the commits are mine',
     title: 'MCP servers',
     context: 'RF-Technologies',
     year: '2025 – 2026',
@@ -51,13 +54,14 @@ export const featured: Project[] = [
   },
   {
     id: 'agentjack',
-    scenario: 'this-site',
-    title: 'AgentJACK',
+    scenario: 'assistant',
+    aside: 'runs my own admin, every day',
+    title: 'Personal agent team',
     context: 'Personal',
     year: '2026',
     status: 'In daily use',
     summary:
-      "My own assistant, built on Claude Code. I talk to one agent, JACK, and he hands the work to specialists: one for LinkedIn, one for job hunting, one for my finances, one for mail, one that keeps an eye on my laptop, and a small dev team that builds new features for the whole thing. They share their memory through an Obsidian vault, so I can open it and read what they know.",
+      "My own assistant, built on Claude Code. I talk to one manager agent, and it hands the work to specialists: one for LinkedIn, one for job hunting, one for my finances, one for mail, one that keeps an eye on my laptop, and a small dev team that builds new features for the whole thing. They share their memory through an Obsidian vault, so I can open it and read what they know.",
     highlights: [
       'Every agent keeps its own memory, mistakes and log notes. Memory is capped, so it has to be cleaned up instead of just growing',
       'Skills live in one registry that a script rebuilds and checks for drift',
@@ -67,7 +71,7 @@ export const featured: Project[] = [
     stack: ['Claude Code', 'Subagents', 'Skills', 'MCP', 'Obsidian', 'Python'],
     flow: [
       { label: 'Me', detail: 'one chat' },
-      { label: 'JACK', detail: 'routes the work' },
+      { label: 'Manager', detail: 'routes the work' },
       { label: 'Specialists', detail: 'each with their own skills' },
       { label: 'Vault', detail: 'shared memory' },
     ],
@@ -75,6 +79,7 @@ export const featured: Project[] = [
   {
     id: 'second-line-hub',
     scenario: 'incident',
+    aside: 'nothing ships without my yes',
     title: '2nd-line support agents',
     context: 'Attentia',
     year: '2026',
@@ -100,6 +105,7 @@ export const featured: Project[] = [
   {
     id: 'personal-work-agent',
     scenario: 'dev-flow',
+    aside: 'no approved plan, no code',
     title: 'Personal Work Agent',
     context: 'Attentia',
     year: '2026',
@@ -125,6 +131,7 @@ export const featured: Project[] = [
   },
   {
     id: 'n8n-automation',
+    aside: 'not live yet, and it says so',
     title: 'n8n flows for payments and finance',
     context: 'Attentia',
     year: '2026',
@@ -142,6 +149,7 @@ export const featured: Project[] = [
   },
   {
     id: 'recruitment-crm',
+    aside: 'access rules tested in an emulator',
     title: 'Recruitment CRM',
     context: 'Client project',
     year: '2026',

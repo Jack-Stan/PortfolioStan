@@ -16,6 +16,7 @@ const emit = defineEmits<{ open: [project: Project] }>()
         <div class="side">
           <span class="meta">{{ p.year }}</span>
           <span class="meta">{{ p.context }}</span>
+          <span v-if="p.aside" class="aside">{{ p.aside }}</span>
         </div>
         <div class="body">
           <h3>
@@ -82,6 +83,17 @@ button {
   cursor: pointer;
   text-align: left;
 }
+.aside {
+  font-family: 'Caveat', cursive;
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  color: var(--amber);
+  margin-top: 14px;
+  max-width: 150px;
+  transform: rotate(-3deg);
+  transform-origin: left top;
+}
 .title:hover {
   color: var(--amber);
 }
@@ -147,8 +159,16 @@ button {
   }
   .side {
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 10px;
     padding: 0;
+  }
+  .aside {
+    margin: 0;
+    max-width: none;
+    transform: none;
+    font-size: 1.2rem;
   }
   h3 {
     font-size: 1.4rem;
