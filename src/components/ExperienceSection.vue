@@ -1,104 +1,70 @@
 <script setup lang="ts">
 import { experience, extras } from '../data/profile'
+import StackSection from './StackSection.vue'
 </script>
 
 <template>
-  <section id="experience" class="container reveal">
-    <p class="section-head"><span class="prompt">$</span> git log --career</p>
+  <section id="experience" class="container">
     <h2 class="section-title">Experience</h2>
-    <ol class="timeline">
+    <ol class="jobs">
       <li v-for="job in experience" :key="job.org">
-        <span class="period">{{ job.period }}</span>
+        <span class="meta">{{ job.period }}</span>
         <div>
-          <h3>{{ job.role }} <span class="org">· {{ job.org }}</span></h3>
+          <h3>{{ job.role }}, <span class="org">{{ job.org }}</span></h3>
           <p>{{ job.text }}</p>
         </div>
       </li>
+      <li v-for="x in extras" :key="x.label" class="extra">
+        <span class="meta">{{ x.label }}</span>
+        <p>{{ x.value }}</p>
+      </li>
     </ol>
-    <dl class="extras">
-      <div v-for="x in extras" :key="x.label">
-        <dt>{{ x.label }}</dt>
-        <dd>{{ x.value }}</dd>
-      </div>
-    </dl>
+    <StackSection />
   </section>
 </template>
 
 <style scoped>
-.timeline {
+.jobs {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-left: 1px solid var(--line-strong);
 }
 li {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 20px;
-  padding: 0 0 26px 22px;
-  position: relative;
+  grid-template-columns: 170px 1fr;
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
 }
-li::before {
-  content: '';
-  position: absolute;
-  left: -5px;
-  top: 8px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--accent);
+li:first-child {
+  padding-top: 0;
 }
-li:first-child::before {
-  background: var(--accent);
-}
-.period {
-  font-family: var(--mono);
-  font-size: 0.82rem;
-  color: var(--faint);
-  padding-top: 3px;
+li .meta {
+  padding-top: 6px;
+  text-transform: capitalize;
 }
 h3 {
-  margin: 0 0 4px;
-  font-size: 1.05rem;
+  margin: 0 0 6px;
+  font-size: 1.3rem;
 }
 .org {
-  color: var(--accent);
-  font-weight: 500;
+  font-style: italic;
 }
 p {
   margin: 0;
   color: var(--muted);
   max-width: 42rem;
 }
-.extras {
-  margin: 12px 0 0;
-  display: grid;
-  gap: 10px;
+.extra {
+  padding: 12px 0;
 }
-.extras div {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 20px;
+.extra .meta {
+  padding-top: 3px;
 }
-dt {
-  font-family: var(--mono);
-  font-size: 0.82rem;
-  color: var(--faint);
-  padding-top: 2px;
-}
-dd {
-  margin: 0;
-  color: var(--muted);
-}
-@media (max-width: 600px) {
-  .extras div {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
+@media (max-width: 680px) {
   li {
     grid-template-columns: 1fr;
-    gap: 2px;
+    gap: 4px;
   }
 }
 </style>

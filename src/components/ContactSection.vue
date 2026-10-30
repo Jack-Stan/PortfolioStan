@@ -5,35 +5,31 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <section id="contact" class="container reveal">
-    <p class="section-head"><span class="prompt">$</span> ./contact --open</p>
-    <h2 class="section-title">Let's talk</h2>
-    <p class="lede">Happy to talk automation, agents and MCP. Mail is the fastest way to reach me.</p>
-    <div class="links">
-      <a :href="`mailto:${profile.email}`" class="btn primary">{{ profile.email }}</a>
-      <a :href="profile.linkedin" class="btn" target="_blank" rel="noopener">linkedin</a>
-      <a :href="profile.github" class="btn" target="_blank" rel="noopener">github</a>
-      <a :href="profile.cv" class="btn" target="_blank" rel="noopener">cv.pdf</a>
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="lede">Happy to talk automation, agents or MCP. Mail is the quickest way to reach me:</p>
+    <p class="mail"><a :href="`mailto:${profile.email}`">{{ profile.email }}</a></p>
+    <div class="links-row">
+      <a :href="profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a :href="profile.github" target="_blank" rel="noopener">GitHub</a>
+      <a :href="profile.cv" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
   </section>
   <footer class="container footer">
     <span>© {{ year }} {{ profile.name }}</span>
-    <span>built with vue + vite · <a href="#top">cd ~</a></span>
+    <span>Built by hand with Vue, and some help from my agents.</span>
   </footer>
 </template>
 
 <style scoped>
 .lede {
   color: var(--muted);
-  max-width: 36rem;
-  margin: 0 0 24px;
+  margin: 0 0 8px;
 }
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.links .primary {
+.mail {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  margin: 0 0 22px;
   overflow-wrap: anywhere;
 }
 .footer {
@@ -41,12 +37,11 @@ const year = new Date().getFullYear()
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 88px;
-  padding-top: 24px;
-  padding-bottom: 32px;
+  margin-top: 110px;
+  padding-top: 22px;
+  padding-bottom: 36px;
   border-top: 1px solid var(--line);
-  font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--faint);
 }
 </style>

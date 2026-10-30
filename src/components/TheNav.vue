@@ -4,24 +4,23 @@ import { profile } from '../data/profile'
 
 const open = ref(false)
 const links = [
-  { href: '#projects', label: 'projects' },
-  { href: '#experience', label: 'experience' },
-  { href: '#stack', label: 'stack' },
-  { href: '#about', label: 'about' },
-  { href: '#contact', label: 'contact' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#about', label: 'About' },
+  { href: '#contact', label: 'Contact' },
 ]
 </script>
 
 <template>
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#top" class="brand">~/stan<span class="cursor">_</span></a>
+      <a href="#top" class="brand">{{ profile.name }}</a>
       <button class="burger" :aria-expanded="open" aria-label="Menu" @click="open = !open">
         <span></span><span></span>
       </button>
       <nav :class="{ open }">
-        <a v-for="l in links" :key="l.href" :href="l.href" @click="open = false">./{{ l.label }}</a>
-        <a :href="profile.cv" class="cv" target="_blank" rel="noopener">cv.pdf</a>
+        <a v-for="l in links" :key="l.href" :href="l.href" @click="open = false">{{ l.label }}</a>
+        <a :href="profile.cv" target="_blank" rel="noopener">CV</a>
       </nav>
     </div>
   </header>
@@ -32,8 +31,7 @@ const links = [
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(11, 15, 20, 0.85);
-  backdrop-filter: blur(10px);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 .nav-inner {
@@ -43,32 +41,21 @@ const links = [
   height: 60px;
 }
 .brand {
-  font-family: var(--mono);
-  font-weight: 700;
-  color: var(--text);
-}
-.brand:hover {
+  font-family: var(--serif);
+  font-size: 1.15rem;
   text-decoration: none;
-}
-.cursor {
-  color: var(--accent);
-  animation: blink 1.1s steps(1) infinite;
 }
 nav {
   display: flex;
-  gap: 22px;
-  font-family: var(--mono);
-  font-size: 0.9rem;
+  gap: 26px;
+  font-size: 0.92rem;
 }
 nav a {
   color: var(--muted);
-}
-nav a:hover {
-  color: var(--accent);
   text-decoration: none;
 }
-nav .cv {
-  color: var(--accent);
+nav a:hover {
+  color: var(--text);
 }
 .burger {
   display: none;
@@ -80,8 +67,8 @@ nav .cv {
 .burger span {
   display: block;
   width: 22px;
-  height: 2px;
-  margin: 5px 0;
+  height: 1.5px;
+  margin: 6px 0;
   background: var(--text);
 }
 @media (max-width: 680px) {
@@ -103,13 +90,8 @@ nav .cv {
     display: flex;
   }
   nav a {
-    padding: 14px 20px;
+    padding: 14px 24px;
     border-top: 1px solid var(--line);
-  }
-}
-@keyframes blink {
-  50% {
-    opacity: 0;
   }
 }
 </style>
