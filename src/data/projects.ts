@@ -47,13 +47,13 @@ export const featured: Project[] = [
     highlights: [
       'Each user signs in with their own Microsoft account. No shared service account',
       'Hosted on Azure App Service, released from UAT to production through a pipeline',
-      'Most of the work went into the dull parts: token refresh, timeouts, retries on 429 and 503, and caching',
+      'Token refresh, timeouts, bounded retries on 429 and 503, and caching',
       'Diagnosed a sign-in incident on the test environment',
     ],
     stack: ['MCP', 'Node.js', 'TypeScript', 'Azure App Service', 'Entra ID', 'OData'],
   },
   {
-    id: 'agentjack',
+    id: 'agent-team',
     scenario: 'assistant',
     aside: 'runs my own admin, every day',
     title: 'Personal agent team',
@@ -66,7 +66,6 @@ export const featured: Project[] = [
       'Every agent keeps its own memory, mistakes and log notes. Memory is capped, so it has to be cleaned up instead of just growing',
       'Skills live in one registry that a script rebuilds and checks for drift',
       'A daily check runs over everything and only bothers me when something is actually wrong',
-      'Same rules for every agent: three tries, then stop and ask me. Anything touching secrets, or anything that can\'t be undone, waits for me too',
     ],
     stack: ['Claude Code', 'Subagents', 'Skills', 'MCP', 'Obsidian', 'Python'],
     flow: [
@@ -79,7 +78,7 @@ export const featured: Project[] = [
   {
     id: 'second-line-hub',
     scenario: 'incident',
-    aside: 'nothing ships without my yes',
+    aside: 'one chief, twelve specialists',
     title: '2nd-line support agents',
     context: 'Attentia',
     year: '2026',
@@ -105,7 +104,7 @@ export const featured: Project[] = [
   {
     id: 'personal-work-agent',
     scenario: 'dev-flow',
-    aside: 'no approved plan, no code',
+    aside: 'twenty specialists, one main agent',
     title: 'Personal Work Agent',
     context: 'Attentia',
     year: '2026',
@@ -117,7 +116,7 @@ export const featured: Project[] = [
       'A hook on every tool call blocks or asks about secrets, force pushes, destructive SQL and deploys',
       'If an agent makes the same call three times, it gets stopped',
       'Anything with numbers in it, or anything going to a colleague, gets checked claim by claim first',
-      "Nothing gets sent, pushed or deployed without my yes. Mail is read as data, so a mail can't give the agent orders",
+      "Mail is read as data, so a mail can't give the agent orders",
     ],
     stack: ['Claude Code', 'Subagents', 'PowerShell hooks', 'Obsidian', 'Docker'],
     flow: [
@@ -131,7 +130,7 @@ export const featured: Project[] = [
   },
   {
     id: 'n8n-automation',
-    aside: 'not live yet, and it says so',
+    aside: 'POC / UAT for now',
     title: 'n8n flows for payments and finance',
     context: 'Attentia',
     year: '2026',
