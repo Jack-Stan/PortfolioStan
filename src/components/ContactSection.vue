@@ -17,7 +17,7 @@ const year = new Date().getFullYear()
   </section>
   <footer class="container footer">
     <span>© {{ year }} {{ profile.name }}</span>
-    <span>Built by hand with Vue, and some help from my agents.</span>
+    <span>Built with Vue and Vite.</span>
   </footer>
 </template>
 

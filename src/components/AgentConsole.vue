@@ -144,7 +144,7 @@ onBeforeUnmount(() => {
 <template>
   <div ref="root" class="console">
     <div class="bar">
-      <span class="live"><span class="pulse"></span>agents</span>
+      <span class="live">replay</span>
       <div v-if="list.length > 1" class="tabs" role="tablist" aria-label="Agent flows">
         <button
           v-for="(s, i) in list"
@@ -216,13 +216,6 @@ onBeforeUnmount(() => {
   font-size: 0.75rem;
   color: var(--muted);
   flex-shrink: 0;
-}
-.pulse {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: pulse 1.6s ease-in-out infinite;
 }
 .tabs {
   display: flex;
@@ -352,11 +345,6 @@ onBeforeUnmount(() => {
   .live {
     font-size: 0;
     gap: 0;
-  }
-}
-@keyframes pulse {
-  50% {
-    opacity: 0.3;
   }
 }
 @keyframes blink {

@@ -12,11 +12,11 @@ export interface MapNode {
 // A map of where my work sits, from the people it serves to the systems underneath.
 // Systems are named by kind only. Coordinates are in a 560 x 330 viewBox.
 export const nodes: MapNode[] = [
-  { id: 'me', label: 'Me', x: 52, y: 110, col: 'people', note: 'Analyst first, builder second.', link: '#about' },
+  { id: 'me', label: 'Me', x: 52, y: 110, col: 'people', note: 'Functional analyst turned automation engineer.', link: '#about' },
   { id: 'colleagues', label: 'Colleagues', x: 52, y: 220, col: 'people', note: 'The people most of this work is for.' },
 
-  { id: 'personal', label: 'Personal agents', x: 190, y: 60, col: 'agents', note: 'My own assistant team. Runs my admin every day.', link: 'agentjack' },
-  { id: 'work', label: 'Work agent', x: 190, y: 165, col: 'agents', note: 'Plans the day, builds only behind a plan I approve.', link: 'personal-work-agent' },
+  { id: 'personal', label: 'Personal agents', x: 190, y: 60, col: 'agents', note: 'My own assistant team. Runs my admin every day.', link: 'agent-team' },
+  { id: 'work', label: 'Work agent', x: 190, y: 165, col: 'agents', note: 'A main agent and twenty specialists for my working day.', link: 'personal-work-agent' },
   { id: 'support', label: 'Support agents', x: 190, y: 270, col: 'agents', note: 'A chief and twelve specialists for 2nd-line support.', link: 'second-line-hub' },
 
   { id: 'mcp', label: 'MCP servers', x: 340, y: 95, col: 'tools', note: 'Five production servers, each user signs in as themselves.', link: 'mcp-servers' },
