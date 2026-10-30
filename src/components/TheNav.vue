@@ -43,11 +43,13 @@ const links = [
 .brand {
   font-family: var(--serif);
   font-size: 1.15rem;
+  font-weight: 600;
   text-decoration: none;
 }
 nav {
   display: flex;
   gap: 26px;
+  font-family: var(--sans);
   font-size: 0.92rem;
 }
 nav a {

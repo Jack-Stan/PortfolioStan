@@ -14,7 +14,7 @@ import { profile } from '../data/profile'
           I build agents that hand work to each other, and the n8n flows and MCP servers they run on. Right now at Attentia.
           Before that I was primary author of five production MCP servers at RF-Technologies.
         </p>
-        <p class="hint">The console is a replay of how my agents actually talk. <span class="human">Amber</span> is a person, <span class="agent">green</span> is an agent.</p>
+        <p class="hint">The console is a replay of how my agents actually talk. <span class="human">Orange</span> is a person, <span class="agent">green</span> is an agent.</p>
         <div class="links-row">
           <a href="#projects">See the projects</a>
           <a :href="profile.cv" target="_blank" rel="noopener">CV (PDF)</a>
@@ -59,6 +59,7 @@ h1 {
   margin: 0 0 14px;
 }
 .hint {
+  font-family: var(--sans);
   font-size: 0.85rem;
   color: var(--faint);
   margin: 0 0 28px;

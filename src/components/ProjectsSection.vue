@@ -98,10 +98,12 @@ button {
   margin: 0 0 12px;
 }
 .stack {
+  font-family: var(--sans);
   font-size: 0.85rem;
   color: var(--faint);
 }
 .more {
+  font-family: var(--sans);
   font-size: 0.9rem;
   text-decoration: underline;
   text-decoration-color: var(--amber);

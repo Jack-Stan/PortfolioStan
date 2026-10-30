@@ -33,6 +33,7 @@ const year = new Date().getFullYear()
   overflow-wrap: anywhere;
 }
 .footer {
+  font-family: var(--sans);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

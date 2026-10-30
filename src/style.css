@@ -1,30 +1,29 @@
-@import '@fontsource-variable/fraunces';
-@import '@fontsource/ibm-plex-sans/400.css';
-@import '@fontsource/ibm-plex-sans/400-italic.css';
-@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource-variable/source-serif-4';
+@import '@fontsource-variable/source-serif-4/wght-italic.css';
+@import '@fontsource-variable/instrument-sans';
 @import '@fontsource/ibm-plex-mono/400.css';
 @import '@fontsource/ibm-plex-mono/500.css';
 
-/* Warm near-black, one human colour (amber) and one agent colour (sage).
-   Amber marks people and links; sage only appears where agents are talking. */
+/* Warm paper, ink-dark text and one clay accent: a calm, essay-like page.
+   Clay marks people and links; olive only appears where agents are talking. */
 :root {
-  --bg: #121110;
-  --bg-raised: #1a1917;
-  --bg-sunken: #0d0c0b;
-  --line: #2a2825;
-  --line-strong: #3a3733;
-  --text: #ece8e1;
-  --muted: #b0aa9f;
-  --faint: #8a857b;
-  --amber: #f0b45a;
-  --accent: #8fd3ad;
-  --accent-dim: #4d7a62;
-  --serif: 'Fraunces Variable', Georgia, serif;
-  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --bg: #faf9f5;
+  --bg-raised: #f3f1ea;
+  --bg-sunken: #efece3;
+  --line: #e4e0d5;
+  --line-strong: #d3cec1;
+  --text: #1f1e1c;
+  --muted: #55534e;
+  --faint: #7b786f;
+  --amber: #c4613f;
+  --accent: #5d7a4e;
+  --accent-dim: #9db28f;
+  --serif: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
+  --sans: 'Instrument Sans Variable', system-ui, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
-  --radius: 6px;
+  --radius: 10px;
   --max: 1040px;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 *,
@@ -42,8 +41,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--sans);
-  font-size: 17px;
+  font-family: var(--serif);
+  font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -88,8 +87,7 @@ h2,
 h3 {
   font-family: var(--serif);
   font-weight: 500;
-  font-variation-settings: 'SOFT' 50, 'opsz' 72;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .section-title {
@@ -101,12 +99,14 @@ h3 {
 }
 
 .meta {
-  font-family: var(--mono);
-  font-size: 0.78rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
   color: var(--faint);
 }
 
 .links-row {
+  font-family: var(--sans);
+  font-size: 0.95rem;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 22px;
