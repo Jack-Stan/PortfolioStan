@@ -33,7 +33,7 @@ dl div {
   border-bottom: 1px solid var(--line);
 }
 dt {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 0.8rem;
   color: var(--faint);
   padding-top: 3px;

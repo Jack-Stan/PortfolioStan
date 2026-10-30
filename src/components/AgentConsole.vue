@@ -294,14 +294,14 @@ onBeforeUnmount(() => {
 }
 .node.lit rect {
   stroke: var(--accent);
-  fill: #18241d;
+  fill: #e7eedf;
 }
 .node.lit text {
   fill: var(--text);
 }
 .node.human.lit rect {
   stroke: var(--amber);
-  fill: #241d0c;
+  fill: #f7e4da;
 }
 .log {
   height: 196px;

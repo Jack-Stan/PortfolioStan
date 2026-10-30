@@ -13,7 +13,8 @@ const warn = computed(() => /poc|uat/i.test(props.status))
 
 <style scoped>
 .status {
-  font-size: 0.85rem;
+  font-family: var(--serif);
+  font-size: 0.9rem;
   font-style: italic;
   color: var(--muted);
 }
