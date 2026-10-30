@@ -41,9 +41,9 @@ onMounted(() => {
   <TheNav />
   <main>
     <HeroSection />
+    <AboutSection />
     <ProjectsSection :featured="featured" :also-built="alsoBuilt" @open="open" />
     <ExperienceSection />
-    <AboutSection />
     <ContactSection />
   </main>
   <ProjectModal v-if="selected" :project="selected" @close="close" />

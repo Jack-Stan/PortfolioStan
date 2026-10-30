@@ -14,7 +14,7 @@ export const profile = {
 export const about = [
   "I started out as a developer, moved into functional analysis, and these days I work as an Automation Engineer at Attentia. I build n8n flows, MCP servers and agent setups for my colleagues, and I do 2nd-line support on the systems they run on.",
   "What I enjoy most is working out what a business problem actually needs before anyone writes code, and then checking the fix holds up once it's built. Because I know .NET, SQL and Vue, I can read the code and test a fix myself instead of taking someone's word for it.",
-  "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. Outside of work I'm tinkering with my own agents, including AgentJACK, the assistant further up this page, and a security agent: Claude Code driving Kali Linux in Docker, which I use for bug bounties on Intigriti, on in-scope targets only.",
+  "On a team I'm usually the one asking 'wait, why are we doing it this way' before things get built the wrong way. Outside of work I'm tinkering with my own agents, including the personal agent team further down this page, and a security agent: Claude Code driving Kali Linux in Docker, which I use for bug bounties on Intigriti, on in-scope targets only.",
 ]
 
 export const experience = [

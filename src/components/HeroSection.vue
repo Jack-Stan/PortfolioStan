@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AgentConsole from './AgentConsole.vue'
+import WorkMap from './WorkMap.vue'
 import { profile } from '../data/profile'
 </script>
 
@@ -7,22 +7,21 @@ import { profile } from '../data/profile'
   <section id="top" class="hero">
     <div class="container hero-grid">
       <div class="intro">
-        <img :src="profile.photo" :alt="profile.name" class="avatar" width="64" height="64" />
         <h1>{{ profile.name }}</h1>
         <p class="role">{{ profile.role }}</p>
         <p class="lede">
           I build agents that hand work to each other, and the n8n flows and MCP servers they run on. Right now at Attentia.
           Before that I was primary author of five production MCP servers at RF-Technologies.
         </p>
-        <p class="hint">The console is a replay of how my agents actually talk. <span class="human">Orange</span> is a person, <span class="agent">green</span> is an agent.</p>
         <div class="links-row">
-          <a href="#projects">See the projects</a>
+          <a href="#about">About me</a>
+          <a href="#projects">Projects</a>
           <a :href="profile.cv" target="_blank" rel="noopener">CV (PDF)</a>
           <a :href="profile.github" target="_blank" rel="noopener">GitHub</a>
           <a :href="profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <AgentConsole />
+      <WorkMap />
     </div>
   </section>
 </template>
