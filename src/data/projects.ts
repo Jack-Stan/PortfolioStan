@@ -84,7 +84,8 @@ export const featured: Project[] = [
     highlights: [
       'The .NET 9 backend is split into domain, application, infrastructure and API projects, with Entity Framework on SQL Server',
       'Routes are planned with Google OR-Tools: a distance matrix from GPS positions, then the best order of stops that fits the swapper\'s shift',
-      'Flags vehicles running low on battery and vehicles that have left their zone',
+      'Flags vehicles running low on battery, lowest first, per zone',
+      '63 backend tests run in GitHub Actions on every push, covering the route solver, sign-in and the battery rules',
       'JWT sign-in with three roles. No secrets in config files, and the API won\'t start without a signing key',
     ],
     stack: ['.NET 9', 'C#', 'Entity Framework', 'SQL Server', 'OR-Tools', 'React Native', 'TypeScript', 'JWT'],
