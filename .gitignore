@@ -52,3 +52,4 @@ netlify/functions/node_modules
 .cache/
 tsconfig.tsbuildinfo
 dist
+dist-ssr

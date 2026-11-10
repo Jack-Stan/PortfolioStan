@@ -1,5 +1,6 @@
-import { createApp } from 'vue'
+import { createSSRApp } from 'vue'
 import App from './App.vue'
 import './style.css'
 
-createApp(App).mount('#app')
+// Hydrates the HTML that scripts/prerender.mjs baked in at build time.
+createSSRApp(App).mount('#app')
