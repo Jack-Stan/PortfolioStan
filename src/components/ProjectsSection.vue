@@ -2,6 +2,7 @@
 import type { Project } from '../data/projects'
 import StatusBadge from './StatusBadge.vue'
 import { profile } from '../data/profile'
+import ContributionsGraph from './ContributionsGraph.vue'
 
 defineProps<{ featured: Project[]; alsoBuilt: Project[] }>()
 const emit = defineEmits<{ open: [project: Project] }>()
@@ -44,6 +45,7 @@ const emit = defineEmits<{ open: [project: Project] }>()
       </li>
     </ul>
     <p class="gh">The personal ones have their code on <a :href="profile.github" target="_blank" rel="noopener">GitHub</a>.</p>
+    <ContributionsGraph />
   </section>
 </template>
 
