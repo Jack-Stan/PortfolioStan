@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <title>Stan Verbruggen - CV</title>
 <style>
-  @page { size: A4; margin: 0; }
+  @page { size: A4; margin: 12mm 0 12mm; }
+  @page :first { margin-top: 0; }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
@@ -14,8 +15,8 @@
   }
   .page {
     background: #ffffff;
-    margin: 14px;
-    padding: 26px 36px 30px;
+    margin: 0 14px;
+    padding: 26px 36px 10px;
     color: #2a2a2a;
     font-size: 9.6pt;
     line-height: 1.42;
@@ -33,10 +34,11 @@
     border-bottom: 1px solid #b9c2e0;
     padding-bottom: 3px;
     margin: 16px 0 9px;
+    break-after: avoid;
   }
   .section-title:first-of-type { margin-top: 0; }
-  .summary p { margin: 0; color: #333; }
-  .entry { margin-bottom: 9px; }
+  .skills .section-title, .edu .section-title { margin-top: 16px; }
+  .entry { margin-bottom: 9px; break-inside: avoid; }
   .entry-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
   .entry-row .title { font-weight: 700; color: #1b2a4d; font-size: 9.9pt; }
   .entry-row .org { font-weight: 400; color: #444; }
@@ -44,11 +46,14 @@
   .entry .sub { font-style: italic; color: #666; font-size: 8.8pt; margin: 1px 0 3px; }
   .entry ul { margin: 4px 0 0; padding-left: 17px; color: #333; }
   .entry li { margin-bottom: 3px; }
+  .skills { break-inside: avoid; }
   .skills-line { margin-bottom: 4px; color: #333; }
   .skills-line b { color: #1b2a4d; }
+  .edu { break-inside: avoid; }
   .edu-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
   .edu-row b { color: #1b2a4d; }
   .edu-row .date { font-style: italic; color: #666; font-size: 8.8pt; }
+  .more { color: #333; margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -68,37 +73,38 @@
     <div class="entry">
       <div class="entry-row">
         <span class="title">Automation Engineer <span class="org">at Attentia</span></span>
-        <span class="date">2026 &ndash; Present</span>
+        <span class="date">Oct 2026 &ndash; Present</span>
       </div>
       <ul>
-        <li>Build n8n automations that replace repetitive manual work</li>
-        <li>Build MCP servers and personal work agents for colleagues, and design multi-agent flows</li>
-        <li>Provide 2nd-line development support: investigate and fix issues in internal systems</li>
-        <li>Check that bank transfers process correctly through the systems, and optimise those systems</li>
+        <li>Build n8n automations, MCP servers and agent setups for colleagues, and provide 2nd-line development support on the internal systems they run on</li>
+        <li>Building around 30 n8n workflows for payments, finance exports and CRM data (proof of concept / UAT, not yet in production): every incoming file validated and fingerprinted so duplicates are refused, one run at a time, a log written before anything goes out, and retries that fail loudly; custom n8n nodes where the built-in ones fell short</li>
+        <li>Built a 2nd-line support agent setup on Claude Code: a chief agent with twelve specialist subagents that read systems, match errors to runbooks and keep documentation in line with the code; monitors diagnose and propose fixes but never apply them</li>
+        <li>Built a personal work agent that plans the day from open to-dos and runs bigger work through analyst, planner, developer, tester and reviewer agents, with hooks that block or ask about secrets, force pushes, destructive SQL and deploys</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-row">
         <span class="title">Functional Analyst &amp; Lead Developer <span class="org">at RF-Technologies</span></span>
-        <span class="date">2025 &ndash; 2026</span>
+        <span class="date">Sep 2025 &ndash; Oct 2026</span>
       </div>
       <ul>
-        <li>Owned business-critical enterprise applications end-to-end: functional analysis, technical lead on implementation, and production debugging, including an operational workflow platform and a data &amp; analysis tool</li>
-        <li>Built supporting modules, including visual discount-rule management and inventory tracking, plus an automated Azure DevOps CI/CD test pipeline for both applications</li>
-        <li>Digitized manual approval workflows with Power Automate &amp; SharePoint, and built an AI-driven automation (n8n + Claude API) that reads tender documents shared in Microsoft Teams and converts them into quote information</li>
-        <li>Built production MCP servers on Azure App Service with per-user Entra OAuth, giving AI agents secure access to internal APIs and data</li>
-        <li>Explored a Microsoft Fabric medallion architecture with AI-agent data querying as a forward-looking data analytics initiative</li>
+        <li>Built the MCP servers the company's AI agents used to reach its own systems (ERP, CRM, data platform, time registration, SQL); primary author of five (80&ndash;100% of commits), with per-user Microsoft sign-in instead of a shared service account, hosted on Azure App Service and released from UAT to production through a pipeline</li>
+        <li>Most of that work went into reliability: token refresh, timeouts, retries on 429 and 503, and caching</li>
+        <li>Functional analysis, technical lead and production debugging on the business-critical applications: a modular workflow and compliance platform that talks to other systems through events, and a data analysis tool with controlled schema changes</li>
+        <li>Built a visual discount-rule editor and inventory tracking modules, and pulled the Playwright suites together into one automated Azure DevOps test pipeline</li>
+        <li>Moved manual approval workflows into Power Automate and SharePoint, and built an n8n + Claude API flow that picks up documents dropped in Microsoft Teams and returns the details needed to start a quote</li>
+        <li>Explored a Microsoft Fabric medallion setup that AI agents could query (exploration only)</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-row">
-        <span class="title">Student Developer <span class="org">at Brightest</span></span>
-        <span class="date">2025</span>
+        <span class="title">Software Developer Intern <span class="org">at Brightest</span></span>
+        <span class="date">Feb &ndash; May 2025</span>
       </div>
       <ul>
-        <li>Built the Brightest Test Automation Framework: a React/Node.js/Firebase web app letting non-technical users create automated tests, using the OpenAI API for AI-generated test code, significantly reducing the manual effort of writing and maintaining tests</li>
+        <li>Co-built a no-code test automation framework (React, Node.js, Firebase, OpenAI API, Puppeteer): users build website tests without code while the OpenAI API writes the test code, pick page elements by clicking on a screenshot, and work on tests together on a kanban board</li>
       </ul>
     </div>
 
@@ -113,7 +119,42 @@
       </ul>
     </div>
 
-    <div class="section-title">Personal Projects</div>
+    <div class="section-title">Selected Projects</div>
+
+    <div class="entry">
+      <div class="entry-row">
+        <span class="title">Recruitment CRM <span class="org">(client project, in production)</span></span>
+        <span class="date">Vue 3 / TypeScript / Firebase &middot; 2026</span>
+      </div>
+      <ul>
+        <li>Most recent full-stack build: a CRM a field-marketing and recruitment agency uses every week, still receiving small same-day releases</li>
+        <li>Shift planning with admin approval, shared to the team's WhatsApp group from the planning view; a lead funnel with click-to-call and per-recruiter figures; a Leaflet map with drawn zones and a visit log</li>
+        <li>Three roles plus a team-leader flag across multiple offices; runs on Firebase with no server code, so every access rule lives in Firestore rules with their own test suite against the emulator; iOS and Android apps from the same code with Capacitor</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row">
+        <span class="title">Battery-swap route manager <span class="org">(personal concept)</span></span>
+        <span class="date">.NET 9 / React Native &middot; 2025</span>
+      </div>
+      <ul>
+        <li>Full-stack concept for planning battery-swap rounds for shared e-scooters, modelled on 23 regions across four countries and run on seeded data, not a live system</li>
+        <li>.NET 9 backend split into domain, application, infrastructure and API projects, with Entity Framework on SQL Server; routes planned with Google OR-Tools from a GPS distance matrix to fit the swapper's shift; flags low-battery and out-of-zone vehicles</li>
+        <li>React Native app with separate views for admins, fleet managers and swappers; JWT sign-in with three roles, no secrets in config files</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-row">
+        <span class="title">Personal agent team <span class="org">(in daily use)</span></span>
+        <span class="date">Claude Code / Obsidian &middot; 2026</span>
+      </div>
+      <ul>
+        <li>My own assistant on Claude Code: one manager agent hands work to specialists for LinkedIn, job search, finances, mail and laptop health, plus a small dev team; they share memory through an Obsidian vault</li>
+        <li>Each agent keeps capped memory, mistakes and log notes; skills live in one registry a script rebuilds and checks for drift; a daily check only raises an alert when something is actually wrong</li>
+      </ul>
+    </div>
 
     <div class="entry">
       <div class="entry-row">
@@ -121,42 +162,28 @@
         <span class="date">Flutter / Firebase &middot; 2025</span>
       </div>
       <ul>
-        <li>Cross-platform time tracking &amp; invoicing app with automated billing, financial analytics and UBL/Peppol e-invoicing, streamlining the full admin workflow from time tracking to payment</li>
+        <li>Time tracking and invoicing for freelancers, from a live timer to PDF invoices, UBL XML export and Peppol e-invoicing; web, iOS and Android from one Flutter codebase</li>
       </ul>
     </div>
 
-    <div class="entry">
-      <div class="entry-row">
-        <span class="title">Hoppy Route Manager</span>
-        <span class="date">.NET Core / React Native &middot; 2025</span>
-      </div>
-      <ul>
-        <li>Route management system for battery-swap fleet operations across 23 European regions, pairing a .NET Core API with a React Native app, with role-based access, real-time vehicle tracking and route optimisation</li>
-      </ul>
+    <div class="more">More on the portfolio: AI document-to-quote automation, a booking system (Vue + Express/TypeScript), and the work above in more detail.</div>
+
+    <div class="skills">
+      <div class="section-title">Skills</div>
+      <div class="skills-line"><b>Agents &amp; AI:</b> Claude Code (subagents, hooks, skills), MCP servers, Claude API, OpenAI API</div>
+      <div class="skills-line"><b>Automation:</b> n8n (incl. custom nodes), Power Automate, REST / SOAP / OData, OAuth2 &amp; mTLS</div>
+      <div class="skills-line"><b>Frontend:</b> Vue 3, TypeScript, Pinia, Tailwind CSS, React, React Native, Flutter</div>
+      <div class="skills-line"><b>Backend:</b> .NET / C#, Entity Framework, Node.js, SQL Server, Oracle SQL, Firebase / Firestore</div>
+      <div class="skills-line"><b>Cloud &amp; delivery:</b> Azure (App Service, Entra ID), Azure DevOps CI/CD, GitHub Actions, Playwright, Docker, Git</div>
+      <div class="skills-line"><b>Analysis:</b> functional analysis, requirements, process mapping, production debugging</div>
+      <div class="skills-line"><b>Languages:</b> Dutch (native), English (fluent), French (intermediate)</div>
     </div>
 
-    <div class="entry">
-      <div class="entry-row">
-        <span class="title">PersonalFinanceAgent</span>
-        <span class="date">Claude Code / Markdown &middot; 2026</span>
-      </div>
-      <ul>
-        <li>Agentic personal-finance system built on Claude Code with custom skills and a structured Markdown knowledge base as a single source of truth, automating payslip-to-budget processing, goal &amp; scenario planning and surfacing spending blind spots</li>
-      </ul>
+    <div class="edu">
+      <div class="section-title">Education &amp; Certifications</div>
+      <div class="edu-row"><b>Associate Degree in Software Development (Graduaat Programmeren)</b><span class="date">2025</span></div>
+      <div class="edu-row"><b>Oracle Database 12c: SQL Fundamentals Certification</b><span class="date">2022</span></div>
     </div>
-
-    <div class="section-title">Skills</div>
-    <div class="skills-line"><b>Frontend:</b> React, Vue, TypeScript, JavaScript, HTML/CSS, Flutter</div>
-    <div class="skills-line"><b>Backend:</b> .NET, C#, Node.js, REST APIs, SQL Server</div>
-    <div class="skills-line"><b>Cloud &amp; DevOps:</b> Azure (Key Vault, DevOps Pipelines), Docker, CI/CD, Git/GitHub</div>
-    <div class="skills-line"><b>AI &amp; Automation:</b> Claude API, OpenAI API, n8n, Power Automate</div>
-    <div class="skills-line"><b>Testing:</b> xUnit, Jest, Playwright, automated test frameworks</div>
-    <div class="skills-line"><b>Databases:</b> SQL Server, Firebase/Firestore, MySQL</div>
-    <div class="skills-line"><b>Languages:</b> Dutch (native), English (professional), French (intermediate)</div>
-
-    <div class="section-title">Education &amp; Certifications</div>
-    <div class="edu-row"><b>Graduate Degree in Programming (Belgian graduaat, short-cycle Professional Bachelor)</b><span class="date">2021 &ndash; 2025</span></div>
-    <div class="edu-row"><b>Oracle Database 12c: SQL Fundamentals Certification</b><span class="date">2022</span></div>
 
   </div>
 </body>
