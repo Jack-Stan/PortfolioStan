@@ -53,6 +53,45 @@ export const featured: Project[] = [
     stack: ['MCP', 'Node.js', 'TypeScript', 'Azure App Service', 'Entra ID', 'OData'],
   },
   {
+    id: 'recruitment-crm',
+    aside: 'real users, real shifts, every week',
+    title: 'Recruitment CRM',
+    context: 'Client project',
+    year: '2026',
+    status: 'Production, in use',
+    summary:
+      "My most recent full-stack build: a CRM that a field-marketing and recruitment agency uses every week. Team managers plan shifts and admins approve them, recruiters move leads through a funnel, and a map shows which areas each team has worked. I'm still shipping to it, in small changes that go live the same day.",
+    highlights: [
+      'Three roles plus a team-leader flag, across multiple offices, with an admin-assignable job ladder',
+      'Lead funnel with street-lead statuses, click-to-call and per-recruiter performance figures',
+      "The week's shift planning goes straight to the team's WhatsApp group from the planning view",
+      'Leaflet map with drawn zones and a visit log',
+      "It runs on Firebase's free plan with no server code, so every access rule lives in the Firestore rules, and those have their own test suite against the emulator",
+      'iOS and Android apps from the same code with Capacitor',
+    ],
+    stack: ['Vue 3', 'TypeScript', 'Pinia', 'Tailwind', 'Firebase', 'Firestore rules', 'Leaflet', 'Capacitor'],
+    note: "Client work, so there's no public repo or link.",
+  },
+  {
+    id: 'route-manager',
+    aside: 'the solver is OR-Tools, not a guess',
+    title: 'Battery-swap route manager',
+    context: 'Personal',
+    year: '2025',
+    status: 'Concept',
+    summary:
+      "A full-stack concept for planning battery-swap rounds for shared e-scooters, modelled on 23 regions across four countries. A .NET API does the planning and a React Native app gives admins, fleet managers and swappers each their own view.",
+    highlights: [
+      'The .NET 9 backend is split into domain, application, infrastructure and API projects, with Entity Framework on SQL Server',
+      'Routes are planned with Google OR-Tools: a distance matrix from GPS positions, then the best order of stops that fits the swapper\'s shift',
+      'Flags vehicles running low on battery and vehicles that have left their zone',
+      'JWT sign-in with three roles. No secrets in config files, and the API won\'t start without a signing key',
+    ],
+    stack: ['.NET 9', 'C#', 'Entity Framework', 'SQL Server', 'OR-Tools', 'React Native', 'TypeScript', 'JWT'],
+    note: "A concept on seeded data, not a live system.",
+    repoUrl: 'https://github.com/Jack-Stan/AutomatedRoutePlanner',
+  },
+  {
     id: 'agentjack',
     scenario: 'assistant',
     aside: 'runs my own admin, every day',
@@ -79,13 +118,13 @@ export const featured: Project[] = [
   {
     id: 'second-line-hub',
     scenario: 'incident',
-    aside: 'nothing ships without my yes',
+    aside: 'twelve specialists, one chief',
     title: '2nd-line support agents',
     context: 'Attentia',
     year: '2026',
     status: 'Internal tool',
     summary:
-      "The setup I use for 2nd-line support. One chief agent talks to me, and twelve specialists sit behind him: some know a specific system and only read, some look at errors and match them to a runbook, and a few keep our documentation in line with the code. None of them can push, comment on a ticket or apply a fix on their own. That's always my call.",
+      "The setup I use for 2nd-line support. One chief agent talks to me, and twelve specialists sit behind him: some know a specific system and only read, some look at errors and match them to a runbook, and a few keep our documentation in line with the code. None of them can push, comment on a ticket or apply a fix on their own.",
     highlights: [
       "Agents don't call each other. Each one finishes with a short result and a list of who should pick it up next, and the chief decides",
       'The monitors diagnose and propose a fix. They never apply it',
@@ -99,34 +138,7 @@ export const featured: Project[] = [
       { label: 'Chief' },
       { label: 'Specialists' },
       { label: 'Quality check' },
-      { label: 'My yes' },
-    ],
-  },
-  {
-    id: 'personal-work-agent',
-    scenario: 'dev-flow',
-    aside: 'no approved plan, no code',
-    title: 'Personal Work Agent',
-    context: 'Attentia',
-    year: '2026',
-    status: 'Internal tool',
-    summary:
-      "A local agent team that helps me run my working day. In the morning it goes through my open to-dos and suggests what to do first. Bigger work goes through an analyst, a planner and a set of developers, then a tester and a reviewer. It's all plain Claude Code, held in check with PowerShell hooks.",
-    highlights: [
-      'The plan comes back to me before anyone writes code',
-      'A hook on every tool call blocks or asks about secrets, force pushes, destructive SQL and deploys',
-      'If an agent makes the same call three times, it gets stopped',
-      'Anything with numbers in it, or anything going to a colleague, gets checked claim by claim first',
-      "Nothing gets sent, pushed or deployed without my yes. Mail is read as data, so a mail can't give the agent orders",
-    ],
-    stack: ['Claude Code', 'Subagents', 'PowerShell hooks', 'Obsidian', 'Docker'],
-    flow: [
-      { label: 'Analyst' },
-      { label: 'Planner' },
-      { label: 'My OK' },
-      { label: 'Devs' },
-      { label: 'Tester' },
-      { label: 'Reviewer' },
+      { label: 'Me, to approve' },
     ],
   },
   {
@@ -147,27 +159,34 @@ export const featured: Project[] = [
     note: "None of this runs in production yet. The payment flows are proofs of concept or still on the test environment.",
     stack: ['n8n', 'TypeScript', 'Custom n8n nodes', 'REST / SOAP', 'SQL'],
   },
-  {
-    id: 'recruitment-crm',
-    aside: 'access rules tested in an emulator',
-    title: 'Recruitment CRM',
-    context: 'Client project',
-    year: '2026',
-    status: 'Production',
-    summary:
-      "A CRM for a field-marketing and recruitment agency. Team managers plan shifts and admins approve them, and recruiters move leads through a funnel. A map shows which areas each team has worked. It runs on Firebase's free plan, which means no server code, so all the access rules live in the Firestore rules.",
-    highlights: [
-      'Three roles plus a team-leader flag, across multiple offices',
-      'Leaflet map with drawn zones and a visit log',
-      'The Firestore rules have their own test suite running against the emulator',
-      'iOS and Android apps from the same code with Capacitor',
-    ],
-    stack: ['Vue 3', 'TypeScript', 'Pinia', 'Tailwind', 'Firebase', 'Leaflet', 'Capacitor'],
-    note: "Client work, so there's no public repo or link.",
-  },
 ]
 
 export const alsoBuilt: Project[] = [
+  {
+    id: 'personal-work-agent',
+    title: 'Personal Work Agent',
+    context: 'Attentia',
+    year: '2026',
+    status: 'Internal tool',
+    summary:
+      "A local agent team that helps me run my working day. In the morning it goes through my open to-dos and suggests what to do first. Bigger work goes through an analyst, a planner and a set of developers, then a tester and a reviewer. It's all plain Claude Code, held in check with PowerShell hooks.",
+    highlights: [
+      'The plan comes back to me before anyone writes code',
+      'A hook on every tool call blocks or asks about secrets, force pushes, destructive SQL and deploys',
+      'If an agent makes the same call three times, it gets stopped',
+      'Anything with numbers in it, or anything going to a colleague, gets checked claim by claim first',
+      "Mail is read as data, so a mail can't give the agent orders",
+    ],
+    stack: ['Claude Code', 'Subagents', 'PowerShell hooks', 'Obsidian', 'Docker'],
+    flow: [
+      { label: 'Analyst' },
+      { label: 'Planner' },
+      { label: 'My OK' },
+      { label: 'Devs' },
+      { label: 'Tester' },
+      { label: 'Reviewer' },
+    ],
+  },
   {
     id: 'rf-enterprise',
     title: 'Enterprise applications',
@@ -216,21 +235,6 @@ export const alsoBuilt: Project[] = [
     stack: ['Flutter', 'Firebase', 'Cloud Functions', 'UBL / Peppol'],
     repoUrl: 'https://github.com/Jack-Stan/Time2Bill',
     image: time2billImg,
-  },
-  {
-    id: 'route-manager',
-    title: 'Battery-swap route manager',
-    context: 'Personal',
-    year: '2025',
-    status: 'Completed',
-    summary: 'A concept I built for planning battery-swap rounds, modelled on 23 regions. Admins, fleet managers and swappers each get their own view.',
-    highlights: [
-      'Vehicle tracking per zone',
-      'Works out the swap rounds and flags vehicles running low on battery',
-      'Flags vehicles that leave their zone. Access per role with JWT',
-    ],
-    stack: ['.NET Core', 'React Native', 'TypeScript', 'SQL Server', 'Entity Framework'],
-    repoUrl: 'https://github.com/Jack-Stan/AutomatedRoutePlanner',
   },
   {
     id: 'brightest',
