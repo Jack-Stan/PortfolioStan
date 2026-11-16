@@ -77,10 +77,10 @@
         <span class="date">Oct 2026 &ndash; Present</span>
       </div>
       <ul>
-        <li>Build n8n automations, MCP servers and agent setups for colleagues, and provide 2nd-line development support on the internal systems they run on</li>
-        <li>Building around 30 n8n workflows for payments, finance exports and CRM data (proof of concept / UAT, not yet in production): every incoming file validated and fingerprinted so duplicates are refused, one run at a time, a log written before anything goes out, and retries that fail loudly; custom n8n nodes where the built-in ones fell short</li>
-        <li>Built a 2nd-line support agent setup on Claude Code: a chief agent with twelve specialist subagents that read systems, match errors to runbooks and keep documentation in line with the code; monitors diagnose and propose fixes but never apply them</li>
-        <li>Built a personal work agent that plans the day from open to-dos and runs bigger work through analyst, planner, developer, tester and reviewer agents, with hooks that block or ask about secrets, force pushes, destructive SQL and deploys</li>
+        <li>Designed and built the 2nd-line team's agent platform on Claude Code: a chief session with about 19 specialist agents, 7 hooks (guardrail, secret filter, context size, route hint, run log, trace, session start) and a self-maintaining knowledge vault; the team now runs its automation estate through it, and colleagues use it too</li>
+        <li>Rebuilt a bank payment-file upload from an RPA robot to n8n, with a token keeper, a heartbeat and escalation mails; tested end to end on UAT against the bank's test environment, production go-live in preparation</li>
+        <li>Building an automated sales-invoice import into Certinia to replace a manual Boomi step: read-only pre-checks against Salesforce and the write path are built and ran clean on UAT; scheduling, notifications and posting still to come (not yet in production)</li>
+        <li>Moving seven internal Docker web apps to Kubernetes/Helm pipelines, with LDAP login, CORS and security-header fixes and a rework of the n8n monitor; ran an authorised security assessment of the portal and split a monolithic repository into hub, web-tools and archive repos</li>
       </ul>
     </div>
 
