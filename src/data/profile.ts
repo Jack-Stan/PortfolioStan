@@ -33,7 +33,7 @@ export const experience = [
   {
     role: 'Software Developer Intern',
     org: 'Brightest',
-    period: 'Feb – May 2025',
+    period: 'Jan – Jun 2025',
     text: 'Co-built a no-code test automation framework with AI-generated test code (React, Node, Firebase, OpenAI).',
   },
 ]
