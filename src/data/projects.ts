@@ -249,7 +249,7 @@ export const alsoBuilt: Project[] = [
       'Pick page elements straight from a screenshot',
       'A kanban board so a team can work on tests together',
     ],
-    stack: ['React', 'Node.js', 'Firebase', 'OpenAI API', 'Puppeteer'],
+    stack: ['React', 'Node.js', 'Firebase', 'OpenAI API', 'Selenium'],
     image: brightestImg,
   },
   {
