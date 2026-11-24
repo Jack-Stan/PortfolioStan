@@ -31,7 +31,7 @@ export const experience = [
     text: 'Analysis, lead development and production debugging on the apps the business ran on. Built the MCP servers our AI agents used, a CI/CD test pipeline, and an n8n + Claude flow that pulls quote details out of tender documents.',
   },
   {
-    role: 'Software Developer Intern',
+    role: 'Internship Trainee',
     org: 'Brightest',
     period: 'Jan – Jun 2025',
     text: 'Co-built a no-code test automation framework with AI-generated test code (React, Node, Firebase, OpenAI).',
